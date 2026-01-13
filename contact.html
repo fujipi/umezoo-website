@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>お問い合わせ | UMEZOO株式会社 - フードクリエイティブファーム</title>
+  <meta name="description" content="UMEZOO株式会社（ウメズー）へのお問い合わせ。プロジェクトのご相談、お見積もり、業務提携、採用に関するお問い合わせはこちらから。フードビジネスディレクション、コンテンツ制作のご相談を承ります。">
+  <meta name="keywords" content="UMEZOO, お問い合わせ, 相談, 見積もり, フードクリエイティブ, フードビジネス, コンテンツ制作, 業務提携">
+  <meta name="author" content="UMEZOO株式会社">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://umezoo.co.jp/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://umezoo.co.jp/contact.html">
+  <meta property="og:title" content="お問い合わせ | UMEZOO株式会社">
+  <meta property="og:description" content="UMEZOO株式会社へのお問い合わせ。プロジェクトのご相談、お見積もりはこちらから。">
+  <meta property="og:image" content="https://umezoo.co.jp/UMEZOO_logo_Blue_Horizontal.jpg">
+  <meta property="og:site_name" content="UMEZOO株式会社">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
+      </a>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="about.html" class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="work.html" class="nav__link" data-i18n="nav.work">Work</a></li>
+          <li><a href="service.html" class="nav__link" data-i18n="nav.service">Service</a></li>
+          <li><a href="career.html" class="nav__link" data-i18n="nav.career">Career</a></li>
+          <li><a href="news.html" class="nav__link" data-i18n="nav.news">News</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn" data-lang="ja">JP</button>
+          <button class="lang-switcher__btn" data-lang="en">EN</button>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Menu">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title" data-i18n="contact.pageTitle">Contact</h1>
+      <p class="page-hero__subtitle" data-i18n="contact.pageSubtitle">お問い合わせ</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="content-section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2 data-i18n="contact.infoTitle">お問い合わせ先</h2>
+
+          <div class="contact-info__item">
+            <p class="contact-info__label" data-i18n="contact.emailLabel">Email</p>
+            <p class="contact-info__value">x-aaaasypl3h5bag2gepv6yyfm4q@umezoo.slack.com</p>
+          </div>
+
+          <div class="contact-info__item">
+            <p class="contact-info__label" data-i18n="contact.addressLabel">Address</p>
+            <p class="contact-info__value" data-i18n="contact.address">東京都</p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 data-i18n="contact.formTitle">お問い合わせフォーム</h3>
+
+          <form action="mailto:x-aaaasypl3h5bag2gepv6yyfm4q@umezoo.slack.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+              <label for="name" data-i18n="contact.nameLabel">お名前</label>
+              <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="山田 太郎">
+            </div>
+
+            <div class="form-group">
+              <label for="company" data-i18n="contact.companyLabel">会社名</label>
+              <input type="text" id="company" name="company" data-i18n-placeholder="contact.companyPlaceholder" placeholder="株式会社〇〇">
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="contact.emailFormLabel">メールアドレス</label>
+              <input type="email" id="email" name="email" required data-i18n-placeholder="contact.emailFormPlaceholder" placeholder="example@company.com">
+            </div>
+
+            <div class="form-group">
+              <label for="subject" data-i18n="contact.subjectLabel">お問い合わせ種別</label>
+              <select id="subject" name="subject">
+                <option value="" data-i18n="contact.subjectOptions.select">選択してください</option>
+                <option value="project" data-i18n="contact.subjectOptions.project">プロジェクトのご相談</option>
+                <option value="partnership" data-i18n="contact.subjectOptions.partnership">業務提携について</option>
+                <option value="career" data-i18n="contact.subjectOptions.career">採用について</option>
+                <option value="other" data-i18n="contact.subjectOptions.other">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-i18n="contact.messageLabel">メッセージ</label>
+              <textarea id="message" name="message" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="お問い合わせ内容をご記入ください"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" data-i18n="contact.submitButton">送信する</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
+          </div>
+          <p class="footer__desc" data-i18n="footer.desc">創造的な食体験を事業活動に浸透させる、フードクリエイティブファーム</p>
+        </div>
+
+        <div class="footer__nav">
+          <p class="footer__nav-title" data-i18n="footer.navigation">Navigation</p>
+          <ul class="footer__nav-list">
+            <li><a href="about.html" class="footer__nav-link" data-i18n="nav.about">About</a></li>
+            <li><a href="work.html" class="footer__nav-link" data-i18n="nav.work">Work</a></li>
+            <li><a href="service.html" class="footer__nav-link" data-i18n="nav.service">Service</a></li>
+            <li><a href="career.html" class="footer__nav-link" data-i18n="nav.career">Career</a></li>
+            <li><a href="news.html" class="footer__nav-link" data-i18n="nav.news">News</a></li>
+            <li><a href="contact.html" class="footer__nav-link" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav">
+          <p class="footer__nav-title" data-i18n="footer.legal">Legal</p>
+          <ul class="footer__nav-list">
+            <li><a href="privacy.html" class="footer__nav-link" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="security.html" class="footer__nav-link" data-i18n="footer.security">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 UMEZOO Inc. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link" data-i18n="footer.privacyPolicy">Privacy Policy</a>
+          <a href="security.html" class="footer__legal-link" data-i18n="footer.security">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

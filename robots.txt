@@ -1,0 +1,28 @@
+# robots.txt for UMEZOO株式会社
+# https://umezoo.co.jp/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://umezoo.co.jp/sitemap.xml
+
+# Disallow admin or private directories (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all crawlers to access the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yahoo! Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
