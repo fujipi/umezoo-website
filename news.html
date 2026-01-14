@@ -74,14 +74,126 @@
     </div>
   </section>
 
-  <!-- News List -->
+  <!-- News Grid -->
   <section class="content-section">
     <div class="container">
-      <div class="news-list">
-        <!-- News items will be added here -->
+      <div class="news-grid">
+        <!-- News 4: YAMAGATA FUSION -->
+        <article class="news-card" data-news-id="4">
+          <div class="news-card__image" style="background-image: url('images/work/yamagata-fusion.jpg');">
+            <span class="news-card__image-placeholder">YAMAGATA FUSION</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">イベント</span>
+              <time class="news-card__date">2024.09.14</time>
+            </div>
+            <h3 class="news-card__title">「YAMAGATA FUSION」を開催しました</h3>
+            <p class="news-card__summary">山形県高畠町にて、料理とワインによる新たな食体験を発信するコラボイベント「YAMAGATA FUSION」を開催。高畠ワイナリー協力のもと実現しました。</p>
+          </div>
+        </article>
+
+        <!-- News 5: &mog ワークショップ -->
+        <article class="news-card" data-news-id="5">
+          <div class="news-card__image" style="background-image: url('images/work/andmog.jpg');">
+            <span class="news-card__image-placeholder">&mog Workshop</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">ワークショップ</span>
+              <time class="news-card__date">2024.05.10</time>
+            </div>
+            <h3 class="news-card__title">三井不動産「&mog」にてワークショップを共催</h3>
+            <p class="news-card__summary">三井不動産様の飲食事業者共創プラットフォーム「&mog」にて、消費者向け食品プロモーションにおけるクリエイティブ制作ワークショップを共催しました。</p>
+          </div>
+        </article>
+
+        <!-- News 6: Fun Eat Makers -->
+        <article class="news-card" data-news-id="6">
+          <div class="news-card__image" style="background-image: url('images/work/fun-eat-makers.jpg');">
+            <span class="news-card__image-placeholder">Fun Eat Makers</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">プロジェクト</span>
+              <time class="news-card__date">2024.04.20</time>
+            </div>
+            <h3 class="news-card__title">福島県大熊町「Fun Eat Makers」プロジェクトに参画</h3>
+            <p class="news-card__summary">福島県大熊町の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画。「つくる・たべる・つながる」をコンセプトに農業と食の拠点創出に取り組んでいます。</p>
+          </div>
+        </article>
+
+        <!-- News 1: 会社設立 -->
+        <article class="news-card" data-news-id="1">
+          <div class="news-card__image" style="background-image: url('images/news/company-founding.jpg');">
+            <span class="news-card__image-placeholder">UMEZOO設立</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">会社情報</span>
+              <time class="news-card__date">2024.03.15</time>
+            </div>
+            <h3 class="news-card__title">UMEZOO株式会社を設立しました</h3>
+            <p class="news-card__summary">フードクリエイティブファームとして、UMEZOO株式会社を設立いたしました。創造的な食体験を事業活動に浸透させることをミッションに掲げ、活動を開始いたします。</p>
+          </div>
+        </article>
+
+        <!-- News 2: ウェブサイト公開 -->
+        <article class="news-card" data-news-id="2">
+          <div class="news-card__image" style="background-image: url('images/news/website-launch.jpg');">
+            <span class="news-card__image-placeholder">Website Launch</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">お知らせ</span>
+              <time class="news-card__date">2024.03.20</time>
+            </div>
+            <h3 class="news-card__title">公式ウェブサイトを公開しました</h3>
+            <p class="news-card__summary">UMEZOOの公式ウェブサイトを公開いたしました。私たちのサービス、実績、そしてフードクリエイティブに対する想いをご覧いただけます。</p>
+          </div>
+        </article>
+
+        <!-- News 3: 代表メッセージ -->
+        <article class="news-card" data-news-id="3">
+          <div class="news-card__image" style="background-image: url('images/news/founder-message.jpg');">
+            <span class="news-card__image-placeholder">Founder Message</span>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag">インタビュー</span>
+              <time class="news-card__date">2024.03.25</time>
+            </div>
+            <h3 class="news-card__title">代表・梅津信吾が語る「食とクリエイティブの未来」</h3>
+            <p class="news-card__summary">RED U-35シルバーエッグ受賞シェフである代表・梅津信吾が、UMEZOO設立の背景と、フードクリエイティブが切り拓く新しい食体験について語ります。</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
+
+  <!-- News Modal -->
+  <div class="news-modal" id="newsModal">
+    <div class="news-modal__overlay"></div>
+    <div class="news-modal__container">
+      <button class="news-modal__close" aria-label="閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <article class="news-modal__content">
+        <div class="news-modal__header">
+          <div class="news-modal__meta">
+            <span class="news-modal__tag"></span>
+            <time class="news-modal__date"></time>
+          </div>
+          <h2 class="news-modal__title"></h2>
+        </div>
+        <div class="news-modal__image"></div>
+        <div class="news-modal__body"></div>
+      </article>
+    </div>
+  </div>
 
   <!-- CTA Section -->
   <section class="section cta">
