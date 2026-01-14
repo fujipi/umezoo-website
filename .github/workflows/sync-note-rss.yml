@@ -1,0 +1,44 @@
+name: Sync Note RSS
+
+on:
+  schedule:
+    # 毎日午前9時(JST) = UTC 0時に実行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Note RSS and update data
+        run: npm run sync-note
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/note-articles.json || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/note-articles.json
+          git commit -m "chore: update note articles from RSS feed"
+          git push

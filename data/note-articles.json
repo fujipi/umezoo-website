@@ -1,0 +1,57 @@
+{
+  "lastUpdated": "2026-01-14T00:00:00.000Z",
+  "feedTitle": "しゅわTokyo",
+  "feedLink": "https://note.com/cccellars",
+  "articles": [
+    {
+      "id": "note-1",
+      "tag": "Journey",
+      "date": "2026.01.12",
+      "title": "サントリー登美の丘ワイナリー訪問記",
+      "link": "https://note.com/cccellars/n/example1",
+      "summary": "山梨県甲斐市にあるサントリー登美の丘ワイナリーを訪問しました。日本ワインの歴史と醸造の現場を体験...",
+      "image": "https://assets.st-note.com/production/uploads/images/example1.jpg",
+      "isExternal": true
+    },
+    {
+      "id": "note-2",
+      "tag": "Journey",
+      "date": "2026.01.08",
+      "title": "シャンパーニュとチョコレートのペアリング",
+      "link": "https://note.com/cccellars/n/example2",
+      "summary": "シャンパーニュとチョコレートの意外な相性を探求。泡とカカオが織りなすハーモニーを楽しむ方法を紹介...",
+      "image": "https://assets.st-note.com/production/uploads/images/example2.jpg",
+      "isExternal": true
+    },
+    {
+      "id": "note-3",
+      "tag": "Journey",
+      "date": "2025.12.28",
+      "title": "北海道ワイナリー巡り - 余市・小樽編",
+      "link": "https://note.com/cccellars/n/example3",
+      "summary": "北海道のワイン産地、余市と小樽を巡る旅。日本のブルゴーニュと呼ばれる地域のテロワールを探る...",
+      "image": "https://assets.st-note.com/production/uploads/images/example3.jpg",
+      "isExternal": true
+    },
+    {
+      "id": "note-4",
+      "tag": "Journey",
+      "date": "2025.12.20",
+      "title": "ワインと料理のマリアージュ講座を開催",
+      "link": "https://note.com/cccellars/n/example4",
+      "summary": "ワインと料理のペアリングの基本を学ぶ講座を開催しました。参加者の皆様と一緒に味わいのハーモニー...",
+      "image": "https://assets.st-note.com/production/uploads/images/example4.jpg",
+      "isExternal": true
+    },
+    {
+      "id": "note-5",
+      "tag": "Journey",
+      "date": "2025.12.15",
+      "title": "KENZO ESTATE訪問 - ナパバレーの日本の心",
+      "link": "https://note.com/cccellars/n/example5",
+      "summary": "カリフォルニア・ナパバレーにある日本人オーナーのワイナリー、KENZO ESTATEを訪問...",
+      "image": "https://assets.st-note.com/production/uploads/images/example5.jpg",
+      "isExternal": true
+    }
+  ]
+}
