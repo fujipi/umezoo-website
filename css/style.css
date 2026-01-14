@@ -2156,6 +2156,11 @@ a.work-card:hover {
   max-width: 320px;
 }
 
+.partners__logo--xlarge {
+  height: 150px;
+  max-width: 400px;
+}
+
 @keyframes partners-scroll {
   0% {
     transform: translateX(0);
