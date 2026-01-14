@@ -685,6 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initNewsModal();
   initCareerModal();
+  initNoteArticles();
 
   // Apply translations
   applyTranslations();
@@ -1294,4 +1295,80 @@ function initCareerModal() {
       closeModal();
     }
   });
+}
+
+// Note articles functionality - fetch from RSS-synced JSON
+async function initNoteArticles() {
+  const newsGrid = document.querySelector('.news-grid');
+  const noteSection = document.getElementById('noteArticlesSection');
+
+  // Only run on news page
+  if (!newsGrid && !noteSection) return;
+
+  try {
+    const response = await fetch('data/note-articles.json');
+    if (!response.ok) {
+      console.log('Note articles data not found');
+      return;
+    }
+
+    const data = await response.json();
+
+    if (!data.articles || data.articles.length === 0) {
+      console.log('No note articles found');
+      return;
+    }
+
+    // Create note articles section if it doesn't exist
+    let targetContainer = noteSection;
+    if (!targetContainer && newsGrid) {
+      // Insert note section before the news grid
+      const contentSection = newsGrid.closest('.content-section');
+      if (contentSection) {
+        const noteHTML = `
+          <section class="content-section content-section--note" id="noteArticlesSection">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title">Journey</h2>
+                <p class="section-subtitle">noteでの活動記録</p>
+                <a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="note-link">
+                  すべての記事を見る →
+                </a>
+              </div>
+              <div class="note-grid" id="noteGrid"></div>
+            </div>
+          </section>
+        `;
+        contentSection.insertAdjacentHTML('beforebegin', noteHTML);
+        targetContainer = document.getElementById('noteArticlesSection');
+      }
+    }
+
+    const noteGrid = document.getElementById('noteGrid');
+    if (!noteGrid) return;
+
+    // Render note articles
+    const articlesHTML = data.articles.map(article => `
+      <article class="note-card" onclick="window.open('${article.link}', '_blank')">
+        <div class="note-card__image" style="background-image: url('${article.image || 'images/news/default-note.jpg'}');">
+          <span class="note-card__image-placeholder">${article.title.substring(0, 20)}...</span>
+        </div>
+        <div class="note-card__content">
+          <div class="note-card__meta">
+            <span class="note-card__tag">${article.tag}</span>
+            <time class="note-card__date">${article.date}</time>
+          </div>
+          <h3 class="note-card__title">${article.title}</h3>
+          <p class="note-card__summary">${article.summary}</p>
+          <span class="note-card__link">noteで読む →</span>
+        </div>
+      </article>
+    `).join('');
+
+    noteGrid.innerHTML = articlesHTML;
+
+    console.log(`Loaded ${data.articles.length} note articles`);
+  } catch (error) {
+    console.log('Error loading note articles:', error);
+  }
 }

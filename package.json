@@ -1,0 +1,11 @@
+{
+  "name": "umezoo-website",
+  "version": "1.0.0",
+  "description": "UMEZOO Inc. official website",
+  "scripts": {
+    "sync-note": "node scripts/sync-note-rss.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
