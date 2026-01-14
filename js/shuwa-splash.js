@@ -9,9 +9,7 @@
   // Splash images - ランダムに1つ選ばれる
   const splashImages = [
     'images/shuwa/splash-1.jpg',
-    'images/shuwa/splash-2.jpg',
-    'images/shuwa/splash-3.jpg',
-    'images/shuwa/splash-4.jpg'
+    'images/shuwa/splash-2.jpg'
   ];
 
   // Initialize splash screen
