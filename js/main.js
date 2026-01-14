@@ -1006,10 +1006,10 @@ const newsData = {
   },
   6: {
     tag: 'プロジェクト',
-    date: '2024.04.20',
+    date: '2025.06（予定）',
     title: '福島県大熊町「Fun Eat Makers」プロジェクトに参画',
     image: 'images/work/fun-eat-makers.jpg',
-    body: `<p>UMEZOOは、福島県大熊町で進行中の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画しております。</p>
+    body: `<p>UMEZOOは、福島県大熊町で進行中の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画しております。<strong>2025年6月ローンチ予定</strong>です。</p>
 <p><strong>プロジェクトの背景</strong></p>
 <p>福島県大熊町は、東日本大震災および原発事故からの復興を進める中で、新たな産業の創出と地域の活性化に取り組んでいます。「Fun Eat Makers」は、農業と食を軸にした復興プロジェクトとして、地域に新しい価値を生み出すことを目指しています。</p>
 <p><strong>「つくる・たべる・つながる」</strong></p>
