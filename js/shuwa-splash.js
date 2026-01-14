@@ -45,12 +45,19 @@
       // Fade out after delay
       setTimeout(() => {
         splash.classList.add('is-hidden');
+        // Strengthen hero overlay after splash ends
+        if (hero) {
+          hero.classList.add('is-ready');
+        }
       }, 2500);
 
       // Remove from DOM after animation
       setTimeout(() => {
         splash.style.display = 'none';
       }, 3500);
+    } else if (hero) {
+      // No splash, immediately strengthen overlay
+      hero.classList.add('is-ready');
     }
 
     // Set hero background
