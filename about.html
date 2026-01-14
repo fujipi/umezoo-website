@@ -7,7 +7,7 @@
   <!-- SEO Meta Tags -->
   <title>会社概要 | UMEZOO株式会社 - フードクリエイティブファーム 梅津信吾</title>
   <meta name="description" content="UMEZOO株式会社（ウメズー）の会社概要。代表 梅津信吾（RED-U35シルバーエッグ受賞）が率いるフードクリエイティブファーム。フードビジネスディレクション、コンテンツ制作、ブランディング、店舗プロデュースを提供。">
-  <meta name="keywords" content="UMEZOO, UMEZOO株式会社, ウメズー, 梅津信吾, 会社概要, フードクリエイティブ, RED-U35, シルバーエッグ, 料理人, シェフ, フードビジネス, 東京">
+  <meta name="keywords" content="UMEZOO, UMEZOO株式会社, ウメズー, 梅津信吾, Shingo Umetsu, Umetsu, umetsu, ume, 会社概要, フードクリエイティブ, RED-U35, シルバーエッグ, 料理人, シェフ, フードビジネス, 東京, パスタ, パスタクリエイター, Pasta, PASTA, pasta, PASTA CREATOR, Pasta Creator, シェフズテーブル, Chef's Table, シェフのテーブル, CHEF'S TABLE">
   <meta name="author" content="UMEZOO株式会社">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://umezoo.co.jp/about.html">
@@ -41,15 +41,18 @@
           <li><a href="about.html" class="nav__link nav__link--active" data-i18n="nav.about">About</a></li>
           <li><a href="work.html" class="nav__link" data-i18n="nav.work">Work</a></li>
           <li><a href="service.html" class="nav__link" data-i18n="nav.service">Service</a></li>
+          <li><a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="nav__link">Journey</a></li>
           <li><a href="career.html" class="nav__link" data-i18n="nav.career">Career</a></li>
           <li><a href="news.html" class="nav__link" data-i18n="nav.news">News</a></li>
           <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
         </ul>
 
-        <div class="lang-switcher">
-          <button class="lang-switcher__btn" data-lang="ja">JP</button>
-          <button class="lang-switcher__btn" data-lang="en">EN</button>
-          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        <div class="nav__right">
+          <div class="lang-switcher">
+            <button class="lang-switcher__btn" data-lang="ja">JP</button>
+            <button class="lang-switcher__btn" data-lang="en">EN</button>
+            <button class="lang-switcher__btn" data-lang="fr">FR</button>
+          </div>
         </div>
       </nav>
 
@@ -61,37 +64,102 @@
     </div>
   </header>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
+  <!-- Visual Hero -->
+  <section class="page-hero page-hero--with-bg">
+    <div class="page-hero__bg" id="page-hero-bg"></div>
+    <div class="page-hero__overlay"></div>
     <div class="container">
       <h1 class="page-hero__title" data-i18n="about.pageTitle">About</h1>
-      <p class="page-hero__subtitle" data-i18n="about.pageSubtitle">私たちについて</p>
+      <p class="page-hero__subtitle" data-i18n="about.heroTagline">食の可能性を、創造する。</p>
     </div>
   </section>
 
-  <!-- About Intro -->
-  <section class="content-section">
+  <!-- Story Section -->
+  <section class="content-section about-story">
     <div class="container">
-      <div class="about-intro">
-        <div class="about-intro__image">
-          <p class="about-intro__image-placeholder">Image</p>
+      <div class="about-story__content fade-in-up">
+        <h2 class="about-story__title" data-i18n="about.storyTitle">創造的な食体験を、事業活動に浸透させる</h2>
+        <p class="about-story__text" data-i18n="about.storyText1">UMEZOOは、食を通じて人々の心を動かすクリエイティブファームです。</p>
+        <p class="about-story__text" data-i18n="about.storyText2">私たちは、単なるフードビジネスのコンサルティングではなく、食体験そのものをデザインします。商品開発から店舗設計、ブランディングからマーケティングまで、食に関わるあらゆる領域で、クリエイティビティの力を活かしています。</p>
+        <p class="about-story__text" data-i18n="about.storyText3">商品、店舗、製造施設、SNS、映像、BGM、Web、空間演出、内装デザイン。お客様に提供するあらゆる食体験を、クリエイティビティで特別なものに昇華することを生業としております。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="content-section about-founder">
+    <div class="container">
+      <div class="about-founder__inner">
+        <div class="about-founder__image fade-in-up">
+          <img src="images/founder.jpg" alt="梅津信吾" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="about-founder__image-placeholder">
+            <span>Founder Photo</span>
+          </div>
         </div>
-        <div class="about-intro__content">
-          <h2 data-i18n="about.introTitle">食の可能性を、創造する。</h2>
-          <p data-i18n="about.introText1">UMEZOOは、食を通じて人々の心を動かすクリエイティブファームです。</p>
-          <p data-i18n="about.introText2">私たちは、単なるフードビジネスのコンサルティングではなく、食体験そのものをデザインします。商品開発から店舗設計、ブランディングからマーケティングまで、食に関わるあらゆる領域で、クリエイティビティの力を活かしています。</p>
+        <div class="about-founder__content fade-in-up">
+          <p class="about-founder__label" data-i18n="about.founderLabel">Founder & CEO</p>
+          <h2 class="about-founder__name" data-i18n="about.founderName">梅津 信吾</h2>
+          <p class="about-founder__name-en">Shingo Umetsu</p>
+
+          <div class="about-founder__award">
+            <span class="about-founder__award-badge">RED U-35 2021</span>
+            <span class="about-founder__award-title" data-i18n="about.awardTitle">シルバーエッグ受賞</span>
+          </div>
+
+          <div class="about-founder__bio">
+            <p data-i18n="about.founderBio1">フランス留学中に料理人としてのキャリアをスタートし、国内外の名店で研鑽を積む。2021年、国内のシェフコンペティション「RED U-35」にてシルバーエッグを受賞。</p>
+            <p data-i18n="about.founderBio2">料理の技術だけでなく、食を取り巻く体験すべてをクリエイティブの視点で捉え直すことの重要性を感じ、2024年にUMEZOO株式会社を設立。</p>
+            <p data-i18n="about.founderBio3">「食べる」という行為を超えて、記憶に残る食体験をデザインすることをミッションに掲げ、フードビジネスの新しい可能性を追求し続けている。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="content-section about-values">
+    <div class="container">
+      <div class="content-section__header fade-in-up">
+        <h2 class="content-section__title" data-i18n="about.valuesTitle">Our Values</h2>
+        <p class="content-section__subtitle" data-i18n="about.valuesSubtitle">私たちの価値観</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card fade-in-up">
+          <div class="value-card__number">01</div>
+          <h3 class="value-card__title" data-i18n="about.value1Title">Creativity</h3>
+          <p class="value-card__text" data-i18n="about.value1Text">すべての課題に対して、創造的な解決策を追求します。既成概念にとらわれず、新しい価値を生み出すことを常に意識しています。</p>
+        </div>
+
+        <div class="value-card fade-in-up">
+          <div class="value-card__number">02</div>
+          <h3 class="value-card__title" data-i18n="about.value2Title">Seamless</h3>
+          <p class="value-card__text" data-i18n="about.value2Text">企画から制作、運用まで一貫して対応。シームレスな連携で、スムーズなプロジェクト進行を実現します。</p>
+        </div>
+
+        <div class="value-card fade-in-up">
+          <div class="value-card__number">03</div>
+          <h3 class="value-card__title" data-i18n="about.value3Title">Fairness</h3>
+          <p class="value-card__text" data-i18n="about.value3Text">取引先から消費者まで、食に関わるすべてのサプライチェーンに対してフェアであることを大切にしています。</p>
+        </div>
+
+        <div class="value-card fade-in-up">
+          <div class="value-card__number">04</div>
+          <h3 class="value-card__title" data-i18n="about.value4Title">Impact</h3>
+          <p class="value-card__text" data-i18n="about.value4Text">クリエイティブを事業成果に直結させます。美しいだけでなく、ビジネスとして成功する食体験を設計します。</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Company Info -->
-  <section class="content-section">
+  <section class="content-section about-company">
     <div class="container">
-      <div class="content-section__header">
-        <h2 class="content-section__title" data-i18n="about.companyTitle">会社概要</h2>
+      <div class="content-section__header fade-in-up">
+        <h2 class="content-section__title" data-i18n="about.companyTitle">Company</h2>
+        <p class="content-section__subtitle" data-i18n="about.companySubtitle">会社概要</p>
       </div>
-      <div class="company-info">
+      <div class="company-info fade-in-up">
         <div class="company-info__table">
           <div class="company-info__row">
             <div class="company-info__label" data-i18n="about.companyNameLabel">会社名</div>
@@ -118,38 +186,18 @@
     </div>
   </section>
 
+  <!-- CTA Section -->
+  <section class="section cta">
+    <div class="container">
+      <h2 class="cta__title" data-i18n="cta.title">お問い合わせ</h2>
+      <p class="cta__text" data-i18n="cta.text">プロジェクトのご相談、お見積もりなど、お気軽にご連絡ください。</p>
+      <a href="contact.html" class="btn btn--outline" data-i18n="cta.button">Contact Us</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <div class="footer__logo">
-            <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
-          </div>
-          <p class="footer__desc" data-i18n="footer.desc">創造的な食体験を事業活動に浸透させる、フードクリエイティブファーム</p>
-        </div>
-
-        <div class="footer__nav">
-          <p class="footer__nav-title" data-i18n="footer.navigation">Navigation</p>
-          <ul class="footer__nav-list">
-            <li><a href="about.html" class="footer__nav-link" data-i18n="nav.about">About</a></li>
-            <li><a href="work.html" class="footer__nav-link" data-i18n="nav.work">Work</a></li>
-            <li><a href="service.html" class="footer__nav-link" data-i18n="nav.service">Service</a></li>
-            <li><a href="career.html" class="footer__nav-link" data-i18n="nav.career">Career</a></li>
-            <li><a href="news.html" class="footer__nav-link" data-i18n="nav.news">News</a></li>
-            <li><a href="contact.html" class="footer__nav-link" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__nav">
-          <p class="footer__nav-title" data-i18n="footer.legal">Legal</p>
-          <ul class="footer__nav-list">
-            <li><a href="privacy.html" class="footer__nav-link" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
-            <li><a href="security.html" class="footer__nav-link" data-i18n="footer.security">Security</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">

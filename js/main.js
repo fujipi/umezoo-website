@@ -54,17 +54,29 @@ const translations = {
     about: {
       pageTitle: 'About',
       pageSubtitle: '私たちについて',
-      introTitle: '食の可能性を、創造する。',
-      introText1: 'UMEZOOは、食を通じて人々の心を動かすクリエイティブファームです。',
-      introText2: '私たちは、単なるフードビジネスのコンサルティングではなく、食体験そのものをデザインします。商品開発から店舗設計、ブランディングからマーケティングまで、食に関わるあらゆる領域で、クリエイティビティの力を活かしています。',
-      valuesTitle: '私たちの価値観',
+      heroTagline: '食の可能性を、創造する。',
+      storyTitle: '創造的な食体験を、事業活動に浸透させる',
+      storyText1: 'UMEZOOは、食を通じて人々の心を動かすクリエイティブファームです。',
+      storyText2: '私たちは、単なるフードビジネスのコンサルティングではなく、食体験そのものをデザインします。商品開発から店舗設計、ブランディングからマーケティングまで、食に関わるあらゆる領域で、クリエイティビティの力を活かしています。',
+      storyText3: '商品、店舗、製造施設、SNS、映像、BGM、Web、空間演出、内装デザイン。お客様に提供するあらゆる食体験を、クリエイティビティで特別なものに昇華することを生業としております。',
+      founderLabel: 'Founder & CEO',
+      founderName: '梅津 信吾',
+      awardTitle: 'シルバーエッグ受賞',
+      founderBio1: 'フランス留学中に料理人としてのキャリアをスタートし、国内外の名店で研鑽を積む。2021年、国内のシェフコンペティション「RED U-35」にてシルバーエッグを受賞。',
+      founderBio2: '料理の技術だけでなく、食を取り巻く体験すべてをクリエイティブの視点で捉え直すことの重要性を感じ、2024年にUMEZOO株式会社を設立。',
+      founderBio3: '「食べる」という行為を超えて、記憶に残る食体験をデザインすることをミッションに掲げ、フードビジネスの新しい可能性を追求し続けている。',
+      valuesTitle: 'Our Values',
+      valuesSubtitle: '私たちの価値観',
       value1Title: 'Creativity',
-      value1Text: '創造性を武器に、他にはない食体験を生み出します。',
-      value2Title: 'Strategy',
-      value2Text: '体系的なロジックで、ビジネスとしての成功を追求します。',
-      value3Title: 'Partnership',
-      value3Text: 'クライアントと共に、目的の実現を目指します。',
-      companyTitle: '会社概要',
+      value1Text: 'すべての課題に対して、創造的な解決策を追求します。既成概念にとらわれず、新しい価値を生み出すことを常に意識しています。',
+      value2Title: 'Seamless',
+      value2Text: '企画から制作、運用まで一貫して対応。シームレスな連携で、スムーズなプロジェクト進行を実現します。',
+      value3Title: 'Fairness',
+      value3Text: '取引先から消費者まで、食に関わるすべてのサプライチェーンに対してフェアであることを大切にしています。',
+      value4Title: 'Impact',
+      value4Text: 'クリエイティブを事業成果に直結させます。美しいだけでなく、ビジネスとして成功する食体験を設計します。',
+      companyTitle: 'Company',
+      companySubtitle: '会社概要',
       companyName: 'UMEZOO株式会社',
       companyNameLabel: '会社名',
       ceoLabel: '代表者',
@@ -261,21 +273,33 @@ const translations = {
     about: {
       pageTitle: 'About',
       pageSubtitle: 'About Us',
-      introTitle: 'Creating the possibilities of food.',
-      introText1: 'UMEZOO is a creative farm that moves hearts through food.',
-      introText2: 'We don\'t just consult on food businesses—we design the food experience itself. We leverage the power of creativity in every area related to food, from product development and store design to branding and marketing.',
+      heroTagline: 'Creating the possibilities of food.',
+      storyTitle: 'Integrating creative food experiences into business activities',
+      storyText1: 'UMEZOO is a creative farm that moves hearts through food.',
+      storyText2: 'We don\'t just consult on food businesses—we design the food experience itself. We leverage the power of creativity in every area related to food, from product development and store design to branding and marketing.',
+      storyText3: 'Products, stores, manufacturing facilities, SNS, video, BGM, web, spatial design, interior design. We make it our business to elevate all food experiences provided to customers into something special through creativity.',
+      founderLabel: 'Founder & CEO',
+      founderName: 'Shingo Umetsu',
+      awardTitle: 'Silver Egg Award Winner',
+      founderBio1: 'Started his career as a chef while studying in France, honing his skills at renowned restaurants both domestically and internationally. In 2021, won the Silver Egg at RED U-35, a prestigious chef competition in Japan.',
+      founderBio2: 'Feeling the importance of reexamining not just culinary techniques but all experiences surrounding food from a creative perspective, he founded UMEZOO Inc. in 2024.',
+      founderBio3: 'With a mission to design memorable food experiences that go beyond the act of eating, he continues to pursue new possibilities in food business.',
       valuesTitle: 'Our Values',
+      valuesSubtitle: 'What We Believe In',
       value1Title: 'Creativity',
-      value1Text: 'Using creativity as our weapon to create unique food experiences.',
-      value2Title: 'Strategy',
-      value2Text: 'Pursuing business success through systematic logic.',
-      value3Title: 'Partnership',
-      value3Text: 'Working together with clients to achieve their goals.',
-      companyTitle: 'Company Overview',
+      value1Text: 'We pursue creative solutions to every challenge. We constantly strive to create new value without being bound by conventional ideas.',
+      value2Title: 'Seamless',
+      value2Text: 'We handle everything from planning to production and operation consistently. Seamless collaboration enables smooth project progress.',
+      value3Title: 'Fairness',
+      value3Text: 'We value being fair to all supply chain participants in food, from business partners to consumers.',
+      value4Title: 'Impact',
+      value4Text: 'We directly connect creativity to business results. We design food experiences that are not only beautiful but also succeed as a business.',
+      companyTitle: 'Company',
+      companySubtitle: 'Company Overview',
       companyName: 'UMEZOO Inc.',
       companyNameLabel: 'Company Name',
       ceoLabel: 'CEO',
-      ceo: 'Shingo Umezu',
+      ceo: 'Shingo Umetsu',
       establishedLabel: 'Established',
       established: '2024',
       businessLabel: 'Business',
@@ -468,21 +492,33 @@ const translations = {
     about: {
       pageTitle: 'About',
       pageSubtitle: 'À propos de nous',
-      introTitle: 'Créer les possibilités de la nourriture.',
-      introText1: 'UMEZOO est une ferme créative qui touche les cœurs à travers la nourriture.',
-      introText2: 'Nous ne faisons pas que conseiller sur les entreprises alimentaires—nous concevons l\'expérience alimentaire elle-même. Nous exploitons le pouvoir de la créativité dans tous les domaines liés à la nourriture, du développement de produits et de la conception de magasins au branding et au marketing.',
-      valuesTitle: 'Nos valeurs',
+      heroTagline: 'Créer les possibilités de la nourriture.',
+      storyTitle: 'Intégrer des expériences alimentaires créatives dans les activités commerciales',
+      storyText1: 'UMEZOO est une ferme créative qui touche les cœurs à travers la nourriture.',
+      storyText2: 'Nous ne faisons pas que conseiller sur les entreprises alimentaires—nous concevons l\'expérience alimentaire elle-même. Nous exploitons le pouvoir de la créativité dans tous les domaines liés à la nourriture, du développement de produits et de la conception de magasins au branding et au marketing.',
+      storyText3: 'Produits, magasins, installations de production, réseaux sociaux, vidéo, musique d\'ambiance, web, conception spatiale, décoration intérieure. Nous nous spécialisons dans l\'élévation de toutes les expériences alimentaires offertes aux clients en quelque chose de spécial grâce à la créativité.',
+      founderLabel: 'Fondateur & PDG',
+      founderName: 'Shingo Umetsu',
+      awardTitle: 'Lauréat du Silver Egg',
+      founderBio1: 'Il a commencé sa carrière de chef lors de ses études en France, perfectionnant ses compétences dans des restaurants renommés au Japon et à l\'étranger. En 2021, il a remporté le Silver Egg au RED U-35, un prestigieux concours de chefs au Japon.',
+      founderBio2: 'Ressentant l\'importance de réexaminer non seulement les techniques culinaires mais toutes les expériences entourant la nourriture d\'un point de vue créatif, il a fondé UMEZOO Inc. en 2024.',
+      founderBio3: 'Avec pour mission de concevoir des expériences alimentaires mémorables qui vont au-delà de l\'acte de manger, il continue de poursuivre de nouvelles possibilités dans le secteur alimentaire.',
+      valuesTitle: 'Nos Valeurs',
+      valuesSubtitle: 'Ce en quoi nous croyons',
       value1Title: 'Créativité',
-      value1Text: 'Utiliser la créativité comme arme pour créer des expériences alimentaires uniques.',
-      value2Title: 'Stratégie',
-      value2Text: 'Poursuivre le succès commercial grâce à une logique systématique.',
-      value3Title: 'Partenariat',
-      value3Text: 'Travailler avec les clients pour atteindre leurs objectifs.',
-      companyTitle: 'Aperçu de l\'entreprise',
+      value1Text: 'Nous poursuivons des solutions créatives à chaque défi. Nous nous efforçons constamment de créer de nouvelles valeurs sans être liés par des idées conventionnelles.',
+      value2Title: 'Fluidité',
+      value2Text: 'Nous gérons tout, de la planification à la production et à l\'exploitation de manière cohérente. Une collaboration fluide permet une progression de projet sans heurts.',
+      value3Title: 'Équité',
+      value3Text: 'Nous valorisons l\'équité envers tous les participants de la chaîne d\'approvisionnement alimentaire, des partenaires commerciaux aux consommateurs.',
+      value4Title: 'Impact',
+      value4Text: 'Nous relions directement la créativité aux résultats commerciaux. Nous concevons des expériences alimentaires qui sont non seulement belles mais aussi réussies en tant qu\'entreprise.',
+      companyTitle: 'Entreprise',
+      companySubtitle: 'Aperçu de l\'entreprise',
       companyName: 'UMEZOO Inc.',
       companyNameLabel: 'Nom de l\'entreprise',
       ceoLabel: 'PDG',
-      ceo: 'Shingo Umezu',
+      ceo: 'Shingo Umetsu',
       establishedLabel: 'Fondée',
       established: '2024',
       businessLabel: 'Activité',
@@ -639,6 +675,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize components
+  initSplash();
+  initHeroBackground();
+  initPageHeroBackground();
   initHeader();
   initMobileMenu();
   initLanguageSwitcher();
@@ -648,6 +687,64 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply translations
   applyTranslations();
 });
+
+// Splash screen
+function initSplash() {
+  const splash = document.getElementById('splash');
+  if (!splash) return;
+
+  // ロゴがふわっと出てきた後、2.5秒後にスプラッシュを非表示
+  setTimeout(() => {
+    splash.classList.add('is-hidden');
+  }, 2500);
+}
+
+// Hero images array (shared between main hero and page heroes)
+const heroImages = [
+  'images/hero/hero-1.jpg',
+  'images/hero/hero-2.jpg',
+  'images/hero/hero-3.jpg',
+  'images/hero/hero-4.jpg',
+  'images/hero/hero-5.jpg',
+  'images/hero/hero-6.jpg',
+  'images/hero/hero-7.jpg',
+  'images/hero/hero-8.jpg',
+  'images/hero/hero-9.jpg',
+  'images/hero/1768332177874.jpg',
+  'images/hero/1768332287121.jpg',
+  'images/hero/1768332314082.jpg',
+  'images/hero/1768332359561.jpg',
+  'images/hero/1768332385350.jpg',
+  'images/hero/1768332415046.jpg',
+  'images/hero/1768332447130.jpg',
+  'images/hero/1768332476156.jpg',
+  'images/hero/1768332498041.jpg',
+  'images/hero/1768332521861.jpg',
+  'images/hero/1768332543110.jpg',
+  'images/hero/1768332571132.jpg',
+  'images/hero/1768332589937.jpg',
+  'images/hero/1768332610859.jpg',
+  'images/hero/1768332676035.jpg',
+  'images/hero/1768332703871.jpg'
+];
+
+// Hero background random image (for index.html)
+function initHeroBackground() {
+  const heroBg = document.getElementById('hero-bg');
+  if (!heroBg) return;
+
+  const randomIndex = Math.floor(Math.random() * heroImages.length);
+  heroBg.style.backgroundImage = `url('${heroImages[randomIndex]}')`;
+}
+
+// Page hero background random image (for other pages)
+function initPageHeroBackground() {
+  const pageHeroBg = document.getElementById('page-hero-bg');
+  if (!pageHeroBg) return;
+
+  const randomIndex = Math.floor(Math.random() * heroImages.length);
+  pageHeroBg.style.backgroundImage = `url('${heroImages[randomIndex]}')`;
+}
 
 // Header scroll effect
 function initHeader() {
@@ -761,10 +858,16 @@ function initAnimations() {
     });
   }, observerOptions);
 
+  // Existing animations for feature cards, work cards, etc.
   document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // Fade-in-up animations for About page and other sections
+  document.querySelectorAll('.fade-in-up').forEach(el => {
     observer.observe(el);
   });
 }

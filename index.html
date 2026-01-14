@@ -7,7 +7,7 @@
   <!-- SEO Meta Tags -->
   <title>UMEZOO株式会社 | フードクリエイティブファーム | 梅津信吾</title>
   <meta name="description" content="UMEZOO（ウメズー）は、創造的な食体験を事業活動に浸透させるフードクリエイティブファームです。RED-U35シルバーエッグ受賞の梅津信吾が代表を務め、フードビジネスディレクションとコンテンツデリバリーを提供します。">
-  <meta name="keywords" content="UMEZOO, UMEZOO株式会社, ウメズー, うめずー, 梅津, うめつ, うめず, うめづ, 梅津信吾, フード, クリエイティブ, フードクリエイティブ, RED-U35, シルバーエッグ, フードビジネス, 食体験, レシピ開発, 動画制作, 料理人, シェフ, ケータリング, イベント企画">
+  <meta name="keywords" content="UMEZOO, UMEZOO株式会社, ウメズー, うめずー, 梅津, うめつ, うめず, うめづ, 梅津信吾, Shingo Umetsu, Umetsu, umetsu, ume, フード, クリエイティブ, フードクリエイティブ, RED-U35, シルバーエッグ, フードビジネス, 食体験, レシピ開発, 動画制作, 料理人, シェフ, ケータリング, イベント企画, パスタ, パスタクリエイター, Pasta, PASTA, pasta, PASTA CREATOR, Pasta Creator, シェフズテーブル, Chef's Table, シェフのテーブル, CHEF'S TABLE">
   <meta name="author" content="UMEZOO株式会社">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://umezoo.co.jp/">
@@ -40,9 +40,10 @@
     "founder": {
       "@type": "Person",
       "name": "梅津信吾",
-      "alternateName": ["うめつしんご", "うめずしんご", "Shingo Umetsu"],
+      "alternateName": ["うめつしんご", "うめずしんご", "Shingo Umetsu", "Umetsu", "umetsu", "ume"],
       "jobTitle": "代表取締役",
-      "award": "RED-U35 2021 シルバーエッグ"
+      "award": "RED-U35 2021 シルバーエッグ",
+      "knowsAbout": ["パスタ", "Pasta", "パスタクリエイター", "Pasta Creator", "シェフズテーブル", "Chef's Table"]
     },
     "foundingDate": "2024",
     "address": {
@@ -51,7 +52,7 @@
       "addressCountry": "JP"
     },
     "sameAs": [],
-    "knowsAbout": ["フードクリエイティブ", "レシピ開発", "動画制作", "イベント企画", "ケータリング", "フードビジネス"],
+    "knowsAbout": ["フードクリエイティブ", "レシピ開発", "動画制作", "イベント企画", "ケータリング", "フードビジネス", "パスタ", "Pasta", "パスタクリエイター", "Pasta Creator", "シェフズテーブル", "Chef's Table", "CHEF'S TABLE"],
     "award": "RED-U35 2021 シルバーエッグ"
   }
   </script>
@@ -75,8 +76,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Splash Screen -->
+  <div class="splash" id="splash">
+    <div class="splash__logo">
+      <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
+    </div>
+  </div>
+
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
         <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
@@ -87,15 +95,18 @@
           <li><a href="about.html" class="nav__link" data-i18n="nav.about">About</a></li>
           <li><a href="work.html" class="nav__link" data-i18n="nav.work">Work</a></li>
           <li><a href="service.html" class="nav__link" data-i18n="nav.service">Service</a></li>
+          <li><a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="nav__link">Journey</a></li>
           <li><a href="career.html" class="nav__link" data-i18n="nav.career">Career</a></li>
           <li><a href="news.html" class="nav__link" data-i18n="nav.news">News</a></li>
           <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
         </ul>
 
-        <div class="lang-switcher">
-          <button class="lang-switcher__btn" data-lang="ja">JP</button>
-          <button class="lang-switcher__btn" data-lang="en">EN</button>
-          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        <div class="nav__right">
+          <div class="lang-switcher">
+            <button class="lang-switcher__btn" data-lang="ja">JP</button>
+            <button class="lang-switcher__btn" data-lang="en">EN</button>
+            <button class="lang-switcher__btn" data-lang="fr">FR</button>
+          </div>
         </div>
       </nav>
 
@@ -107,23 +118,51 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero__bg"></div>
+  <!-- Hero Section with Background Image -->
+  <section class="hero hero--main" id="hero">
+    <div class="hero__bg" id="hero-bg"></div>
+    <div class="hero__overlay"></div>
     <div class="hero__content">
-      <div class="hero__logo">
-        <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
-      </div>
-      <p class="hero__subtitle" data-i18n="hero.subtitle">Food Creative Farm</p>
-
-      <div class="hero__concept">
-        <p class="hero__concept-title" data-i18n="hero.conceptTitle">UMEZOOとは</p>
-        <p class="hero__concept-text" data-i18n="hero.conceptText">UMEZOO（ウメズー）は、創造的な食体験を事業活動に浸透させる、フードクリエイティブファームです。フードビジネスディレクションとコンテンツデリバリーを軸に、商品、店舗、製造施設、SNS、映像、BGM、Web、空間演出、内装デザインなど、お客様に提供するあらゆる食体験を、クリエイティビティで特別なものに昇華することを生業としております。様々なクリエイティブと体系的なロジックによって、ユニークに目的を叶えることを目指しております。</p>
-      </div>
+      <p class="hero__tagline" data-i18n="hero.subtitle">Food Creative Farm</p>
+      <h1 class="hero__title">
+        <span data-i18n="hero.title1">創造的な食体験を</span><br>
+        <span data-i18n="hero.title2">事業活動に浸透させる</span>
+      </h1>
+      <p class="hero__desc" data-i18n="hero.conceptText">フードビジネスディレクションとコンテンツデリバリーを軸に、<br class="hero__br">お客様に提供するあらゆる食体験を、クリエイティビティで特別なものに。</p>
+      <a href="about.html" class="btn btn--white" data-i18n="hero.learnMore">Learn More</a>
     </div>
     <div class="hero__scroll">
       <span>Scroll</span>
       <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners">
+    <div class="container">
+      <p class="partners__label">Partners</p>
+    </div>
+    <div class="partners__track">
+      <div class="partners__logos">
+        <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo">
+        <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo">
+        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large">
+        <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large">
+        <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo">
+        <img src="images/partners/firadis.png" alt="Firadis" class="partners__logo">
+        <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--large">
+        <img src="images/partners/tsukuyomi-coffee.jpg" alt="ツクヨミコーヒー" class="partners__logo partners__logo--large">
+      </div>
+      <div class="partners__logos" aria-hidden="true">
+        <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo">
+        <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo">
+        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large">
+        <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large">
+        <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo">
+        <img src="images/partners/firadis.png" alt="Firadis" class="partners__logo">
+        <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--large">
+        <img src="images/partners/tsukuyomi-coffee.jpg" alt="ツクヨミコーヒー" class="partners__logo partners__logo--large">
+      </div>
     </div>
   </section>
 
@@ -139,35 +178,6 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <div class="footer__logo">
-            <img src="UMEZOO_logo_Blue_Horizontal.jpg" alt="UMEZOO">
-          </div>
-          <p class="footer__desc" data-i18n="footer.desc">創造的な食体験を事業活動に浸透させる、フードクリエイティブファーム</p>
-        </div>
-
-        <div class="footer__nav">
-          <p class="footer__nav-title" data-i18n="footer.navigation">Navigation</p>
-          <ul class="footer__nav-list">
-            <li><a href="about.html" class="footer__nav-link" data-i18n="nav.about">About</a></li>
-            <li><a href="work.html" class="footer__nav-link" data-i18n="nav.work">Work</a></li>
-            <li><a href="service.html" class="footer__nav-link" data-i18n="nav.service">Service</a></li>
-            <li><a href="career.html" class="footer__nav-link" data-i18n="nav.career">Career</a></li>
-            <li><a href="news.html" class="footer__nav-link" data-i18n="nav.news">News</a></li>
-            <li><a href="contact.html" class="footer__nav-link" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__nav">
-          <p class="footer__nav-title" data-i18n="footer.legal">Legal</p>
-          <ul class="footer__nav-list">
-            <li><a href="privacy.html" class="footer__nav-link" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
-            <li><a href="security.html" class="footer__nav-link" data-i18n="footer.security">Security</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
