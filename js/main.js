@@ -683,6 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
   initAnimations();
   initContactForm();
+  initNewsModal();
 
   // Apply translations
   applyTranslations();
@@ -918,5 +919,102 @@ function initContactForm() {
           currentLang === 'fr' ? 'Votre message a été envoyé.' :
           'Your message has been sent.');
     form.reset();
+  });
+}
+
+// News data for modal
+const newsData = {
+  1: {
+    tag: '会社情報',
+    date: '2024.03.15',
+    title: 'UMEZOO株式会社を設立しました',
+    image: 'images/news/company-founding.jpg',
+    body: `<p>2024年3月15日、UMEZOO株式会社を設立いたしました。</p>
+<p>UMEZOOは「創造的な食体験を、事業活動に浸透させる」をミッションに掲げるフードクリエイティブファームです。フードビジネスディレクションとコンテンツデリバリーを軸に、商品、店舗、製造施設、SNS、映像、BGM、Web、空間演出、内装デザインなど、お客様に提供するあらゆる食体験を、クリエイティビティで特別なものに昇華することを生業としております。</p>
+<p>代表を務める梅津信吾は、フランス留学中に料理人としてのキャリアをスタートし、国内外の名店で研鑽を積んできました。2021年には国内最大級のシェフコンペティション「RED U-35」にてシルバーエッグを受賞。料理の技術だけでなく、食を取り巻く体験すべてをクリエイティブの視点で捉え直すことの重要性を感じ、この度の会社設立に至りました。</p>
+<p>「食べる」という行為を超えて、記憶に残る食体験をデザインすることをミッションに掲げ、フードビジネスの新しい可能性を追求してまいります。</p>
+<p>今後ともUMEZOOをよろしくお願いいたします。</p>`
+  },
+  2: {
+    tag: 'お知らせ',
+    date: '2024.03.20',
+    title: '公式ウェブサイトを公開しました',
+    image: 'images/news/website-launch.jpg',
+    body: `<p>本日、UMEZOO株式会社の公式ウェブサイトを公開いたしました。</p>
+<p>当サイトでは、UMEZOOが提供するサービスの詳細、これまでの実績、そして私たちが大切にしている価値観をご覧いただけます。</p>
+<p><strong>ウェブサイトのコンテンツ</strong></p>
+<p>・About：UMEZOOの理念と代表・梅津信吾のプロフィール<br>
+・Work：高畠ワイナリー、YAMAGATA FUSION、三井不動産&mogなど、これまでの実績<br>
+・Service：フードビジネスディレクション、コンテンツデリバリー、クリエイティブデザインなどのサービス紹介<br>
+・Career：採用情報<br>
+・News：最新のお知らせ<br>
+・Contact：お問い合わせフォーム</p>
+<p>多言語対応（日本語・英語・フランス語）にも対応しており、海外のお客様にもUMEZOOの活動をお伝えできるようになっております。</p>
+<p>プロジェクトのご相談、業務提携のお問い合わせなど、お気軽にご連絡ください。</p>`
+  },
+  3: {
+    tag: 'インタビュー',
+    date: '2024.03.25',
+    title: '代表・梅津信吾が語る「食とクリエイティブの未来」',
+    image: 'images/news/founder-message.jpg',
+    body: `<p>UMEZOO株式会社の設立にあたり、代表・梅津信吾が会社設立の背景と、フードクリエイティブが切り拓く新しい食体験について語りました。</p>
+<p><strong>なぜフードクリエイティブファームを立ち上げたのか</strong></p>
+<p>「料理人として様々な経験を積む中で、食の価値は"味"だけではないと強く感じるようになりました。お皿に盛られた料理だけでなく、空間、音楽、サービス、そしてストーリー。これらすべてが一体となって初めて、人の心に残る食体験が生まれます。</p>
+<p>UMEZOOは、この"食体験全体"をデザインする会社です。レシピ開発や店舗プロデュースはもちろん、映像制作やBGM、Webサイト、SNSコンテンツまで、食に関わるあらゆるクリエイティブを一貫して手がけます。」</p>
+<p><strong>大切にしている価値観</strong></p>
+<p>「私たちが大切にしているのは、Creativity（創造性）、Seamless（シームレスな連携）、Fairness（公正さ）、Impact（成果）の4つです。特にFairnessは、生産者から消費者まで、食に関わるすべての人に対してフェアで共創的であることを意味しています。</p>
+<p>食は人々の暮らしに深く根ざしたものです。だからこそ、ビジネスとして成功するだけでなく、関わるすべての人が幸せになれる形を追求したいと考えています。」</p>
+<p><strong>今後の展望</strong></p>
+<p>「UMEZOOとして、食の可能性をさらに広げていきたいと考えています。国内だけでなく海外の案件にも積極的に取り組み、日本の食文化の素晴らしさを世界に発信していく。そんな架け橋になれたら嬉しいです。」</p>`
+  }
+};
+
+// News modal functionality
+function initNewsModal() {
+  const modal = document.getElementById('newsModal');
+  if (!modal) return;
+
+  const newsCards = document.querySelectorAll('.news-card');
+  const overlay = modal.querySelector('.news-modal__overlay');
+  const closeBtn = modal.querySelector('.news-modal__close');
+  const modalTag = modal.querySelector('.news-modal__tag');
+  const modalDate = modal.querySelector('.news-modal__date');
+  const modalTitle = modal.querySelector('.news-modal__title');
+  const modalImage = modal.querySelector('.news-modal__image');
+  const modalBody = modal.querySelector('.news-modal__body');
+
+  // Open modal when clicking on news card
+  newsCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const newsId = card.dataset.newsId;
+      const news = newsData[newsId];
+
+      if (news) {
+        modalTag.textContent = news.tag;
+        modalDate.textContent = news.date;
+        modalTitle.textContent = news.title;
+        modalImage.style.backgroundImage = `url('${news.image}')`;
+        modalBody.innerHTML = news.body;
+
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // Close modal functions
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
   });
 }
