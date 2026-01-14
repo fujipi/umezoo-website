@@ -927,7 +927,7 @@ function initContactForm() {
 // News data for modal
 const newsData = {
   1: {
-    tag: '会社情報',
+    tag: 'プレスリリース',
     date: '2024.03.15',
     title: 'UMEZOO株式会社を設立しました',
     image: 'images/news/company-founding.jpg',
@@ -955,7 +955,7 @@ const newsData = {
 <p>プロジェクトのご相談、業務提携のお問い合わせなど、お気軽にご連絡ください。</p>`
   },
   3: {
-    tag: 'インタビュー',
+    tag: 'Journey',
     date: '2024.03.25',
     title: '代表・梅津信吾が語る「食とクリエイティブの未来」',
     image: 'images/news/founder-message.jpg',
@@ -970,7 +970,7 @@ const newsData = {
 <p>「UMEZOOとして、食の可能性をさらに広げていきたいと考えています。国内だけでなく海外の案件にも積極的に取り組み、日本の食文化の素晴らしさを世界に発信していく。そんな架け橋になれたら嬉しいです。」</p>`
   },
   4: {
-    tag: 'イベント',
+    tag: 'プロジェクト',
     date: '2024.09.14',
     title: '「YAMAGATA FUSION」を開催しました',
     image: 'images/work/yamagata-fusion.jpg',
@@ -987,7 +987,7 @@ const newsData = {
 <p><a href="https://www.redu35.jp/clubred/report/11301/" target="_blank" rel="noopener noreferrer">イベントレポートはこちら →</a></p>`
   },
   5: {
-    tag: 'ワークショップ',
+    tag: 'プロジェクト',
     date: '2024.05.10',
     title: '三井不動産「&mog」にてワークショップを共催',
     image: 'images/work/andmog.jpg',
@@ -1297,78 +1297,128 @@ function initCareerModal() {
   });
 }
 
-// Note articles functionality - fetch from RSS-synced JSON
+// News categories for filtering
+const NEWS_CATEGORIES = ['すべて', 'Journey', 'プレスリリース', 'プロジェクト', 'レポート', 'お知らせ'];
+
+// Load note articles and integrate with news grid
 async function initNoteArticles() {
   const newsGrid = document.querySelector('.news-grid');
-  const noteSection = document.getElementById('noteArticlesSection');
-
-  // Only run on news page
-  if (!newsGrid && !noteSection) return;
+  if (!newsGrid) return;
 
   try {
     const response = await fetch('data/note-articles.json');
     if (!response.ok) {
       console.log('Note articles data not found');
+      initNewsFilter(); // Initialize filter even without note articles
       return;
     }
 
     const data = await response.json();
 
-    if (!data.articles || data.articles.length === 0) {
-      console.log('No note articles found');
-      return;
-    }
-
-    // Create note articles section if it doesn't exist
-    let targetContainer = noteSection;
-    if (!targetContainer && newsGrid) {
-      // Insert note section before the news grid
-      const contentSection = newsGrid.closest('.content-section');
-      if (contentSection) {
-        const noteHTML = `
-          <section class="content-section content-section--note" id="noteArticlesSection">
-            <div class="container">
-              <div class="section-header">
-                <h2 class="section-title">Journey</h2>
-                <p class="section-subtitle">noteでの活動記録</p>
-                <a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="note-link">
-                  すべての記事を見る →
-                </a>
-              </div>
-              <div class="note-grid" id="noteGrid"></div>
-            </div>
-          </section>
-        `;
-        contentSection.insertAdjacentHTML('beforebegin', noteHTML);
-        targetContainer = document.getElementById('noteArticlesSection');
-      }
-    }
-
-    const noteGrid = document.getElementById('noteGrid');
-    if (!noteGrid) return;
-
-    // Render note articles
-    const articlesHTML = data.articles.map(article => `
-      <article class="note-card" onclick="window.open('${article.link}', '_blank')">
-        <div class="note-card__image" style="background-image: url('${article.image || 'images/news/default-note.jpg'}');">
-          <span class="note-card__image-placeholder">${article.title.substring(0, 20)}...</span>
-        </div>
-        <div class="note-card__content">
-          <div class="note-card__meta">
-            <span class="note-card__tag">${article.tag}</span>
-            <time class="note-card__date">${article.date}</time>
+    if (data.articles && data.articles.length > 0) {
+      // Add note articles to the news grid
+      const noteCardsHTML = data.articles.map(article => `
+        <article class="news-card news-card--external" data-tag="${article.tag}" data-date="${article.date}" onclick="window.open('${article.link}', '_blank')">
+          <div class="news-card__image" style="background-image: url('${article.image || 'images/news/default-note.jpg'}');">
+            <span class="news-card__image-placeholder">${article.title.substring(0, 20)}...</span>
           </div>
-          <h3 class="note-card__title">${article.title}</h3>
-          <p class="note-card__summary">${article.summary}</p>
-          <span class="note-card__link">noteで読む →</span>
-        </div>
-      </article>
-    `).join('');
+          <div class="news-card__content">
+            <div class="news-card__meta">
+              <span class="news-card__tag news-card__tag--journey">${article.tag}</span>
+              <time class="news-card__date">${article.date}</time>
+            </div>
+            <h3 class="news-card__title">${article.title}</h3>
+            <p class="news-card__summary">${article.summary}</p>
+            <span class="news-card__external-link">noteで読む →</span>
+          </div>
+        </article>
+      `).join('');
 
-    noteGrid.innerHTML = articlesHTML;
+      // Insert note articles at the beginning of the grid
+      newsGrid.insertAdjacentHTML('afterbegin', noteCardsHTML);
+      console.log(`Loaded ${data.articles.length} note articles`);
+    }
 
-    console.log(`Loaded ${data.articles.length} note articles`);
+    // Initialize filter after adding note articles
+    initNewsFilter();
+
   } catch (error) {
     console.log('Error loading note articles:', error);
+    initNewsFilter(); // Initialize filter even on error
   }
+}
+
+// News filter functionality
+function initNewsFilter() {
+  const newsGrid = document.querySelector('.news-grid');
+  const filterContainer = document.querySelector('.news-filter');
+  if (!newsGrid || !filterContainer) return;
+
+  const filterButtons = filterContainer.querySelectorAll('.news-filter__btn');
+  const newsCards = newsGrid.querySelectorAll('.news-card');
+
+  // Add data-tag to existing news cards that don't have it
+  newsCards.forEach(card => {
+    if (!card.dataset.tag) {
+      const tagEl = card.querySelector('.news-card__tag');
+      if (tagEl) {
+        card.dataset.tag = tagEl.textContent.trim();
+      }
+    }
+  });
+
+  // Sort all cards by date (newest first)
+  sortNewsByDate();
+
+  // Filter button click handler
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
+
+      // Update active state
+      filterButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      // Filter cards
+      const allCards = newsGrid.querySelectorAll('.news-card');
+      allCards.forEach(card => {
+        if (category === 'すべて' || card.dataset.tag === category) {
+          card.style.display = '';
+          card.classList.remove('is-hidden');
+        } else {
+          card.style.display = 'none';
+          card.classList.add('is-hidden');
+        }
+      });
+    });
+  });
+}
+
+// Sort news cards by date
+function sortNewsByDate() {
+  const newsGrid = document.querySelector('.news-grid');
+  if (!newsGrid) return;
+
+  const cards = Array.from(newsGrid.querySelectorAll('.news-card'));
+
+  cards.sort((a, b) => {
+    const dateA = parseDateString(a.dataset.date || a.querySelector('.news-card__date')?.textContent || '');
+    const dateB = parseDateString(b.dataset.date || b.querySelector('.news-card__date')?.textContent || '');
+    return dateB - dateA; // Newest first
+  });
+
+  // Re-append in sorted order
+  cards.forEach(card => newsGrid.appendChild(card));
+}
+
+// Parse date string like "2024.03.15" or "2025.06（予定）"
+function parseDateString(dateStr) {
+  const match = dateStr.match(/(\d{4})\.(\d{2})(?:\.(\d{2}))?/);
+  if (match) {
+    const year = parseInt(match[1]);
+    const month = parseInt(match[2]) - 1;
+    const day = match[3] ? parseInt(match[3]) : 1;
+    return new Date(year, month, day);
+  }
+  return new Date(0);
 }
