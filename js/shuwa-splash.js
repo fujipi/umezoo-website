@@ -1,12 +1,12 @@
 /**
- * しゅわTokyo Splash Screen
+ * しゅわTokyo Splash Screen & Hero
  * Random image with komorebi (dappled sunlight) effect
  */
 
 (function() {
   'use strict';
 
-  // Splash images - ランダムに1つ選ばれる
+  // Splash/Hero images - ランダムに選ばれる
   const splashImages = [
     'images/shuwa/splash-1.jpg',
     'images/shuwa/splash-2.jpg',
@@ -16,38 +16,54 @@
     'images/shuwa/splash-6.jpg'
   ];
 
-  // Initialize splash screen
-  function initSplash() {
+  // Get random image index
+  function getRandomIndex(exclude) {
+    let index;
+    do {
+      index = Math.floor(Math.random() * splashImages.length);
+    } while (index === exclude && splashImages.length > 1);
+    return index;
+  }
+
+  // Initialize splash screen and hero
+  function init() {
     const splash = document.getElementById('shuwaSplash');
-    if (!splash) return;
+    const hero = document.getElementById('shuwaHero');
 
-    const bg = splash.querySelector('.shuwa-splash__bg');
+    // Select random images (different for splash and hero)
+    const splashIndex = getRandomIndex(-1);
+    const heroIndex = getRandomIndex(splashIndex);
 
-    // Select random image
-    const randomIndex = Math.floor(Math.random() * splashImages.length);
-    const selectedImage = splashImages[randomIndex];
+    // Set splash background
+    if (splash) {
+      const splashBg = splash.querySelector('.shuwa-splash__bg');
+      splashBg.style.backgroundImage = `url('${splashImages[splashIndex]}')`;
 
-    // Set background image
-    bg.style.backgroundImage = `url('${selectedImage}')`;
+      // Fade in
+      splash.classList.add('is-visible');
 
-    // Fade in
-    splash.classList.add('is-visible');
+      // Fade out after delay
+      setTimeout(() => {
+        splash.classList.add('is-hidden');
+      }, 2500);
 
-    // Fade out after delay
-    setTimeout(() => {
-      splash.classList.add('is-hidden');
-    }, 2500);
+      // Remove from DOM after animation
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 3500);
+    }
 
-    // Remove from DOM after animation
-    setTimeout(() => {
-      splash.style.display = 'none';
-    }, 3500);
+    // Set hero background
+    if (hero) {
+      const heroBg = hero.querySelector('.shuwa-hero__bg');
+      heroBg.style.backgroundImage = `url('${splashImages[heroIndex]}')`;
+    }
   }
 
   // Run on DOM ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSplash);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initSplash();
+    init();
   }
 })();
