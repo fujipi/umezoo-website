@@ -216,17 +216,26 @@
 }
 
 .shuwa-hero__subtitle {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 2;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   opacity: 0;
   animation: shuwaFadeInUp 0.8s ease 0.7s forwards;
 }
 
+.shuwa-hero__note {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: shuwaFadeInUp 0.8s ease 0.85s forwards;
+}
+
 .shuwa-hero__cta {
   opacity: 0;
-  animation: shuwaFadeInUp 0.8s ease 0.9s forwards;
+  animation: shuwaFadeInUp 0.8s ease 1s forwards;
 }
 
 .shuwa-hero__scroll {
@@ -717,13 +726,17 @@
   }
 
   .shuwa-hero__tagline {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.2em;
   }
 
   .shuwa-hero__subtitle {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     line-height: 1.9;
+  }
+
+  .shuwa-hero__note {
+    font-size: 0.8125rem;
   }
 
   .shuwa-intro {
@@ -796,7 +809,11 @@
   }
 
   .shuwa-hero__subtitle {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .shuwa-hero__note {
+    font-size: 0.75rem;
   }
 
   .shuwa-plan {
