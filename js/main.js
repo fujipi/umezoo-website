@@ -684,6 +684,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimations();
   initContactForm();
   initNewsModal();
+  initCareerModal();
 
   // Apply translations
   applyTranslations();
@@ -972,15 +973,15 @@ const newsData = {
     date: '2024.09.14',
     title: '「YAMAGATA FUSION」を開催しました',
     image: 'images/work/yamagata-fusion.jpg',
-    body: `<p>2024年9月14日、山形県高畠町にて「YAMAGATA FUSION」を開催いたしました。</p>
+    body: `<p>2024年9月14日、東京にて「YAMAGATA FUSION」を開催いたしました。</p>
 <p>本イベントは、山形県が誇る食材とワインを融合させた新たな食体験を発信するコラボイベントです。高畠ワイナリー様のご協力のもと、CLUB REDメンバーとして企画・運営を担当させていただきました。</p>
 <p><strong>イベント概要</strong></p>
 <p>・日時：2024年9月14日（土）<br>
-・会場：高畠ワイナリー（山形県東置賜郡高畠町）<br>
-・内容：地元食材を活かしたコース料理と高畠ワインのペアリング体験</p>
+・会場：東京都内<br>
+・内容：山形の食材を活かしたコース料理と高畠ワインのペアリング体験</p>
 <p><strong>山形の食材とワインの融合</strong></p>
 <p>山形県は、米沢牛、だだちゃ豆、ラ・フランスなど豊かな食材の宝庫です。また、高畠ワイナリーは日本を代表するワイナリーの一つとして知られています。</p>
-<p>今回のイベントでは、これらの地元食材を活かした創作料理と、それに合わせた高畠ワインのペアリングを提案。参加者の皆様に山形の「テロワール」を五感で体験していただきました。</p>
+<p>今回のイベントでは、山形から届いた旬の食材を活かした創作料理と、それに合わせた高畠ワインのペアリングを提案。東京にいながら山形の「テロワール」を五感で体験していただきました。</p>
 <p>ご参加いただいた皆様、そしてご協力いただいた高畠ワイナリーの皆様に、心より感謝申し上げます。</p>
 <p><a href="https://www.redu35.jp/clubred/report/11301/" target="_blank" rel="noopener noreferrer">イベントレポートはこちら →</a></p>`
   },
@@ -1005,10 +1006,10 @@ const newsData = {
   },
   6: {
     tag: 'プロジェクト',
-    date: '2024.04.20',
+    date: '2025.06（予定）',
     title: '福島県大熊町「Fun Eat Makers」プロジェクトに参画',
     image: 'images/work/fun-eat-makers.jpg',
-    body: `<p>UMEZOOは、福島県大熊町で進行中の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画しております。</p>
+    body: `<p>UMEZOOは、福島県大熊町で進行中の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画しております。<strong>2025年6月ローンチ予定</strong>です。</p>
 <p><strong>プロジェクトの背景</strong></p>
 <p>福島県大熊町は、東日本大震災および原発事故からの復興を進める中で、新たな産業の創出と地域の活性化に取り組んでいます。「Fun Eat Makers」は、農業と食を軸にした復興プロジェクトとして、地域に新しい価値を生み出すことを目指しています。</p>
 <p><strong>「つくる・たべる・つながる」</strong></p>
@@ -1049,6 +1050,228 @@ function initNewsModal() {
         modalTitle.textContent = news.title;
         modalImage.style.backgroundImage = `url('${news.image}')`;
         modalBody.innerHTML = news.body;
+
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // Close modal functions
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+}
+
+// Job data for career modal
+const jobData = {
+  1: {
+    title: 'ビジネスディレクター',
+    type: '正社員',
+    location: '東京',
+    role: 'クライアントの事業課題を深く理解し、多様なサービスを組み合わせたソリューションを設計・推進する責任者',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>クライアントの経営者・事業責任者との対話を通じた課題のヒアリングと分析</li>
+        <li>課題解決に向けた包括的なサービスプランの設計と提案</li>
+        <li>プロジェクト全体のディレクションおよび社内外のリソース調整</li>
+        <li>クライアントとの継続的なリレーション構築と追加提案</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>事業会社またはコンサルティングファームでの事業企画・経営企画経験</li>
+        <li>複数ステークホルダーを巻き込んだプロジェクトマネジメント経験</li>
+        <li>経営レベルとの折衝およびプレゼンテーション経験</li>
+        <li>食・クリエイティブ領域への強い関心</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>クライアントの課題を自分ごととして捉え、最後まで責任を持てる方</li>
+        <li>多様な専門家と協働し、チームとして成果を出すことに喜びを感じる方</li>
+        <li>未経験領域でも積極的に学び、自ら動ける方</li>
+      </ul>
+    `
+  },
+  2: {
+    title: 'セールス',
+    type: '正社員 / 業務委託',
+    location: 'リモート可',
+    role: 'UMEZOOのサービスを必要とする企業を開拓し、継続的な取引関係を構築する営業担当',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>ターゲット企業のリサーチとアプローチリスト作成</li>
+        <li>新規顧客へのアウトバウンド営業（電話・メール・SNS等）</li>
+        <li>商談設定および初回ヒアリングの実施</li>
+        <li>提案資料の作成支援と契約クロージング</li>
+        <li>CRMを活用した顧客管理とパイプライン可視化</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>法人向け新規営業経験（業界不問）</li>
+        <li>目標達成意欲が高く、PDCAを自ら回せる方</li>
+        <li>基本的なPCスキル（スプレッドシート、プレゼン資料作成）</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>フットワーク軽く、スピード感を持って行動できる方</li>
+        <li>断られても粘り強くアプローチを続けられる方</li>
+        <li>食やクリエイティブ業界への興味がある方</li>
+      </ul>
+    `
+  },
+  3: {
+    title: 'フードプランナー',
+    type: '正社員 / 業務委託',
+    location: 'リモート可',
+    role: 'レシピ開発・商品開発・メニュー設計など、フード領域の成果物を高い品質で納品する実務担当者',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>クライアント要件に基づいたレシピ・メニューの開発</li>
+        <li>試作・試食会の実施とフィードバック反映</li>
+        <li>原価計算、栄養計算、商品仕様書の作成</li>
+        <li>製造工程の設計と外部パートナー（OEM工場等）との連携</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>飲食店・ホテル・食品メーカー等でのレシピ開発またはメニュー開発経験</li>
+        <li>調理師免許または栄養士資格（尚可）</li>
+        <li>食材・調味料・調理法に関する幅広い知識</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>美味しさと再現性を両立できる方</li>
+        <li>細部までこだわり、品質に妥協しない方</li>
+        <li>トレンドに敏感で、新しい食体験を探求し続ける方</li>
+      </ul>
+    `
+  },
+  4: {
+    title: 'フードコンサルタント',
+    type: '正社員 / 業務委託',
+    location: 'リモート可',
+    role: '市場分析・戦略立案・事業計画策定などの事業関連成果物を提供するコンサルタント',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>市場調査（定量・定性）と競合分析の実施</li>
+        <li>事業計画書・ビジネスモデルの策定支援</li>
+        <li>ブランドコンセプト・ポジショニングの設計</li>
+        <li>クライアントへのプレゼンテーションと報告書作成</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>コンサルティングファームまたは事業会社での戦略立案経験</li>
+        <li>食品・飲食業界の知識（尚可）</li>
+        <li>リサーチスキルおよび論理的な資料作成能力</li>
+        <li>Excel/PowerPoint等を用いた分析・資料作成スキル</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>データと仮説を行き来しながら戦略を構築できる方</li>
+        <li>クライアントの意思決定を後押しする説得力のあるアウトプットを出せる方</li>
+        <li>食産業の未来に興味を持ち、業界課題を自分ごと化できる方</li>
+      </ul>
+    `
+  },
+  5: {
+    title: '人材採用スタッフ',
+    type: '正社員 / 業務委託',
+    location: 'リモート可',
+    role: '採用計画の立案から母集団形成、選考運営、入社後フォローまで、採用プロセス全体を推進',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>採用計画の策定と採用チャネルの選定</li>
+        <li>求人票の作成、媒体運用、スカウト送信</li>
+        <li>応募者対応、面接日程調整、選考フローの運営</li>
+        <li>内定者フォローおよびオンボーディング支援</li>
+        <li>採用ブランディング施策の企画・実行</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>人事・採用担当としての実務経験</li>
+        <li>採用媒体、ダイレクトリクルーティングの運用経験</li>
+        <li>基本的なPCスキルと丁寧なコミュニケーション能力</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>候補者一人ひとりに真摯に向き合える方</li>
+        <li>会社のカルチャーを理解し、自ら発信できる方</li>
+        <li>スタートアップのスピード感を楽しめる方</li>
+      </ul>
+    `
+  },
+  6: {
+    title: 'コンシューマー向け新規事業責任者',
+    type: '正社員',
+    location: '東京',
+    role: '一般消費者向けの新規事業を立ち上げ、成長させる責任者（部長レベル）',
+    body: `
+      <h3>主な業務内容</h3>
+      <ul>
+        <li>新規事業のアイデア創出、市場検証（MVP構築）</li>
+        <li>事業計画の策定とKPI設計</li>
+        <li>チーム組成とマネジメント</li>
+        <li>プロダクト開発、マーケティング、オペレーション全般の推進</li>
+        <li>経営陣への進捗報告と意思決定サポート</li>
+      </ul>
+      <h3>求める経験・スキル</h3>
+      <ul>
+        <li>新規事業立ち上げまたは事業責任者としての経験</li>
+        <li>P/L管理、チームマネジメントの経験</li>
+        <li>食品・飲食・消費財領域でのビジネス経験（尚可）</li>
+        <li>不確実性の高い環境で意思決定し、推進できる能力</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <ul>
+        <li>ゼロイチを楽しみ、自ら手を動かせる方</li>
+        <li>事業成長に対するオーナーシップを持てる方</li>
+        <li>失敗を恐れず、高速でPDCAを回せる方</li>
+      </ul>
+    `
+  }
+};
+
+// Career modal functionality
+function initCareerModal() {
+  const modal = document.getElementById('careerModal');
+  if (!modal) return;
+
+  const positionCards = document.querySelectorAll('.position-card');
+  const overlay = modal.querySelector('.career-modal__overlay');
+  const closeBtn = modal.querySelector('.career-modal__close');
+  const modalType = modal.querySelector('.career-modal__type');
+  const modalLocation = modal.querySelector('.career-modal__location');
+  const modalTitle = modal.querySelector('.career-modal__title');
+  const modalRole = modal.querySelector('.career-modal__role');
+  const modalBody = modal.querySelector('.career-modal__body');
+
+  // Open modal when clicking on position card
+  positionCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const jobId = card.dataset.jobId;
+      const job = jobData[jobId];
+
+      if (job) {
+        modalType.textContent = job.type;
+        modalLocation.textContent = job.location;
+        modalTitle.textContent = job.title;
+        modalRole.textContent = job.role;
+        modalBody.innerHTML = job.body;
 
         modal.classList.add('is-open');
         document.body.style.overflow = 'hidden';
