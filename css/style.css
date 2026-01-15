@@ -2237,11 +2237,6 @@ a.work-card:hover {
   border-color: var(--color-primary);
 }
 
-/* News card tag colors by category */
-.news-card__tag--journey {
-  background: #2E7D6B;
-}
-
 /* External link card styles */
 .news-card--external {
   cursor: pointer;

@@ -1324,7 +1324,7 @@ async function initNoteArticles() {
           </div>
           <div class="news-card__content">
             <div class="news-card__meta">
-              <span class="news-card__tag news-card__tag--journey">${article.tag}</span>
+              <span class="news-card__tag">${article.tag}</span>
               <time class="news-card__date">${article.date}</time>
             </div>
             <h3 class="news-card__title">${article.title}</h3>
