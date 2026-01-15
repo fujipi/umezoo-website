@@ -41,9 +41,14 @@
       <p class="shuwa-hero__note">準備は簡単。届いたその日から楽しめます。</p>
       <a href="#plans" class="btn btn--white shuwa-hero__cta">プランを見る</a>
     </div>
-    <div class="shuwa-hero__scroll">
+    <div class="shuwa-hero__scroll" onclick="document.querySelector('.shuwa-intro').scrollIntoView({behavior: 'smooth'})">
+      <div class="shuwa-hero__scroll-mouse">
+        <div class="shuwa-hero__scroll-wheel"></div>
+      </div>
       <span>SCROLL</span>
-      <span class="shuwa-hero__scroll-line"></span>
+      <svg class="shuwa-hero__scroll-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M1 1L6 6L11 1"/>
+      </svg>
     </div>
   </section>
 
