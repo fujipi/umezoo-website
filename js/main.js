@@ -112,7 +112,7 @@ const translations = {
     },
     // Service Page
     service: {
-      pageTitle: 'WHAT WE DO',
+      pageTitle: 'Service',
       pageSubtitle: '3つの領域で、パートナーの事業を動かす',
       createSectionTitle: 'つくる',
       createBody: 'UMEZOOのフードプランナーが、コンセプト設計からレシピ開発、試作、原価計算、OEM先との製造調整、品質管理まで一貫して担当します。納品して終わりではなく、月額パートナーとして商品の改良・拡張を継続的に支えます。',
@@ -391,7 +391,7 @@ const translations = {
     },
     // Service Page
     service: {
-      pageTitle: 'WHAT WE DO',
+      pageTitle: 'Service',
       pageSubtitle: 'Three domains that drive your partner\'s business',
       createSectionTitle: 'Create',
       createBody: 'UMEZOO\'s food planners handle everything from concept design to recipe development, prototyping, cost calculation, OEM coordination, and quality control. We don\'t just deliver — as a monthly partner, we continuously support product improvement and expansion.',
@@ -670,7 +670,7 @@ const translations = {
     },
     // Service Page
     service: {
-      pageTitle: 'WHAT WE DO',
+      pageTitle: 'Service',
       pageSubtitle: 'Trois domaines pour faire avancer l\'activité de nos partenaires',
       createSectionTitle: 'Créer',
       createBody: 'Les planificateurs alimentaires d\'UMEZOO gèrent tout, de la conception du concept au développement de recettes, au prototypage, au calcul des coûts, à la coordination OEM et au contrôle qualité. Nous ne nous contentons pas de livrer — en tant que partenaire mensuel, nous soutenons continuellement l\'amélioration et l\'expansion des produits.',
