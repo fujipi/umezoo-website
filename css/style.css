@@ -2605,6 +2605,14 @@ a.work-card:hover {
   max-width: 400px;
 }
 
+.partners__logo--invert {
+  filter: grayscale(100%) invert(1);
+}
+
+.partners__logo--invert:hover {
+  filter: invert(1);
+}
+
 @keyframes partners-scroll {
   0% {
     transform: translateX(0);
