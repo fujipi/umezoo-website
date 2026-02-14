@@ -138,15 +138,39 @@ const translations = {
       workstyleIntro1: 'UMEZOOの「働き方」は固定ではなく、事業・チーム・フェーズに合わせてベストを更新し続ける運用です。オフィスで生まれるコラボレーション（試食・試作・製造・撮影・ワークショップ等）と、リモートが生む集中と効率を掛け合わせ、個と組織のアウトプットを最大化します。',
       workstyleIntro2: '私たちは「食体験をデザインする」会社です。商品/店舗/空間から、SNS・映像・Webまで含めて一気通貫で作るため、働き方もクリエイティブ制作会社と事業会社のハイブリッドになります。',
       workLocationTitle: '働く場所',
+      workLocationBase: '拠点：',
+      workLocationBaseValue: '東京（千代田区東神田）',
+      workLocationStyle: '勤務形態：',
+      workLocationStyleValue: '職種ごとに設定します（例：セールスはハイブリッドなど）。',
+      workDetailButton: 'オフライン / リモート推奨の仕事を見る',
       offlineWorkTitle: 'オフライン推奨の仕事',
       offlineWorkText: 'UMEZOOは「食」を扱う以上、オフラインでしか品質が決まらない瞬間があります。',
+      offlineTag1: '試食・試作',
+      offlineTag2: '品質チェック',
+      offlineTag3: '撮影（フードスタイリング含む）',
+      offlineTag4: '体験設計 / ワークショップ',
+      offlineTag5: '店舗 / 製造現場での検証',
+      offlineTag6: '研究開発',
       remoteWorkTitle: 'リモート推奨の仕事',
       remoteWorkText: '以下はリモートの方が生産性が出やすい業務です。',
+      remoteTag1: '提案書 / 企画書 / 事業計画',
+      remoteTag2: '編集・台本・構成',
+      remoteTag3: '分析（SNS / GA等）',
+      remoteTag4: '制作進行',
+      remoteTag5: 'ナレッジ整理・手順書整備',
       remoteWorkNote: '目安の運用：チーム/案件単位で「今週は現場比率高め」「今週は制作集中」など、成果が最大化する配置を合意して動きます。',
       workHoursTitle: '働く時間',
       workHoursText: 'UMEZOOは、成果と品質に責任を持つプロフェッショナルとして、個々の事情と役割に応じた柔軟性を重視します（職種・契約形態により例外あり）。',
-      workProcessTitle: '仕事の進め方 ― "Seamless"な仕組み',
-      workProcessText: 'UMEZOOの価値は、企画→制作→運用を切らずに繋げる「Seamless」です。プロジェクトでは最低限これを徹底します。',
+      workHoursDetail1: 'コラボレーション時間帯（例：日中の一定時間）はチームで揃え、レビュー・意思決定の密度を上げる',
+      workHoursDetail2: 'それ以外は、各自が最もパフォーマンスが出る時間帯で集中',
+      workFoundationTitle: '働く土台',
+      workFoundationText: 'UMEZOOの価値は、企画→制作→運用を切らずに繋げる「Seamless」です。プロジェクトでは最低限これを徹底します。',
+      workFoundationKpi: '目的とKPI：',
+      workFoundationKpiValue: 'Impact（成果）を先に置く',
+      workFoundationQuality: '品質基準：',
+      workFoundationQualityValue: 'レシピ/撮影/デザイン/運用の"当たり前水準"を言語化',
+      workFoundationRole: '役割と締切：',
+      workFoundationRoleValue: '責任の所在を曖昧にしない（属人化を潰す）',
       positionsTitle: '募集職種',
       positionsSubtitle: 'Open Positions',
       benefitsTitle: '福利厚生・共通条件',
@@ -380,15 +404,39 @@ const translations = {
       workstyleIntro1: 'At UMEZOO, our work style is not fixed — we continuously update best practices to match the business, team, and phase. We maximize output by combining the collaboration born in our office (tasting, prototyping, production, photography, workshops) with the focus and efficiency that remote work enables.',
       workstyleIntro2: 'We are a company that "designs food experiences." Because we create everything seamlessly — from products, stores, and spaces to SNS, video, and web — our work style is a hybrid of a creative production company and a business company.',
       workLocationTitle: 'Work Location',
+      workLocationBase: 'Base: ',
+      workLocationBaseValue: 'Tokyo (Higashi-Kanda, Chiyoda-ku)',
+      workLocationStyle: 'Work Style: ',
+      workLocationStyleValue: 'Set per role (e.g., Sales is hybrid).',
+      workDetailButton: 'View Offline / Remote Work Details',
       offlineWorkTitle: 'Offline-Recommended Work',
       offlineWorkText: 'Since UMEZOO deals with "food," there are moments when quality can only be determined in person.',
+      offlineTag1: 'Tasting & Prototyping',
+      offlineTag2: 'Quality Checks',
+      offlineTag3: 'Photography (incl. Food Styling)',
+      offlineTag4: 'Experience Design / Workshops',
+      offlineTag5: 'Store / Production Site Verification',
+      offlineTag6: 'R&D',
       remoteWorkTitle: 'Remote-Recommended Work',
       remoteWorkText: 'The following tasks tend to be more productive when done remotely.',
+      remoteTag1: 'Proposals / Plans / Business Plans',
+      remoteTag2: 'Editing / Scripts / Structure',
+      remoteTag3: 'Analysis (SNS / GA etc.)',
+      remoteTag4: 'Production Management',
+      remoteTag5: 'Knowledge Organization / Documentation',
       remoteWorkNote: 'Guideline: Teams agree on the optimal balance per project — "more on-site this week" or "focused on production this week" — to maximize results.',
       workHoursTitle: 'Working Hours',
       workHoursText: 'UMEZOO values flexibility based on individual circumstances and roles, as professionals responsible for outcomes and quality (exceptions may apply by position and contract type).',
-      workProcessTitle: 'How We Work — A "Seamless" System',
-      workProcessText: 'UMEZOO\'s value lies in "Seamless" — connecting planning, production, and operations without breaks. We ensure at minimum the following in every project.',
+      workHoursDetail1: 'Align collaboration hours (e.g., certain daytime hours) as a team to increase review and decision-making density',
+      workHoursDetail2: 'Outside those hours, focus during the time that produces your best performance',
+      workFoundationTitle: 'Work Foundation',
+      workFoundationText: 'UMEZOO\'s value lies in "Seamless" — connecting planning, production, and operations without breaks. We ensure at minimum the following in every project.',
+      workFoundationKpi: 'Purpose & KPIs: ',
+      workFoundationKpiValue: 'Put Impact (results) first',
+      workFoundationQuality: 'Quality Standards: ',
+      workFoundationQualityValue: 'Verbalize the "baseline standards" for recipes, photography, design, and operations',
+      workFoundationRole: 'Roles & Deadlines: ',
+      workFoundationRoleValue: 'Never leave accountability ambiguous (eliminate over-reliance on individuals)',
       positionsTitle: 'Open Positions',
       positionsSubtitle: 'Job Listings',
       benefitsTitle: 'Benefits & Common Conditions',
@@ -622,15 +670,39 @@ const translations = {
       workstyleIntro1: 'Chez UMEZOO, notre mode de travail n\'est pas figé — nous actualisons continuellement nos pratiques pour nous adapter au business, à l\'équipe et à la phase du projet. Nous maximisons les résultats en combinant la collaboration née au bureau (dégustation, prototypage, production, photographie, ateliers) avec la concentration et l\'efficacité du travail à distance.',
       workstyleIntro2: 'Nous sommes une entreprise qui « conçoit des expériences alimentaires ». Parce que nous créons tout de manière fluide — des produits, magasins et espaces aux réseaux sociaux, vidéos et web — notre mode de travail est un hybride entre une société de production créative et une entreprise.',
       workLocationTitle: 'Lieu de travail',
+      workLocationBase: 'Base : ',
+      workLocationBaseValue: 'Tokyo (Higashi-Kanda, Chiyoda-ku)',
+      workLocationStyle: 'Mode de travail : ',
+      workLocationStyleValue: 'Défini par rôle (ex. : Ventes en mode hybride).',
+      workDetailButton: 'Voir les détails travail présentiel / à distance',
       offlineWorkTitle: 'Travail recommandé en présentiel',
       offlineWorkText: 'Puisque UMEZOO travaille avec la « nourriture », certains moments de qualité ne peuvent être déterminés qu\'en personne.',
+      offlineTag1: 'Dégustation & Prototypage',
+      offlineTag2: 'Contrôle qualité',
+      offlineTag3: 'Photographie (incl. stylisme culinaire)',
+      offlineTag4: 'Conception d\'expériences / Ateliers',
+      offlineTag5: 'Vérification en magasin / site de production',
+      offlineTag6: 'R&D',
       remoteWorkTitle: 'Travail recommandé à distance',
       remoteWorkText: 'Les tâches suivantes tendent à être plus productives en télétravail.',
+      remoteTag1: 'Propositions / Plans / Business plans',
+      remoteTag2: 'Édition / Scripts / Structure',
+      remoteTag3: 'Analyse (SNS / GA etc.)',
+      remoteTag4: 'Gestion de production',
+      remoteTag5: 'Organisation des connaissances / Documentation',
       remoteWorkNote: 'Principe directeur : les équipes s\'accordent sur l\'équilibre optimal par projet — « plus de présentiel cette semaine » ou « concentration sur la production cette semaine » — pour maximiser les résultats.',
       workHoursTitle: 'Horaires de travail',
       workHoursText: 'UMEZOO valorise la flexibilité selon les circonstances individuelles et les rôles, en tant que professionnels responsables des résultats et de la qualité (des exceptions peuvent s\'appliquer selon le poste et le type de contrat).',
-      workProcessTitle: 'Notre méthode — Un système "Seamless"',
-      workProcessText: 'La valeur d\'UMEZOO réside dans le « Seamless » — connecter planification, production et opérations sans rupture. Nous garantissons au minimum ce qui suit dans chaque projet.',
+      workHoursDetail1: 'Aligner les heures de collaboration (ex. : certaines heures en journée) en équipe pour densifier les revues et prises de décision',
+      workHoursDetail2: 'En dehors, se concentrer aux heures où chacun performe le mieux',
+      workFoundationTitle: 'Base de travail',
+      workFoundationText: 'La valeur d\'UMEZOO réside dans le « Seamless » — connecter planification, production et opérations sans rupture. Nous garantissons au minimum ce qui suit dans chaque projet.',
+      workFoundationKpi: 'Objectifs & KPIs : ',
+      workFoundationKpiValue: 'Placer l\'Impact (résultats) en premier',
+      workFoundationQuality: 'Standards qualité : ',
+      workFoundationQualityValue: 'Verbaliser les « standards de base » pour recettes, photographie, design et opérations',
+      workFoundationRole: 'Rôles & Délais : ',
+      workFoundationRoleValue: 'Ne jamais laisser la responsabilité ambiguë (éliminer la dépendance individuelle)',
       positionsTitle: 'Postes ouverts',
       positionsSubtitle: 'Offres d\'emploi',
       benefitsTitle: 'Avantages & Conditions communes',
@@ -754,6 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initNewsModal();
   initCareerModal();
+  initWorkstyleModal();
   initNoteArticles();
 
   // Apply translations
@@ -1631,6 +1704,36 @@ function initCareerModal() {
   overlay.addEventListener('click', closeModal);
 
   // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+}
+
+// Workstyle detail modal functionality
+function initWorkstyleModal() {
+  const modal = document.getElementById('workstyleDetailModal');
+  const btn = document.getElementById('workstyleDetailBtn');
+  if (!modal || !btn) return;
+
+  const overlay = modal.querySelector('.workstyle-modal__overlay');
+  const closeBtn = modal.querySelector('.workstyle-modal__close');
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) {
       closeModal();
