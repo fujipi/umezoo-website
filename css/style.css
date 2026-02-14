@@ -1024,15 +1024,7 @@ a.work-card:hover {
    Career Page - Workstyle Section
    ======================================== */
 .workstyle {
-  background: var(--color-primary);
-}
-
-.workstyle .content-section__title {
-  color: var(--color-white);
-}
-
-.workstyle .content-section__subtitle {
-  color: rgba(255, 255, 255, 0.5);
+  background: var(--color-white);
 }
 
 .workstyle__intro {
@@ -1043,7 +1035,7 @@ a.work-card:hover {
 
 .workstyle__intro p {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-light);
   line-height: 1.9;
   margin-bottom: 1rem;
 }
@@ -1054,7 +1046,7 @@ a.work-card:hover {
 
 .workstyle__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -1064,20 +1056,16 @@ a.work-card:hover {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 2rem 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   transition: all var(--transition-normal);
 }
 
-.workstyle-item:nth-child(5) {
-  grid-column: 1 / -1;
-}
-
 .workstyle-item:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: var(--color-bg-dark);
+  border-color: #ccc;
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* Watermark number */
@@ -1090,21 +1078,21 @@ a.work-card:hover {
   font-size: 8rem;
   font-weight: 600;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.03);
+  color: rgba(0, 0, 0, 0.03);
   pointer-events: none;
   z-index: 0;
   transition: color var(--transition-normal);
 }
 
 .workstyle-item:hover::before {
-  color: rgba(255, 255, 255, 0.06);
+  color: rgba(0, 0, 0, 0.06);
 }
 
 /* Visible small number */
 .workstyle-item__number {
   font-family: var(--font-display);
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text-muted);
   line-height: 1;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -1122,11 +1110,11 @@ a.work-card:hover {
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.75rem;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .workstyle-item__text {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-light);
   margin-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.8;
@@ -1143,12 +1131,12 @@ a.work-card:hover {
   padding-left: 1rem;
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-light);
   line-height: 1.8;
 }
 
 .workstyle-item__details li strong {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text);
 }
 
 .workstyle-item__details li::before {
@@ -1158,45 +1146,172 @@ a.work-card:hover {
   top: 0.65rem;
   width: 4px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-text-muted);
   border-radius: 50%;
 }
 
-.workstyle-item__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.workstyle-item__tag {
-  font-size: 0.75rem;
-  padding: 0.375rem 0.875rem;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 100px;
-  transition: all var(--transition-fast);
-}
-
-.workstyle-item:hover .workstyle-item__tag {
-  border-color: rgba(255, 255, 255, 0.35);
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.workstyle-item__note {
-  margin-top: 1rem;
+/* Detail button on card */
+.workstyle-item__detail-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1.25rem;
+  padding: 0.5rem 0;
+  font-family: inherit;
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.4);
-  line-height: 1.8;
-  font-style: italic;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+
+.workstyle-item__detail-btn::after {
+  content: '\2192';
+  transition: transform var(--transition-fast);
+}
+
+.workstyle-item__detail-btn:hover {
+  color: var(--color-text-light);
+  border-color: var(--color-text-light);
+}
+
+.workstyle-item__detail-btn:hover::after {
+  transform: translateX(4px);
 }
 
 /* Staggered entrance animation */
 .workstyle__list .workstyle-item:nth-child(1) { transition-delay: 0s; }
 .workstyle__list .workstyle-item:nth-child(2) { transition-delay: 0.1s; }
 .workstyle__list .workstyle-item:nth-child(3) { transition-delay: 0.2s; }
-.workstyle__list .workstyle-item:nth-child(4) { transition-delay: 0.3s; }
-.workstyle__list .workstyle-item:nth-child(5) { transition-delay: 0.4s; }
+
+/* ========================================
+   Workstyle Detail Modal
+   ======================================== */
+.workstyle-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.workstyle-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.workstyle-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.workstyle-modal__container {
+  position: relative;
+  width: 90%;
+  max-width: 680px;
+  max-height: 90vh;
+  background: var(--color-white);
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.workstyle-modal.is-open .workstyle-modal__container {
+  transform: translateY(0);
+}
+
+.workstyle-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workstyle-modal__close:hover {
+  background: var(--color-bg);
+  transform: rotate(90deg);
+}
+
+.workstyle-modal__content {
+  padding: 2.5rem 2rem 2rem;
+}
+
+.workstyle-modal__section {
+  margin-bottom: 2rem;
+}
+
+.workstyle-modal__section:last-child {
+  margin-bottom: 0;
+}
+
+.workstyle-modal__section-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.workstyle-modal__text {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.workstyle-modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.workstyle-modal__tag {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.875rem;
+  background: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  transition: all var(--transition-fast);
+}
+
+.workstyle-modal__tag:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.workstyle-modal__note {
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-style: italic;
+}
 
 /* ========================================
    Career Page - Positions
@@ -1914,10 +2029,6 @@ a.work-card:hover {
 
   .workstyle__list {
     grid-template-columns: 1fr;
-  }
-
-  .workstyle-item:nth-child(5) {
-    grid-column: auto;
   }
 
   .workstyle-item::before {
