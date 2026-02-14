@@ -112,30 +112,9 @@ const translations = {
     },
     // Service Page
     service: {
-      heroLabel: 'SERVICE',
-      heroTitle1: '食品事業の成長を、',
-      heroTitle2: '企画から運営まで。',
-      heroDesc: 'UMEZOOは、食のバリューチェーン全体を横断するパートナーとして、事業の「つくる」「届ける」「広げる」を支えます。',
-      philosophy1: '食品SNSのコンテンツは、',
-      philosophyAccent1: '料理の質で決まる。',
-      philosophy2: '商品開発は、売れる設計がなければ',
-      philosophyAccent2: '棚に並んで終わる。',
-      philosophy3: '事業は、',
-      philosophyAccent3: '立ち上げた後こそが本番。',
-      philosophySub: '私たちは、戦略を描くだけでなく、食のプロフェッショナルとして自ら手を動かし、成果を出します。',
-      overviewTitle: '3つの領域で、事業を動かす',
-      overviewMore: '→ 詳しく',
-      createTitle: 'つくる',
-      createOverviewDesc: 'レシピ開発・試作・製造管理まで。食のプロフェッショナルが、商品とメニューを形にします。',
-      deliverTitle: '届ける',
-      deliverOverviewDesc: 'SNS・EC・LINE・メルマガを横断。食品に特化したコンテンツ制作とマーケティング運用。',
-      expandTitle: '広げる',
-      expandOverviewDesc: 'コンセプト設計から店舗開発、事業計画まで。新しい食の事業を立ち上げ、軌道に乗せます。',
+      pageTitle: 'WHAT WE DO',
+      pageSubtitle: '3つの領域で、パートナーの事業を動かす',
       createSectionTitle: 'つくる',
-      createSubtitle: '商品・メニュー開発',
-      createLead1: '「美味しい」を、',
-      createLeadAccent: '再現可能な事業資産',
-      createLead2: 'に変換する。',
       createBody: 'UMEZOOのフードプランナーが、コンセプト設計からレシピ開発、試作、原価計算、OEM先との製造調整、品質管理まで一貫して担当します。納品して終わりではなく、月額パートナーとして商品の改良・拡張を継続的に支えます。',
       create1Title: '新商品企画・レシピ開発', create1Desc: '試作・改良を繰り返し、味と事業性を両立',
       create2Title: '製造管理・OEM調整', create2Desc: '製造仕様書作成、工場との品質・コスト交渉',
@@ -144,9 +123,6 @@ const translations = {
       create5Title: '食品表示・規格対応', create5Desc: '栄養成分表示、HACCP、賞味期限設定',
       create6Title: 'ペアリング・テイスティング', create6Desc: '日本酒・ワイン等との組み合わせ提案',
       deliverSectionTitle: '届ける',
-      deliverSubtitle: 'マーケティング・ブランド構築',
-      deliverLead1: '食品SNSの質は、',
-      deliverLeadAccent: '料理の質で決まる。',
       deliverBody: 'レシピ開発・料理撮影・フードスタイリングを社内で完結できるUMEZOOだからこそ、食品に最適化されたコンテンツを制作できます。投稿企画から運用・分析・改善まで、月額で伴走します。',
       deliver1Title: 'SNS運用・コンテンツ制作', deliver1Desc: 'Instagram / X / TikTok の企画・投稿・分析',
       deliver2Title: 'レシピコンテンツ企画', deliver2Desc: 'ペアリング・アレンジレシピの開発と撮影',
@@ -155,9 +131,6 @@ const translations = {
       deliver5Title: 'LINE OA・メルマガ・note', deliver5Desc: 'CRM設計からコンテンツ配信まで一貫運用',
       deliver6Title: 'ブランディング戦略', deliver6Desc: '市場調査・ターゲット分析・ブランド設計',
       expandSectionTitle: '広げる',
-      expandSubtitle: '新規事業・店舗・チャネル開発',
-      expandLead1: '食の事業は、',
-      expandLeadAccent: '立ち上げた後こそが本番。',
       expandBody: 'コンセプト設計から事業計画、物件選定、店舗設計・施工、厨房設計、メニュー開発、オペレーション構築まで。開業後は運営支援として「つくる」「届ける」のサービスと接続し、事業が軌道に乗るまで伴走します。',
       expand1Title: 'コンセプト設計・事業計画', expand1Desc: '市場調査、競合分析、収支シミュレーション',
       expand2Title: '物件選定・店舗設計施工', expand2Desc: '立地分析から内装・設備導入まで',
@@ -165,16 +138,9 @@ const translations = {
       expand4Title: 'セントラルキッチン開発', expand4Desc: '製造ライン設計、HACCP対応、品質管理体制',
       expand5Title: '補助金申請支援', expand5Desc: '事業計画に基づく資金調達サポート',
       expand6Title: '開業後の運営支援', expand6Desc: 'メニュー改良・マーケ運用・品質管理の継続伴走',
-      engagementTitle: '支援から共創へ',
-      engagementSubtitle: 'UMEZOOは「外注先」ではありません。事業の内側に入り、成果にコミットするパートナーです。',
-      step1Title: 'プロジェクト支援', step1Desc: '特定の課題に対する企画・制作・コンサルティング。短期間で成果を出すスポット型支援。',
-      step2Title: '月額パートナー（伴走型）', step2Desc: 'マーケティング運用、商品開発、品質管理を月額で継続的に支援。チームの一員として事業に関わります。',
-      step3Title: '共同事業（JV / 業務提携）', step3Desc: '資本参画・共同運営を通じて、事業の成長を共にする。UMEZOOの専門性と経営資源を直接投入します。',
-      engagementNote: '多くのクライアントが、プロジェクト支援から月額パートナーへ移行しています。事業の成長に合わせて、関わり方も深くなる設計です。',
       ctaTitle: 'まずは、食の課題をお聞かせください。',
       ctaDesc: '貴社の状況に合わせて、最適な関わり方とチーム体制をご提案します。',
-      ctaButton: '無料相談を予約する',
-      ctaLink: 'お問い合わせフォームへ →'
+      ctaButton: '無料相談を予約する'
     },
     // Career Page
     career: {
@@ -425,30 +391,9 @@ const translations = {
     },
     // Service Page
     service: {
-      heroLabel: 'SERVICE',
-      heroTitle1: 'Food business growth,',
-      heroTitle2: 'from planning to operations.',
-      heroDesc: 'As a partner spanning the entire food value chain, UMEZOO supports your business in "Creating," "Delivering," and "Expanding."',
-      philosophy1: 'Food SNS content quality is ',
-      philosophyAccent1: 'determined by the quality of the food.',
-      philosophy2: 'Product development without a sales strategy ',
-      philosophyAccent2: 'ends on the shelf.',
-      philosophy3: 'A business\'s real challenge ',
-      philosophyAccent3: 'begins after launch.',
-      philosophySub: 'We don\'t just draw strategies — as food professionals, we get hands-on and deliver results.',
-      overviewTitle: 'Three domains that drive your business',
-      overviewMore: '→ Learn more',
-      createTitle: 'Create',
-      createOverviewDesc: 'From recipe development and prototyping to production management. Food professionals bring products and menus to life.',
-      deliverTitle: 'Deliver',
-      deliverOverviewDesc: 'Across SNS, EC, LINE, and newsletters. Food-specialized content creation and marketing operations.',
-      expandTitle: 'Expand',
-      expandOverviewDesc: 'From concept design to store development and business planning. Launching and establishing new food businesses.',
+      pageTitle: 'WHAT WE DO',
+      pageSubtitle: 'Three domains that drive your partner\'s business',
       createSectionTitle: 'Create',
-      createSubtitle: 'Product & Menu Development',
-      createLead1: 'Transforming "delicious" into ',
-      createLeadAccent: 'reproducible business assets',
-      createLead2: '.',
       createBody: 'UMEZOO\'s food planners handle everything from concept design to recipe development, prototyping, cost calculation, OEM coordination, and quality control. We don\'t just deliver — as a monthly partner, we continuously support product improvement and expansion.',
       create1Title: 'New Product Planning & Recipe Development', create1Desc: 'Iterating prototypes to achieve both taste and business viability',
       create2Title: 'Production Management & OEM Coordination', create2Desc: 'Manufacturing spec sheets, quality and cost negotiations with factories',
@@ -457,9 +402,6 @@ const translations = {
       create5Title: 'Food Labeling & Standards Compliance', create5Desc: 'Nutrition labeling, HACCP, shelf-life setting',
       create6Title: 'Pairing & Tasting', create6Desc: 'Pairing suggestions with sake, wine, and more',
       deliverSectionTitle: 'Deliver',
-      deliverSubtitle: 'Marketing & Brand Building',
-      deliverLead1: 'Food SNS quality is ',
-      deliverLeadAccent: 'determined by the quality of the food.',
       deliverBody: 'Because UMEZOO can complete recipe development, food photography, and food styling in-house, we create content optimized for food products. From content planning to operations, analysis, and improvement — we partner with you monthly.',
       deliver1Title: 'SNS Management & Content Creation', deliver1Desc: 'Instagram / X / TikTok planning, posting & analytics',
       deliver2Title: 'Recipe Content Planning', deliver2Desc: 'Development and photography of pairing and arrangement recipes',
@@ -468,9 +410,6 @@ const translations = {
       deliver5Title: 'LINE OA, Newsletter & note', deliver5Desc: 'End-to-end CRM design and content distribution',
       deliver6Title: 'Branding Strategy', deliver6Desc: 'Market research, target analysis, and brand design',
       expandSectionTitle: 'Expand',
-      expandSubtitle: 'New Business, Store & Channel Development',
-      expandLead1: 'A food business\'s real challenge ',
-      expandLeadAccent: 'begins after launch.',
       expandBody: 'From concept design to business planning, site selection, store design and construction, kitchen design, menu development, and operations setup. After opening, we connect with our "Create" and "Deliver" services for ongoing operational support until the business is on track.',
       expand1Title: 'Concept Design & Business Planning', expand1Desc: 'Market research, competitive analysis, P&L simulation',
       expand2Title: 'Site Selection & Store Design', expand2Desc: 'From location analysis to interior and equipment installation',
@@ -478,16 +417,9 @@ const translations = {
       expand4Title: 'Central Kitchen Development', expand4Desc: 'Production line design, HACCP compliance, quality control systems',
       expand5Title: 'Subsidy Application Support', expand5Desc: 'Funding support based on business plans',
       expand6Title: 'Post-Opening Operational Support', expand6Desc: 'Ongoing menu improvement, marketing operations, and quality management',
-      engagementTitle: 'From Support to Co-Creation',
-      engagementSubtitle: 'UMEZOO is not an "outsourcer." We are a partner who gets inside the business and commits to results.',
-      step1Title: 'Project Support', step1Desc: 'Planning, production, and consulting for specific challenges. Spot-based support delivering results in a short timeframe.',
-      step2Title: 'Monthly Partner (Ongoing)', step2Desc: 'Continuous monthly support for marketing operations, product development, and quality control. We engage as a member of your team.',
-      step3Title: 'Joint Venture (JV / Alliance)', step3Desc: 'Growing the business together through equity participation and joint operations. We directly invest UMEZOO\'s expertise and resources.',
-      engagementNote: 'Many clients transition from project support to monthly partnership. As the business grows, the depth of our involvement grows with it.',
       ctaTitle: 'Tell us about your food business challenges.',
       ctaDesc: 'We\'ll propose the optimal engagement model and team structure tailored to your situation.',
-      ctaButton: 'Book a Free Consultation',
-      ctaLink: 'Go to Contact Form →'
+      ctaButton: 'Book a Free Consultation'
     },
     // Career Page
     career: {
@@ -738,30 +670,9 @@ const translations = {
     },
     // Service Page
     service: {
-      heroLabel: 'SERVICE',
-      heroTitle1: 'La croissance de votre activité alimentaire,',
-      heroTitle2: 'de la conception à l\'exploitation.',
-      heroDesc: 'En tant que partenaire couvrant l\'ensemble de la chaîne de valeur alimentaire, UMEZOO soutient votre entreprise dans la « Création », la « Distribution » et l\'« Expansion ».',
-      philosophy1: 'La qualité du contenu SNS alimentaire est ',
-      philosophyAccent1: 'déterminée par la qualité de la cuisine.',
-      philosophy2: 'Le développement de produits sans stratégie de vente ',
-      philosophyAccent2: 'finit sur l\'étagère.',
-      philosophy3: 'Le véritable défi d\'une entreprise ',
-      philosophyAccent3: 'commence après le lancement.',
-      philosophySub: 'Nous ne faisons pas que dessiner des stratégies — en tant que professionnels de l\'alimentation, nous mettons la main à la pâte et produisons des résultats.',
-      overviewTitle: 'Trois domaines qui font avancer votre activité',
-      overviewMore: '→ En savoir plus',
-      createTitle: 'Créer',
-      createOverviewDesc: 'Du développement de recettes et du prototypage à la gestion de production. Des professionnels de l\'alimentation donnent vie aux produits et aux menus.',
-      deliverTitle: 'Distribuer',
-      deliverOverviewDesc: 'Sur les réseaux sociaux, l\'e-commerce, LINE et les newsletters. Création de contenu et opérations marketing spécialisées dans l\'alimentaire.',
-      expandTitle: 'Développer',
-      expandOverviewDesc: 'De la conception du concept au développement de magasins et à la planification commerciale. Lancement et établissement de nouvelles entreprises alimentaires.',
+      pageTitle: 'WHAT WE DO',
+      pageSubtitle: 'Trois domaines pour faire avancer l\'activité de nos partenaires',
       createSectionTitle: 'Créer',
-      createSubtitle: 'Développement de produits et menus',
-      createLead1: 'Transformer le « délicieux » en ',
-      createLeadAccent: 'actifs commerciaux reproductibles',
-      createLead2: '.',
       createBody: 'Les planificateurs alimentaires d\'UMEZOO gèrent tout, de la conception du concept au développement de recettes, au prototypage, au calcul des coûts, à la coordination OEM et au contrôle qualité. Nous ne nous contentons pas de livrer — en tant que partenaire mensuel, nous soutenons continuellement l\'amélioration et l\'expansion des produits.',
       create1Title: 'Planification de nouveaux produits et développement de recettes', create1Desc: 'Itération de prototypes pour allier goût et viabilité commerciale',
       create2Title: 'Gestion de production et coordination OEM', create2Desc: 'Cahiers des charges, négociations qualité et coûts avec les usines',
@@ -770,9 +681,6 @@ const translations = {
       create5Title: 'Étiquetage alimentaire et conformité', create5Desc: 'Étiquetage nutritionnel, HACCP, durée de conservation',
       create6Title: 'Accords et dégustation', create6Desc: 'Suggestions d\'accords avec saké, vin et plus',
       deliverSectionTitle: 'Distribuer',
-      deliverSubtitle: 'Marketing et construction de marque',
-      deliverLead1: 'La qualité des réseaux sociaux alimentaires est ',
-      deliverLeadAccent: 'déterminée par la qualité de la cuisine.',
       deliverBody: 'Parce qu\'UMEZOO peut réaliser en interne le développement de recettes, la photographie culinaire et le stylisme alimentaire, nous créons du contenu optimisé pour les produits alimentaires. De la planification à l\'exploitation, l\'analyse et l\'amélioration — nous vous accompagnons chaque mois.',
       deliver1Title: 'Gestion SNS et création de contenu', deliver1Desc: 'Planification, publication et analyse Instagram / X / TikTok',
       deliver2Title: 'Planification de contenu de recettes', deliver2Desc: 'Développement et photographie de recettes d\'accords et de variations',
@@ -781,9 +689,6 @@ const translations = {
       deliver5Title: 'LINE OA, newsletter et note', deliver5Desc: 'Conception CRM et distribution de contenu de bout en bout',
       deliver6Title: 'Stratégie de marque', deliver6Desc: 'Étude de marché, analyse de cible et conception de marque',
       expandSectionTitle: 'Développer',
-      expandSubtitle: 'Nouvelles activités, magasins et développement de canaux',
-      expandLead1: 'Le véritable défi d\'une entreprise alimentaire ',
-      expandLeadAccent: 'commence après le lancement.',
       expandBody: 'De la conception du concept à la planification commerciale, la sélection de sites, la conception et la construction de magasins, la conception de cuisines, le développement de menus et la mise en place des opérations. Après l\'ouverture, nous nous connectons à nos services « Créer » et « Distribuer » pour un accompagnement opérationnel continu jusqu\'à la stabilisation de l\'activité.',
       expand1Title: 'Conception de concept et planification commerciale', expand1Desc: 'Étude de marché, analyse concurrentielle, simulation P&L',
       expand2Title: 'Sélection de site et conception de magasin', expand2Desc: 'De l\'analyse de localisation à l\'aménagement intérieur et l\'installation d\'équipements',
@@ -791,16 +696,9 @@ const translations = {
       expand4Title: 'Développement de cuisine centrale', expand4Desc: 'Conception de lignes de production, conformité HACCP, systèmes de contrôle qualité',
       expand5Title: 'Aide aux demandes de subventions', expand5Desc: 'Soutien au financement basé sur les plans d\'affaires',
       expand6Title: 'Accompagnement post-ouverture', expand6Desc: 'Amélioration continue des menus, opérations marketing et gestion de la qualité',
-      engagementTitle: 'Du soutien à la co-création',
-      engagementSubtitle: 'UMEZOO n\'est pas un « sous-traitant ». Nous sommes un partenaire qui s\'investit dans l\'entreprise et s\'engage sur les résultats.',
-      step1Title: 'Accompagnement projet', step1Desc: 'Planification, production et conseil pour des défis spécifiques. Soutien ponctuel produisant des résultats à court terme.',
-      step2Title: 'Partenaire mensuel (accompagnement continu)', step2Desc: 'Soutien mensuel continu pour les opérations marketing, le développement de produits et le contrôle qualité. Nous nous engageons en tant que membre de votre équipe.',
-      step3Title: 'Co-entreprise (JV / Alliance)', step3Desc: 'Croissance commune de l\'activité par participation au capital et exploitation conjointe. Nous investissons directement l\'expertise et les ressources d\'UMEZOO.',
-      engagementNote: 'De nombreux clients passent de l\'accompagnement projet au partenariat mensuel. À mesure que l\'activité grandit, notre implication s\'approfondit.',
       ctaTitle: 'Parlez-nous de vos défis alimentaires.',
       ctaDesc: 'Nous vous proposerons le modèle d\'engagement et la structure d\'équipe optimaux, adaptés à votre situation.',
-      ctaButton: 'Réserver une consultation gratuite',
-      ctaLink: 'Aller au formulaire de contact →'
+      ctaButton: 'Réserver une consultation gratuite'
     },
     // Career Page
     career: {
@@ -964,7 +862,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initLanguageSwitcher();
   initAnimations();
-  initServiceScroll();
   initContactForm();
   initNewsModal();
   initCareerModal();
@@ -1130,23 +1027,6 @@ function getNestedValue(obj, path) {
 }
 
 // Scroll animations
-// Service page: smooth scroll from overview cards to category sections
-function initServiceScroll() {
-  document.querySelectorAll('.svc-overview-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      e.preventDefault();
-      const href = card.getAttribute('href');
-      if (!href) return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      const headerOffset = 72;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    });
-  });
-}
-
 function initAnimations() {
   const observerOptions = {
     threshold: 0.1,
@@ -1163,7 +1043,7 @@ function initAnimations() {
   }, observerOptions);
 
   // Existing animations for feature cards, work cards, etc.
-  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card, .workstyle-item, .svc-card, .svc-overview-card, .svc-engagement-step').forEach(el => {
+  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card, .workstyle-item, .svc-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
