@@ -83,252 +83,133 @@
     </div>
   </header>
 
-  <!-- Section 1: Hero -->
-  <section class="svc-hero">
+  <!-- Page Hero -->
+  <section class="page-hero page-hero--with-bg">
+    <div class="page-hero__bg" id="page-hero-bg"></div>
+    <div class="page-hero__overlay"></div>
     <div class="container">
-      <div class="svc-hero__content">
-        <p class="svc-hero__label" data-i18n="service.heroLabel">SERVICE</p>
-        <h1 class="svc-hero__title">
-          <span data-i18n="service.heroTitle1">食品事業の成長を、</span><br>
-          <span class="svc-hero__title-accent" data-i18n="service.heroTitle2">企画から運営まで。</span>
-        </h1>
-        <p class="svc-hero__desc" data-i18n="service.heroDesc">UMEZOOは、食のバリューチェーン全体を横断するパートナーとして、事業の「つくる」「届ける」「広げる」を支えます。</p>
-      </div>
-    </div>
-    <div class="svc-hero__scroll">
-      <span>Scroll</span>
-      <div class="svc-hero__scroll-line"></div>
+      <h1 class="page-hero__title" data-i18n="service.pageTitle">WHAT WE DO</h1>
+      <p class="page-hero__subtitle" data-i18n="service.pageSubtitle">3つの領域で、パートナーの事業を動かす</p>
     </div>
   </section>
 
-  <!-- Section 2: Philosophy -->
-  <section class="svc-philosophy">
+  <!-- つくる / CREATE -->
+  <section class="content-section" id="svc-create">
     <div class="container">
-      <div class="svc-philosophy__content fade-in-up">
-        <p class="svc-philosophy__text">
-          <span data-i18n="service.philosophy1">食品SNSのコンテンツは、</span><span class="svc-philosophy__accent" data-i18n="service.philosophyAccent1">料理の質で決まる。</span><br>
-          <span data-i18n="service.philosophy2">商品開発は、売れる設計がなければ</span><span class="svc-philosophy__accent" data-i18n="service.philosophyAccent2">棚に並んで終わる。</span><br>
-          <span data-i18n="service.philosophy3">事業は、</span><span class="svc-philosophy__accent" data-i18n="service.philosophyAccent3">立ち上げた後こそが本番。</span>
-        </p>
-        <p class="svc-philosophy__sub" data-i18n="service.philosophySub">私たちは、戦略を描くだけでなく、食のプロフェッショナルとして自ら手を動かし、成果を出します。</p>
-        <div class="svc-philosophy__line"></div>
+      <div class="content-section__header fade-in-up">
+        <h2 class="content-section__title" data-i18n="service.createSectionTitle">つくる</h2>
+        <p class="content-section__subtitle">01 &mdash; Create</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Service Overview -->
-  <section class="svc-overview">
-    <div class="container">
-      <div class="svc-overview__header fade-in-up">
-        <p class="svc-overview__label">WHAT WE DO</p>
-        <h2 class="svc-overview__title" data-i18n="service.overviewTitle">3つの領域で、事業を動かす</h2>
-      </div>
-      <div class="svc-overview__cards">
-        <a href="#svc-create" class="svc-overview-card svc-overview-card--create fade-in-up">
-          <span class="svc-overview-card__number">01</span>
-          <div class="svc-overview-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11h1a7 7 0 0 1 7 7v4H2v-4a7 7 0 0 1 7-7h1V9.5A4 4 0 0 1 12 2z"/></svg>
-          </div>
-          <h3 class="svc-overview-card__title" data-i18n="service.createTitle">つくる</h3>
-          <p class="svc-overview-card__en">CREATE</p>
-          <p class="svc-overview-card__desc" data-i18n="service.createOverviewDesc">レシピ開発・試作・製造管理まで。食のプロフェッショナルが、商品とメニューを形にします。</p>
-          <span class="svc-overview-card__arrow" data-i18n="service.overviewMore">&rarr; 詳しく</span>
-        </a>
-        <a href="#svc-deliver" class="svc-overview-card svc-overview-card--deliver fade-in-up">
-          <span class="svc-overview-card__number">02</span>
-          <div class="svc-overview-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-          </div>
-          <h3 class="svc-overview-card__title" data-i18n="service.deliverTitle">届ける</h3>
-          <p class="svc-overview-card__en">DELIVER</p>
-          <p class="svc-overview-card__desc" data-i18n="service.deliverOverviewDesc">SNS・EC・LINE・メルマガを横断。食品に特化したコンテンツ制作とマーケティング運用。</p>
-          <span class="svc-overview-card__arrow" data-i18n="service.overviewMore">&rarr; 詳しく</span>
-        </a>
-        <a href="#svc-expand" class="svc-overview-card svc-overview-card--expand fade-in-up">
-          <span class="svc-overview-card__number">03</span>
-          <div class="svc-overview-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <h3 class="svc-overview-card__title" data-i18n="service.expandTitle">広げる</h3>
-          <p class="svc-overview-card__en">EXPAND</p>
-          <p class="svc-overview-card__desc" data-i18n="service.expandOverviewDesc">コンセプト設計から店舗開発、事業計画まで。新しい食の事業を立ち上げ、軌道に乗せます。</p>
-          <span class="svc-overview-card__arrow" data-i18n="service.overviewMore">&rarr; 詳しく</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: つくる / CREATE -->
-  <section class="svc-category svc-category--dark" id="svc-create">
-    <div class="container">
-      <div class="svc-category__inner">
-        <div class="svc-category__text fade-in-up">
-          <span class="svc-category__label svc-category__label--create">01 &mdash; CREATE</span>
-          <h2 class="svc-category__title" data-i18n="service.createSectionTitle">つくる</h2>
-          <p class="svc-category__subtitle" data-i18n="service.createSubtitle">商品・メニュー開発</p>
-          <p class="svc-category__lead">
-            <span data-i18n="service.createLead1">「美味しい」を、</span><span class="svc-category__lead-accent--create" data-i18n="service.createLeadAccent">再現可能な事業資産</span><span data-i18n="service.createLead2">に変換する。</span>
-          </p>
-          <p class="svc-category__desc" data-i18n="service.createBody">UMEZOOのフードプランナーが、コンセプト設計からレシピ開発、試作、原価計算、OEM先との製造調整、品質管理まで一貫して担当します。納品して終わりではなく、月額パートナーとして商品の改良・拡張を継続的に支えます。</p>
+      <p class="svc-section__desc fade-in-up" data-i18n="service.createBody">UMEZOOのフードプランナーが、コンセプト設計からレシピ開発、試作、原価計算、OEM先との製造調整、品質管理まで一貫して担当します。納品して終わりではなく、月額パートナーとして商品の改良・拡張を継続的に支えます。</p>
+      <div class="svc-items fade-in-up">
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create1Title">新商品企画・レシピ開発</h4>
+          <p class="svc-item__desc" data-i18n="service.create1Desc">試作・改良を繰り返し、味と事業性を両立</p>
         </div>
-        <div class="svc-category__cards">
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create1Title">新商品企画・レシピ開発</h4>
-            <p class="svc-card__desc" data-i18n="service.create1Desc">試作・改良を繰り返し、味と事業性を両立</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create2Title">製造管理・OEM調整</h4>
-            <p class="svc-card__desc" data-i18n="service.create2Desc">製造仕様書作成、工場との品質・コスト交渉</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create3Title">原価計算・利益率設計</h4>
-            <p class="svc-card__desc" data-i18n="service.create3Desc">売れる価格帯を逆算した収益設計</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create4Title">メニュー開発・OP設計</h4>
-            <p class="svc-card__desc" data-i18n="service.create4Desc">飲食店の調理オペレーションまで最適化</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create5Title">食品表示・規格対応</h4>
-            <p class="svc-card__desc" data-i18n="service.create5Desc">栄養成分表示、HACCP、賞味期限設定</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--create fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.create6Title">ペアリング・テイスティング</h4>
-            <p class="svc-card__desc" data-i18n="service.create6Desc">日本酒・ワイン等との組み合わせ提案</p>
-          </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create2Title">製造管理・OEM調整</h4>
+          <p class="svc-item__desc" data-i18n="service.create2Desc">製造仕様書作成、工場との品質・コスト交渉</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create3Title">原価計算・利益率設計</h4>
+          <p class="svc-item__desc" data-i18n="service.create3Desc">売れる価格帯を逆算した収益設計</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create4Title">メニュー開発・OP設計</h4>
+          <p class="svc-item__desc" data-i18n="service.create4Desc">飲食店の調理オペレーションまで最適化</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create5Title">食品表示・規格対応</h4>
+          <p class="svc-item__desc" data-i18n="service.create5Desc">栄養成分表示、HACCP、賞味期限設定</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.create6Title">ペアリング・テイスティング</h4>
+          <p class="svc-item__desc" data-i18n="service.create6Desc">日本酒・ワイン等との組み合わせ提案</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 5: 届ける / DELIVER -->
-  <section class="svc-category svc-category--cream" id="svc-deliver">
+  <!-- 届ける / DELIVER -->
+  <section class="content-section" id="svc-deliver">
     <div class="container">
-      <div class="svc-category__inner svc-category__inner--reversed">
-        <div class="svc-category__cards">
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver1Title">SNS運用・コンテンツ制作</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver1Desc">Instagram / X / TikTok の企画・投稿・分析</p>
-          </div>
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver2Title">レシピコンテンツ企画</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver2Desc">ペアリング・アレンジレシピの開発と撮影</p>
-          </div>
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver3Title">料理撮影・動画制作</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver3Desc">フードスタイリングから撮影・編集まで内製</p>
-          </div>
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver4Title">EC・GA分析・レポーティング</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver4Desc">データに基づく改善提案とKPI管理</p>
-          </div>
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver5Title">LINE OA・メルマガ・note</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver5Desc">CRM設計からコンテンツ配信まで一貫運用</p>
-          </div>
-          <div class="svc-card svc-card--light svc-card--deliver fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.deliver6Title">ブランディング戦略</h4>
-            <p class="svc-card__desc" data-i18n="service.deliver6Desc">市場調査・ターゲット分析・ブランド設計</p>
-          </div>
+      <div class="content-section__header fade-in-up">
+        <h2 class="content-section__title" data-i18n="service.deliverSectionTitle">届ける</h2>
+        <p class="content-section__subtitle">02 &mdash; Deliver</p>
+      </div>
+      <p class="svc-section__desc fade-in-up" data-i18n="service.deliverBody">レシピ開発・料理撮影・フードスタイリングを社内で完結できるUMEZOOだからこそ、食品に最適化されたコンテンツを制作できます。投稿企画から運用・分析・改善まで、月額で伴走します。</p>
+      <div class="svc-items fade-in-up">
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver1Title">SNS運用・コンテンツ制作</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver1Desc">Instagram / X / TikTok の企画・投稿・分析</p>
         </div>
-        <div class="svc-category__text fade-in-up">
-          <span class="svc-category__label svc-category__label--deliver">02 &mdash; DELIVER</span>
-          <h2 class="svc-category__title" data-i18n="service.deliverSectionTitle">届ける</h2>
-          <p class="svc-category__subtitle" data-i18n="service.deliverSubtitle">マーケティング・ブランド構築</p>
-          <p class="svc-category__lead">
-            <span data-i18n="service.deliverLead1">食品SNSの質は、</span><span class="svc-category__lead-accent--deliver" data-i18n="service.deliverLeadAccent">料理の質で決まる。</span>
-          </p>
-          <p class="svc-category__desc" data-i18n="service.deliverBody">レシピ開発・料理撮影・フードスタイリングを社内で完結できるUMEZOOだからこそ、食品に最適化されたコンテンツを制作できます。投稿企画から運用・分析・改善まで、月額で伴走します。</p>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver2Title">レシピコンテンツ企画</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver2Desc">ペアリング・アレンジレシピの開発と撮影</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver3Title">料理撮影・動画制作</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver3Desc">フードスタイリングから撮影・編集まで内製</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver4Title">EC・GA分析・レポーティング</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver4Desc">データに基づく改善提案とKPI管理</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver5Title">LINE OA・メルマガ・note</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver5Desc">CRM設計からコンテンツ配信まで一貫運用</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.deliver6Title">ブランディング戦略</h4>
+          <p class="svc-item__desc" data-i18n="service.deliver6Desc">市場調査・ターゲット分析・ブランド設計</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: 広げる / EXPAND -->
-  <section class="svc-category svc-category--dark" id="svc-expand">
+  <!-- 広げる / EXPAND -->
+  <section class="content-section" id="svc-expand">
     <div class="container">
-      <div class="svc-category__inner">
-        <div class="svc-category__text fade-in-up">
-          <span class="svc-category__label svc-category__label--expand">03 &mdash; EXPAND</span>
-          <h2 class="svc-category__title" data-i18n="service.expandSectionTitle">広げる</h2>
-          <p class="svc-category__subtitle" data-i18n="service.expandSubtitle">新規事業・店舗・チャネル開発</p>
-          <p class="svc-category__lead">
-            <span data-i18n="service.expandLead1">食の事業は、</span><span class="svc-category__lead-accent--expand" data-i18n="service.expandLeadAccent">立ち上げた後こそが本番。</span>
-          </p>
-          <p class="svc-category__desc" data-i18n="service.expandBody">コンセプト設計から事業計画、物件選定、店舗設計・施工、厨房設計、メニュー開発、オペレーション構築まで。開業後は運営支援として「つくる」「届ける」のサービスと接続し、事業が軌道に乗るまで伴走します。</p>
+      <div class="content-section__header fade-in-up">
+        <h2 class="content-section__title" data-i18n="service.expandSectionTitle">広げる</h2>
+        <p class="content-section__subtitle">03 &mdash; Expand</p>
+      </div>
+      <p class="svc-section__desc fade-in-up" data-i18n="service.expandBody">コンセプト設計から事業計画、物件選定、店舗設計・施工、厨房設計、メニュー開発、オペレーション構築まで。開業後は運営支援として「つくる」「届ける」のサービスと接続し、事業が軌道に乗るまで伴走します。</p>
+      <div class="svc-items fade-in-up">
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand1Title">コンセプト設計・事業計画</h4>
+          <p class="svc-item__desc" data-i18n="service.expand1Desc">市場調査、競合分析、収支シミュレーション</p>
         </div>
-        <div class="svc-category__cards">
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand1Title">コンセプト設計・事業計画</h4>
-            <p class="svc-card__desc" data-i18n="service.expand1Desc">市場調査、競合分析、収支シミュレーション</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand2Title">物件選定・店舗設計施工</h4>
-            <p class="svc-card__desc" data-i18n="service.expand2Desc">立地分析から内装・設備導入まで</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand3Title">厨房設計・機器選定</h4>
-            <p class="svc-card__desc" data-i18n="service.expand3Desc">業態最適化された厨房レイアウトとOP設計</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand4Title">セントラルキッチン開発</h4>
-            <p class="svc-card__desc" data-i18n="service.expand4Desc">製造ライン設計、HACCP対応、品質管理体制</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand5Title">補助金申請支援</h4>
-            <p class="svc-card__desc" data-i18n="service.expand5Desc">事業計画に基づく資金調達サポート</p>
-          </div>
-          <div class="svc-card svc-card--dark svc-card--expand fade-in-up">
-            <h4 class="svc-card__title" data-i18n="service.expand6Title">開業後の運営支援</h4>
-            <p class="svc-card__desc" data-i18n="service.expand6Desc">メニュー改良・マーケ運用・品質管理の継続伴走</p>
-          </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand2Title">物件選定・店舗設計施工</h4>
+          <p class="svc-item__desc" data-i18n="service.expand2Desc">立地分析から内装・設備導入まで</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand3Title">厨房設計・機器選定</h4>
+          <p class="svc-item__desc" data-i18n="service.expand3Desc">業態最適化された厨房レイアウトとOP設計</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand4Title">セントラルキッチン開発</h4>
+          <p class="svc-item__desc" data-i18n="service.expand4Desc">製造ライン設計、HACCP対応、品質管理体制</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand5Title">補助金申請支援</h4>
+          <p class="svc-item__desc" data-i18n="service.expand5Desc">事業計画に基づく資金調達サポート</p>
+        </div>
+        <div class="svc-item">
+          <h4 class="svc-item__title" data-i18n="service.expand6Title">開業後の運営支援</h4>
+          <p class="svc-item__desc" data-i18n="service.expand6Desc">メニュー改良・マーケ運用・品質管理の継続伴走</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 7: Engagement Model -->
-  <section class="svc-engagement">
+  <!-- CTA Section -->
+  <section class="section cta">
     <div class="container">
-      <div class="svc-engagement__header fade-in-up">
-        <p class="svc-engagement__label">HOW WE WORK</p>
-        <h2 class="svc-engagement__title" data-i18n="service.engagementTitle">支援から共創へ</h2>
-        <p class="svc-engagement__subtitle" data-i18n="service.engagementSubtitle">UMEZOOは「外注先」ではありません。事業の内側に入り、成果にコミットするパートナーです。</p>
-      </div>
-      <div class="svc-engagement__steps">
-        <div class="svc-engagement-step fade-in-up">
-          <div class="svc-engagement-step__number">01</div>
-          <h3 class="svc-engagement-step__title" data-i18n="service.step1Title">プロジェクト支援</h3>
-          <p class="svc-engagement-step__desc" data-i18n="service.step1Desc">特定の課題に対する企画・制作・コンサルティング。短期間で成果を出すスポット型支援。</p>
-        </div>
-        <div class="svc-engagement-step__connector"></div>
-        <div class="svc-engagement-step fade-in-up">
-          <div class="svc-engagement-step__number">02</div>
-          <h3 class="svc-engagement-step__title" data-i18n="service.step2Title">月額パートナー（伴走型）</h3>
-          <p class="svc-engagement-step__desc" data-i18n="service.step2Desc">マーケティング運用、商品開発、品質管理を月額で継続的に支援。チームの一員として事業に関わります。</p>
-        </div>
-        <div class="svc-engagement-step__connector"></div>
-        <div class="svc-engagement-step fade-in-up">
-          <div class="svc-engagement-step__number">03</div>
-          <h3 class="svc-engagement-step__title" data-i18n="service.step3Title">共同事業（JV / 業務提携）</h3>
-          <p class="svc-engagement-step__desc" data-i18n="service.step3Desc">資本参画・共同運営を通じて、事業の成長を共にする。UMEZOOの専門性と経営資源を直接投入します。</p>
-        </div>
-      </div>
-      <p class="svc-engagement__note fade-in-up" data-i18n="service.engagementNote">多くのクライアントが、プロジェクト支援から月額パートナーへ移行しています。事業の成長に合わせて、関わり方も深くなる設計です。</p>
-    </div>
-  </section>
-
-  <!-- Section 8: CTA -->
-  <section class="svc-cta">
-    <div class="container">
-      <div class="svc-cta__content fade-in-up">
-        <h2 class="svc-cta__title" data-i18n="service.ctaTitle">まずは、食の課題をお聞かせください。</h2>
-        <p class="svc-cta__desc" data-i18n="service.ctaDesc">貴社の状況に合わせて、最適な関わり方とチーム体制をご提案します。</p>
-        <div class="svc-cta__actions">
-          <a href="contact.html" class="svc-btn--primary" data-i18n="service.ctaButton">無料相談を予約する</a>
-          <a href="contact.html" class="svc-cta__link" data-i18n="service.ctaLink">お問い合わせフォームへ &rarr;</a>
-        </div>
-      </div>
+      <h2 class="cta__title" data-i18n="service.ctaTitle">まずは、食の課題をお聞かせください。</h2>
+      <p class="cta__text" data-i18n="service.ctaDesc">貴社の状況に合わせて、最適な関わり方とチーム体制をご提案します。</p>
+      <a href="contact.html" class="btn btn--outline" data-i18n="service.ctaButton">無料相談を予約する</a>
     </div>
   </section>
 
