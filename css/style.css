@@ -1234,9 +1234,11 @@ a.work-card:hover {
 .workstyle__list .workstyle-item:nth-child(3) { transition-delay: 0.2s; }
 
 /* ========================================
-   Workstyle Detail Modal
+   Modal Shared Base Styles
    ======================================== */
-.workstyle-modal {
+.workstyle-modal,
+.career-modal,
+.news-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -1251,25 +1253,31 @@ a.work-card:hover {
   transition: all 0.3s ease;
 }
 
-.workstyle-modal.is-open {
+.workstyle-modal.is-open,
+.career-modal.is-open,
+.news-modal.is-open {
   opacity: 1;
   visibility: visible;
 }
 
-.workstyle-modal__overlay {
+.workstyle-modal__overlay,
+.career-modal__overlay,
+.news-modal__overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
 }
 
-.workstyle-modal__container {
+.workstyle-modal__container,
+.career-modal__container,
+.news-modal__container {
   position: relative;
   width: 90%;
-  max-width: 680px;
+  max-width: 720px;
   max-height: 90vh;
   background: var(--color-white);
   overflow-y: auto;
@@ -1277,11 +1285,15 @@ a.work-card:hover {
   transition: transform 0.3s ease;
 }
 
-.workstyle-modal.is-open .workstyle-modal__container {
+.workstyle-modal.is-open .workstyle-modal__container,
+.career-modal.is-open .career-modal__container,
+.news-modal.is-open .news-modal__container {
   transform: translateY(0);
 }
 
-.workstyle-modal__close {
+.workstyle-modal__close,
+.career-modal__close,
+.news-modal__close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1299,9 +1311,22 @@ a.work-card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.workstyle-modal__close:hover {
+.workstyle-modal__close:hover,
+.career-modal__close:hover,
+.news-modal__close:hover {
   background: var(--color-bg);
   transform: rotate(90deg);
+}
+
+/* ========================================
+   Workstyle Detail Modal (overrides)
+   ======================================== */
+.workstyle-modal__overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.workstyle-modal__container {
+  max-width: 680px;
 }
 
 .workstyle-modal__content {
@@ -1421,72 +1446,10 @@ a.work-card:hover {
 }
 
 /* ========================================
-   Career Modal
+   Career Modal (overrides + content styles)
    ======================================== */
-.career-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.career-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.career-modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
-}
-
 .career-modal__container {
-  position: relative;
-  width: 90%;
   max-width: 800px;
-  max-height: 90vh;
-  background: var(--color-white);
-  overflow-y: auto;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
-
-.career-modal.is-open .career-modal__container {
-  transform: translateY(0);
-}
-
-.career-modal__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-white);
-  border-radius: 50%;
-  z-index: 10;
-  transition: all var(--transition-fast);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.career-modal__close:hover {
-  background: var(--color-bg);
-  transform: rotate(90deg);
 }
 
 .career-modal__content {
@@ -1835,73 +1798,8 @@ a.work-card:hover {
 }
 
 /* ========================================
-   News Modal
+   News Modal (content styles)
    ======================================== */
-.news-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.news-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.news-modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
-}
-
-.news-modal__container {
-  position: relative;
-  width: 90%;
-  max-width: 720px;
-  max-height: 90vh;
-  background: var(--color-white);
-  overflow-y: auto;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
-
-.news-modal.is-open .news-modal__container {
-  transform: translateY(0);
-}
-
-.news-modal__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-white);
-  border-radius: 50%;
-  z-index: 10;
-  transition: all var(--transition-fast);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.news-modal__close:hover {
-  background: var(--color-bg);
-  transform: rotate(90deg);
-}
 
 .news-modal__content {
   padding: 0;
