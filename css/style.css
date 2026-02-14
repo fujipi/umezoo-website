@@ -1001,18 +1001,26 @@ a.work-card:hover {
    Career Page - Workstyle Section
    ======================================== */
 .workstyle {
-  background: var(--color-bg);
+  background: var(--color-primary);
+}
+
+.workstyle .content-section__title {
+  color: var(--color-white);
+}
+
+.workstyle .content-section__subtitle {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .workstyle__intro {
   max-width: 720px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
 .workstyle__intro p {
   font-size: 0.9375rem;
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.9;
   margin-bottom: 1rem;
 }
@@ -1022,36 +1030,80 @@ a.work-card:hover {
 }
 
 .workstyle__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: var(--color-border);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .workstyle-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-normal);
 }
 
+.workstyle-item:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.workstyle-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Watermark number */
+.workstyle-item::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 0;
+  transition: color var(--transition-normal);
+}
+
+.workstyle-item:hover::before {
+  color: rgba(255, 255, 255, 0.06);
+}
+
+/* Visible small number */
 .workstyle-item__number {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.workstyle-item__content {
+  position: relative;
+  z-index: 1;
 }
 
 .workstyle-item__title {
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.75rem;
+  color: var(--color-white);
 }
 
 .workstyle-item__text {
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.8;
@@ -1068,8 +1120,12 @@ a.work-card:hover {
   padding-left: 1rem;
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.8;
+}
+
+.workstyle-item__details li strong {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .workstyle-item__details li::before {
@@ -1079,7 +1135,7 @@ a.work-card:hover {
   top: 0.65rem;
   width: 4px;
   height: 4px;
-  background: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 }
 
@@ -1091,18 +1147,33 @@ a.work-card:hover {
 
 .workstyle-item__tag {
   font-size: 0.75rem;
-  padding: 0.375rem 0.75rem;
-  background: var(--color-bg);
-  color: var(--color-text-light);
+  padding: 0.375rem 0.875rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  transition: all var(--transition-fast);
+}
+
+.workstyle-item:hover .workstyle-item__tag {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .workstyle-item__note {
   margin-top: 1rem;
   font-size: 0.8125rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.4);
   line-height: 1.8;
   font-style: italic;
 }
+
+/* Staggered entrance animation */
+.workstyle__list .workstyle-item:nth-child(1) { transition-delay: 0s; }
+.workstyle__list .workstyle-item:nth-child(2) { transition-delay: 0.1s; }
+.workstyle__list .workstyle-item:nth-child(3) { transition-delay: 0.2s; }
+.workstyle__list .workstyle-item:nth-child(4) { transition-delay: 0.3s; }
+.workstyle__list .workstyle-item:nth-child(5) { transition-delay: 0.4s; }
 
 /* ========================================
    Career Page - Positions
@@ -1809,15 +1880,25 @@ a.work-card:hover {
     grid-column: 1 / -1;
   }
 
-  .service-item,
-  .workstyle-item {
+  .service-item {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .service-item__number,
-  .workstyle-item__number {
+  .service-item__number {
     font-size: 2rem;
+  }
+
+  .workstyle__list {
+    grid-template-columns: 1fr;
+  }
+
+  .workstyle-item:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .workstyle-item::before {
+    font-size: 6rem;
   }
 
   .contact-content {
@@ -1977,10 +2058,19 @@ a.work-card:hover {
   }
 
   .service-item,
-  .workstyle-item,
   .position-card,
   .news-item {
     padding: 1.25rem;
+  }
+
+  .workstyle-item {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .workstyle-item::before {
+    font-size: 5rem;
+    top: -0.125rem;
+    right: -0.25rem;
   }
 
   .benefits__row {
