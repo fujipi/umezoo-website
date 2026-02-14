@@ -130,18 +130,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: '採用情報',
-      introTitle: '一緒に食の可能性を広げませんか？',
-      introText: 'UMEZOOでは、食とクリエイティブに情熱を持つ仲間を募集しています。私たちと一緒に、新しい食体験を創造しましょう。',
+      workstyleTitle: 'UMEZOOの働き方',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'UMEZOOの「働き方」は固定ではなく、事業・チーム・フェーズに合わせてベストを更新し続ける運用です。オフィスで生まれるコラボレーション（試食・試作・製造・撮影・ワークショップ等）と、リモートが生む集中と効率を掛け合わせ、個と組織のアウトプットを最大化します。',
+      workstyleIntro2: '私たちは「食体験をデザインする」会社です。商品/店舗/空間から、SNS・映像・Webまで含めて一気通貫で作るため、働き方もクリエイティブ制作会社と事業会社のハイブリッドになります。',
+      workLocationTitle: '働く場所',
+      offlineWorkTitle: 'オフライン推奨の仕事',
+      offlineWorkText: 'UMEZOOは「食」を扱う以上、オフラインでしか品質が決まらない瞬間があります。',
+      remoteWorkTitle: 'リモート推奨の仕事',
+      remoteWorkText: '以下はリモートの方が生産性が出やすい業務です。',
+      remoteWorkNote: '目安の運用：チーム/案件単位で「今週は現場比率高め」「今週は制作集中」など、成果が最大化する配置を合意して動きます。',
+      workHoursTitle: '働く時間',
+      workHoursText: 'UMEZOOは、成果と品質に責任を持つプロフェッショナルとして、個々の事情と役割に応じた柔軟性を重視します（職種・契約形態により例外あり）。',
+      workProcessTitle: '仕事の進め方 ― "Seamless"な仕組み',
+      workProcessText: 'UMEZOOの価値は、企画→制作→運用を切らずに繋げる「Seamless」です。プロジェクトでは最低限これを徹底します。',
       positionsTitle: '募集職種',
-      position1Title: 'ビジネスディレクター',
-      position1Type: '正社員',
-      position1Location: '東京',
-      position2Title: 'セールス',
-      position2Type: '正社員 / 業務委託',
-      position2Location: 'リモート可',
-      position3Title: 'フードプランナー',
-      position3Type: '正社員 / 業務委託',
-      position3Location: 'リモート可',
+      positionsSubtitle: 'Open Positions',
+      benefitsTitle: '福利厚生・共通条件',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: '勤務地',
+      benefitLocationValue: '東京都千代田区東神田（馬喰町駅 徒歩2分）',
+      benefitWorkStyleLabel: '勤務形態',
+      benefitWorkStyleValue: 'フレックスタイム制（コアタイムあり）\n出社・リモートの比率は職種・役割に応じて設定し、オファー時に提示',
+      benefitEmploymentLabel: '雇用形態',
+      benefitEmploymentValue: '正社員（試用期間6ヶ月 ※期間中の待遇に差異なし）',
+      benefitSalaryLabel: '給与',
+      benefitSalaryValue: '年俸制（固定残業代含む、超過分は別途支給）\n職種・経験に応じて設定、詳細は各募集要項に記載',
+      benefitBonusLabel: '賞与・昇給',
+      benefitBonusValue: '成果連動型インセンティブあり、昇給年1回',
+      benefitLeaveLabel: '休日・休暇',
+      benefitLeaveValue: '完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇',
+      benefitInsuranceLabel: '社会保険',
+      benefitInsuranceValue: '完備（健康保険・厚生年金・雇用保険・労災保険）',
+      benefitPerksLabel: '諸手当・福利厚生',
+      benefitPerksValue: '通勤手当（月額2万円まで）、リモートワーク補助、試食・まかない、試作品持ち帰り、食体験イベントへの参加機会',
       applyButton: '応募する'
     },
     // Contact Page
@@ -349,18 +371,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: 'Join Our Team',
-      introTitle: 'Want to expand the possibilities of food with us?',
-      introText: 'UMEZOO is looking for team members who are passionate about food and creativity. Let\'s create new food experiences together.',
+      workstyleTitle: 'How We Work at UMEZOO',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'At UMEZOO, our work style is not fixed — we continuously update best practices to match the business, team, and phase. We maximize output by combining the collaboration born in our office (tasting, prototyping, production, photography, workshops) with the focus and efficiency that remote work enables.',
+      workstyleIntro2: 'We are a company that "designs food experiences." Because we create everything seamlessly — from products, stores, and spaces to SNS, video, and web — our work style is a hybrid of a creative production company and a business company.',
+      workLocationTitle: 'Work Location',
+      offlineWorkTitle: 'Offline-Recommended Work',
+      offlineWorkText: 'Since UMEZOO deals with "food," there are moments when quality can only be determined in person.',
+      remoteWorkTitle: 'Remote-Recommended Work',
+      remoteWorkText: 'The following tasks tend to be more productive when done remotely.',
+      remoteWorkNote: 'Guideline: Teams agree on the optimal balance per project — "more on-site this week" or "focused on production this week" — to maximize results.',
+      workHoursTitle: 'Working Hours',
+      workHoursText: 'UMEZOO values flexibility based on individual circumstances and roles, as professionals responsible for outcomes and quality (exceptions may apply by position and contract type).',
+      workProcessTitle: 'How We Work — A "Seamless" System',
+      workProcessText: 'UMEZOO\'s value lies in "Seamless" — connecting planning, production, and operations without breaks. We ensure at minimum the following in every project.',
       positionsTitle: 'Open Positions',
-      position1Title: 'Business Director',
-      position1Type: 'Full-time',
-      position1Location: 'Tokyo',
-      position2Title: 'Sales',
-      position2Type: 'Full-time / Contract',
-      position2Location: 'Remote OK',
-      position3Title: 'Food Planner',
-      position3Type: 'Full-time / Contract',
-      position3Location: 'Remote OK',
+      positionsSubtitle: 'Job Listings',
+      benefitsTitle: 'Benefits & Common Conditions',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: 'Location',
+      benefitLocationValue: 'Higashi-Kanda, Chiyoda-ku, Tokyo (2 min walk from Bakurocho Station)',
+      benefitWorkStyleLabel: 'Work Style',
+      benefitWorkStyleValue: 'Flextime system (with core hours)\nOn-site/remote ratio set by role, presented at offer',
+      benefitEmploymentLabel: 'Employment',
+      benefitEmploymentValue: 'Full-time (6-month probation period, no difference in conditions)',
+      benefitSalaryLabel: 'Salary',
+      benefitSalaryValue: 'Annual salary system (includes fixed overtime pay, excess paid separately)\nSet according to role and experience, details in each job listing',
+      benefitBonusLabel: 'Bonus & Raises',
+      benefitBonusValue: 'Performance-based incentives, annual salary review',
+      benefitLeaveLabel: 'Holidays',
+      benefitLeaveValue: 'Full 2-day weekends, annual paid leave, special occasion leave, year-end/New Year holidays',
+      benefitInsuranceLabel: 'Insurance',
+      benefitInsuranceValue: 'Full coverage (health, pension, employment, workers\' compensation)',
+      benefitPerksLabel: 'Benefits & Perks',
+      benefitPerksValue: 'Commuting allowance (up to ¥20,000/month), remote work support, food tasting & meals, take-home prototypes, food experience event participation',
       applyButton: 'Apply'
     },
     // Contact Page
@@ -568,18 +612,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: 'Rejoignez notre équipe',
-      introTitle: 'Voulez-vous élargir les possibilités de la nourriture avec nous?',
-      introText: 'UMEZOO recherche des membres d\'équipe passionnés par la nourriture et la créativité. Créons ensemble de nouvelles expériences alimentaires.',
+      workstyleTitle: 'Notre façon de travailler',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'Chez UMEZOO, notre mode de travail n\'est pas figé — nous actualisons continuellement nos pratiques pour nous adapter au business, à l\'équipe et à la phase du projet. Nous maximisons les résultats en combinant la collaboration née au bureau (dégustation, prototypage, production, photographie, ateliers) avec la concentration et l\'efficacité du travail à distance.',
+      workstyleIntro2: 'Nous sommes une entreprise qui « conçoit des expériences alimentaires ». Parce que nous créons tout de manière fluide — des produits, magasins et espaces aux réseaux sociaux, vidéos et web — notre mode de travail est un hybride entre une société de production créative et une entreprise.',
+      workLocationTitle: 'Lieu de travail',
+      offlineWorkTitle: 'Travail recommandé en présentiel',
+      offlineWorkText: 'Puisque UMEZOO travaille avec la « nourriture », certains moments de qualité ne peuvent être déterminés qu\'en personne.',
+      remoteWorkTitle: 'Travail recommandé à distance',
+      remoteWorkText: 'Les tâches suivantes tendent à être plus productives en télétravail.',
+      remoteWorkNote: 'Principe directeur : les équipes s\'accordent sur l\'équilibre optimal par projet — « plus de présentiel cette semaine » ou « concentration sur la production cette semaine » — pour maximiser les résultats.',
+      workHoursTitle: 'Horaires de travail',
+      workHoursText: 'UMEZOO valorise la flexibilité selon les circonstances individuelles et les rôles, en tant que professionnels responsables des résultats et de la qualité (des exceptions peuvent s\'appliquer selon le poste et le type de contrat).',
+      workProcessTitle: 'Notre méthode — Un système "Seamless"',
+      workProcessText: 'La valeur d\'UMEZOO réside dans le « Seamless » — connecter planification, production et opérations sans rupture. Nous garantissons au minimum ce qui suit dans chaque projet.',
       positionsTitle: 'Postes ouverts',
-      position1Title: 'Directeur Commercial',
-      position1Type: 'Temps plein',
-      position1Location: 'Tokyo',
-      position2Title: 'Commercial',
-      position2Type: 'Temps plein / Contrat',
-      position2Location: 'Télétravail possible',
-      position3Title: 'Planificateur Alimentaire',
-      position3Type: 'Temps plein / Contrat',
-      position3Location: 'Télétravail possible',
+      positionsSubtitle: 'Offres d\'emploi',
+      benefitsTitle: 'Avantages & Conditions communes',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: 'Lieu',
+      benefitLocationValue: 'Higashi-Kanda, Chiyoda-ku, Tokyo (2 min à pied de la gare Bakurocho)',
+      benefitWorkStyleLabel: 'Mode de travail',
+      benefitWorkStyleValue: 'Horaires flexibles (avec heures de base)\nRatio présentiel/télétravail défini par rôle, présenté lors de l\'offre',
+      benefitEmploymentLabel: 'Type d\'emploi',
+      benefitEmploymentValue: 'CDI (période d\'essai de 6 mois, conditions identiques)',
+      benefitSalaryLabel: 'Salaire',
+      benefitSalaryValue: 'Système de salaire annuel (heures supplémentaires fixes incluses, excédent payé séparément)\nDéfini selon le poste et l\'expérience, détails dans chaque offre',
+      benefitBonusLabel: 'Primes & Augmentations',
+      benefitBonusValue: 'Incentives basés sur la performance, révision salariale annuelle',
+      benefitLeaveLabel: 'Congés',
+      benefitLeaveValue: 'Week-ends complets de 2 jours, congés payés annuels, congés spéciaux, vacances de fin d\'année',
+      benefitInsuranceLabel: 'Assurance',
+      benefitInsuranceValue: 'Couverture complète (santé, retraite, emploi, accidents du travail)',
+      benefitPerksLabel: 'Avantages',
+      benefitPerksValue: 'Indemnité de transport (jusqu\'à ¥20 000/mois), aide au télétravail, dégustations et repas, prototypes à emporter, participation aux événements culinaires',
       applyButton: 'Postuler'
     },
     // Contact Page
@@ -862,7 +928,7 @@ function initAnimations() {
   }, observerOptions);
 
   // Existing animations for feature cards, work cards, etc.
-  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card').forEach(el => {
+  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card, .workstyle-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1103,6 +1169,8 @@ const jobData = {
         <li>多様な専門家と協働し、チームとして成果を出すことに喜びを感じる方</li>
         <li>未経験領域でも積極的に学び、自ら動ける方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   },
   2: {
@@ -1131,6 +1199,8 @@ const jobData = {
         <li>断られても粘り強くアプローチを続けられる方</li>
         <li>食やクリエイティブ業界への興味がある方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   },
   3: {
@@ -1158,6 +1228,8 @@ const jobData = {
         <li>細部までこだわり、品質に妥協しない方</li>
         <li>トレンドに敏感で、新しい食体験を探求し続ける方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   },
   4: {
@@ -1186,6 +1258,8 @@ const jobData = {
         <li>クライアントの意思決定を後押しする説得力のあるアウトプットを出せる方</li>
         <li>食産業の未来に興味を持ち、業界課題を自分ごと化できる方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   },
   5: {
@@ -1214,6 +1288,8 @@ const jobData = {
         <li>会社のカルチャーを理解し、自ら発信できる方</li>
         <li>スタートアップのスピード感を楽しめる方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   },
   6: {
@@ -1243,6 +1319,8 @@ const jobData = {
         <li>事業成長に対するオーナーシップを持てる方</li>
         <li>失敗を恐れず、高速でPDCAを回せる方</li>
       </ul>
+      <h3>待遇</h3>
+      <p>詳細はオファー時にご提示します。共通条件は本ページ下部「福利厚生・共通条件」をご確認ください。</p>
     `
   }
 };
