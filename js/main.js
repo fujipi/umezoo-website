@@ -130,18 +130,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: '採用情報',
-      introTitle: '一緒に食の可能性を広げませんか？',
-      introText: 'UMEZOOでは、食とクリエイティブに情熱を持つ仲間を募集しています。私たちと一緒に、新しい食体験を創造しましょう。',
+      workstyleTitle: 'UMEZOOの働き方',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'UMEZOOの「働き方」は固定ではなく、事業・チーム・フェーズに合わせてベストを更新し続ける運用です。オフィスで生まれるコラボレーション（試食・試作・製造・撮影・ワークショップ等）と、リモートが生む集中と効率を掛け合わせ、個と組織のアウトプットを最大化します。',
+      workstyleIntro2: '私たちは「食体験をデザインする」会社です。商品/店舗/空間から、SNS・映像・Webまで含めて一気通貫で作るため、働き方もクリエイティブ制作会社と事業会社のハイブリッドになります。',
+      workLocationTitle: '働く場所',
+      offlineWorkTitle: 'オフライン推奨の仕事',
+      offlineWorkText: 'UMEZOOは「食」を扱う以上、オフラインでしか品質が決まらない瞬間があります。',
+      remoteWorkTitle: 'リモート推奨の仕事',
+      remoteWorkText: '以下はリモートの方が生産性が出やすい業務です。',
+      remoteWorkNote: '目安の運用：チーム/案件単位で「今週は現場比率高め」「今週は制作集中」など、成果が最大化する配置を合意して動きます。',
+      workHoursTitle: '働く時間',
+      workHoursText: 'UMEZOOは、成果と品質に責任を持つプロフェッショナルとして、個々の事情と役割に応じた柔軟性を重視します（職種・契約形態により例外あり）。',
+      workProcessTitle: '仕事の進め方 ― "Seamless"な仕組み',
+      workProcessText: 'UMEZOOの価値は、企画→制作→運用を切らずに繋げる「Seamless」です。プロジェクトでは最低限これを徹底します。',
       positionsTitle: '募集職種',
-      position1Title: 'ビジネスディレクター',
-      position1Type: '正社員',
-      position1Location: '東京',
-      position2Title: 'セールス',
-      position2Type: '正社員 / 業務委託',
-      position2Location: 'リモート可',
-      position3Title: 'フードプランナー',
-      position3Type: '正社員 / 業務委託',
-      position3Location: 'リモート可',
+      positionsSubtitle: 'Open Positions',
+      benefitsTitle: '福利厚生・共通条件',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: '勤務地',
+      benefitLocationValue: '東京都千代田区東神田（馬喰町駅 徒歩2分）',
+      benefitWorkStyleLabel: '勤務形態',
+      benefitWorkStyleValue: 'フレックスタイム制（コアタイムあり）\n出社・リモートの比率は職種・役割に応じて設定し、オファー時に提示',
+      benefitEmploymentLabel: '雇用形態',
+      benefitEmploymentValue: '正社員（試用期間6ヶ月 ※期間中の待遇に差異なし）',
+      benefitSalaryLabel: '給与',
+      benefitSalaryValue: '年俸制（固定残業代含む、超過分は別途支給）\n職種・経験に応じて設定、詳細は各募集要項に記載',
+      benefitBonusLabel: '賞与・昇給',
+      benefitBonusValue: '成果連動型インセンティブあり、昇給年1回',
+      benefitLeaveLabel: '休日・休暇',
+      benefitLeaveValue: '完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇',
+      benefitInsuranceLabel: '社会保険',
+      benefitInsuranceValue: '完備（健康保険・厚生年金・雇用保険・労災保険）',
+      benefitPerksLabel: '諸手当・福利厚生',
+      benefitPerksValue: '通勤手当（月額2万円まで）、リモートワーク補助、試食・まかない、試作品持ち帰り、食体験イベントへの参加機会',
       applyButton: '応募する'
     },
     // Contact Page
@@ -349,18 +371,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: 'Join Our Team',
-      introTitle: 'Want to expand the possibilities of food with us?',
-      introText: 'UMEZOO is looking for team members who are passionate about food and creativity. Let\'s create new food experiences together.',
+      workstyleTitle: 'How We Work at UMEZOO',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'At UMEZOO, our work style is not fixed — we continuously update best practices to match the business, team, and phase. We maximize output by combining the collaboration born in our office (tasting, prototyping, production, photography, workshops) with the focus and efficiency that remote work enables.',
+      workstyleIntro2: 'We are a company that "designs food experiences." Because we create everything seamlessly — from products, stores, and spaces to SNS, video, and web — our work style is a hybrid of a creative production company and a business company.',
+      workLocationTitle: 'Work Location',
+      offlineWorkTitle: 'Offline-Recommended Work',
+      offlineWorkText: 'Since UMEZOO deals with "food," there are moments when quality can only be determined in person.',
+      remoteWorkTitle: 'Remote-Recommended Work',
+      remoteWorkText: 'The following tasks tend to be more productive when done remotely.',
+      remoteWorkNote: 'Guideline: Teams agree on the optimal balance per project — "more on-site this week" or "focused on production this week" — to maximize results.',
+      workHoursTitle: 'Working Hours',
+      workHoursText: 'UMEZOO values flexibility based on individual circumstances and roles, as professionals responsible for outcomes and quality (exceptions may apply by position and contract type).',
+      workProcessTitle: 'How We Work — A "Seamless" System',
+      workProcessText: 'UMEZOO\'s value lies in "Seamless" — connecting planning, production, and operations without breaks. We ensure at minimum the following in every project.',
       positionsTitle: 'Open Positions',
-      position1Title: 'Business Director',
-      position1Type: 'Full-time',
-      position1Location: 'Tokyo',
-      position2Title: 'Sales',
-      position2Type: 'Full-time / Contract',
-      position2Location: 'Remote OK',
-      position3Title: 'Food Planner',
-      position3Type: 'Full-time / Contract',
-      position3Location: 'Remote OK',
+      positionsSubtitle: 'Job Listings',
+      benefitsTitle: 'Benefits & Common Conditions',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: 'Location',
+      benefitLocationValue: 'Higashi-Kanda, Chiyoda-ku, Tokyo (2 min walk from Bakurocho Station)',
+      benefitWorkStyleLabel: 'Work Style',
+      benefitWorkStyleValue: 'Flextime system (with core hours)\nOn-site/remote ratio set by role, presented at offer',
+      benefitEmploymentLabel: 'Employment',
+      benefitEmploymentValue: 'Full-time (6-month probation period, no difference in conditions)',
+      benefitSalaryLabel: 'Salary',
+      benefitSalaryValue: 'Annual salary system (includes fixed overtime pay, excess paid separately)\nSet according to role and experience, details in each job listing',
+      benefitBonusLabel: 'Bonus & Raises',
+      benefitBonusValue: 'Performance-based incentives, annual salary review',
+      benefitLeaveLabel: 'Holidays',
+      benefitLeaveValue: 'Full 2-day weekends, annual paid leave, special occasion leave, year-end/New Year holidays',
+      benefitInsuranceLabel: 'Insurance',
+      benefitInsuranceValue: 'Full coverage (health, pension, employment, workers\' compensation)',
+      benefitPerksLabel: 'Benefits & Perks',
+      benefitPerksValue: 'Commuting allowance (up to ¥20,000/month), remote work support, food tasting & meals, take-home prototypes, food experience event participation',
       applyButton: 'Apply'
     },
     // Contact Page
@@ -568,18 +612,40 @@ const translations = {
     career: {
       pageTitle: 'Career',
       pageSubtitle: 'Rejoignez notre équipe',
-      introTitle: 'Voulez-vous élargir les possibilités de la nourriture avec nous?',
-      introText: 'UMEZOO recherche des membres d\'équipe passionnés par la nourriture et la créativité. Créons ensemble de nouvelles expériences alimentaires.',
+      workstyleTitle: 'Notre façon de travailler',
+      workstyleSubtitle: 'Working Style',
+      workstyleIntro1: 'Chez UMEZOO, notre mode de travail n\'est pas figé — nous actualisons continuellement nos pratiques pour nous adapter au business, à l\'équipe et à la phase du projet. Nous maximisons les résultats en combinant la collaboration née au bureau (dégustation, prototypage, production, photographie, ateliers) avec la concentration et l\'efficacité du travail à distance.',
+      workstyleIntro2: 'Nous sommes une entreprise qui « conçoit des expériences alimentaires ». Parce que nous créons tout de manière fluide — des produits, magasins et espaces aux réseaux sociaux, vidéos et web — notre mode de travail est un hybride entre une société de production créative et une entreprise.',
+      workLocationTitle: 'Lieu de travail',
+      offlineWorkTitle: 'Travail recommandé en présentiel',
+      offlineWorkText: 'Puisque UMEZOO travaille avec la « nourriture », certains moments de qualité ne peuvent être déterminés qu\'en personne.',
+      remoteWorkTitle: 'Travail recommandé à distance',
+      remoteWorkText: 'Les tâches suivantes tendent à être plus productives en télétravail.',
+      remoteWorkNote: 'Principe directeur : les équipes s\'accordent sur l\'équilibre optimal par projet — « plus de présentiel cette semaine » ou « concentration sur la production cette semaine » — pour maximiser les résultats.',
+      workHoursTitle: 'Horaires de travail',
+      workHoursText: 'UMEZOO valorise la flexibilité selon les circonstances individuelles et les rôles, en tant que professionnels responsables des résultats et de la qualité (des exceptions peuvent s\'appliquer selon le poste et le type de contrat).',
+      workProcessTitle: 'Notre méthode — Un système "Seamless"',
+      workProcessText: 'La valeur d\'UMEZOO réside dans le « Seamless » — connecter planification, production et opérations sans rupture. Nous garantissons au minimum ce qui suit dans chaque projet.',
       positionsTitle: 'Postes ouverts',
-      position1Title: 'Directeur Commercial',
-      position1Type: 'Temps plein',
-      position1Location: 'Tokyo',
-      position2Title: 'Commercial',
-      position2Type: 'Temps plein / Contrat',
-      position2Location: 'Télétravail possible',
-      position3Title: 'Planificateur Alimentaire',
-      position3Type: 'Temps plein / Contrat',
-      position3Location: 'Télétravail possible',
+      positionsSubtitle: 'Offres d\'emploi',
+      benefitsTitle: 'Avantages & Conditions communes',
+      benefitsSubtitle: 'Benefits & Conditions',
+      benefitLocationLabel: 'Lieu',
+      benefitLocationValue: 'Higashi-Kanda, Chiyoda-ku, Tokyo (2 min à pied de la gare Bakurocho)',
+      benefitWorkStyleLabel: 'Mode de travail',
+      benefitWorkStyleValue: 'Horaires flexibles (avec heures de base)\nRatio présentiel/télétravail défini par rôle, présenté lors de l\'offre',
+      benefitEmploymentLabel: 'Type d\'emploi',
+      benefitEmploymentValue: 'CDI (période d\'essai de 6 mois, conditions identiques)',
+      benefitSalaryLabel: 'Salaire',
+      benefitSalaryValue: 'Système de salaire annuel (heures supplémentaires fixes incluses, excédent payé séparément)\nDéfini selon le poste et l\'expérience, détails dans chaque offre',
+      benefitBonusLabel: 'Primes & Augmentations',
+      benefitBonusValue: 'Incentives basés sur la performance, révision salariale annuelle',
+      benefitLeaveLabel: 'Congés',
+      benefitLeaveValue: 'Week-ends complets de 2 jours, congés payés annuels, congés spéciaux, vacances de fin d\'année',
+      benefitInsuranceLabel: 'Assurance',
+      benefitInsuranceValue: 'Couverture complète (santé, retraite, emploi, accidents du travail)',
+      benefitPerksLabel: 'Avantages',
+      benefitPerksValue: 'Indemnité de transport (jusqu\'à ¥20 000/mois), aide au télétravail, dégustations et repas, prototypes à emporter, participation aux événements culinaires',
       applyButton: 'Postuler'
     },
     // Contact Page
@@ -862,7 +928,7 @@ function initAnimations() {
   }, observerOptions);
 
   // Existing animations for feature cards, work cards, etc.
-  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card').forEach(el => {
+  document.querySelectorAll('.feature-card, .work-card, .service-item, .value-card, .workstyle-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1078,170 +1144,442 @@ function initNewsModal() {
 // Job data for career modal
 const jobData = {
   1: {
-    title: 'ビジネスディレクター',
+    title: 'ビジネスプロデューサー（アライアンス）',
     type: '正社員',
-    location: 'Tokyo',
-    role: 'クライアントの事業課題を深く理解し、多様なサービスを組み合わせたソリューションを設計・推進する責任者',
+    location: 'ハイブリッド',
+    role: 'クライアントの事業課題を深く理解し、多様なサービスを組み合わせたソリューションを設計・構築する責任者',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>食産業内外のあらゆる法人とのアライアンスを構築し、UMEZOOのサービスを起点にした共創プロジェクトを企画・推進するポジションです。単なる営業ではなく、パートナー企業の経営課題を理解した上で、UMEZOOの企画力・創造力を掛け合わせた事業提携を行います。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>クライアントの経営者・事業責任者との対話を通じた課題のヒアリングと分析</li>
-        <li>課題解決に向けた包括的なサービスプランの設計と提案</li>
-        <li>プロジェクト全体のディレクションおよび社内外のリソース調整</li>
-        <li>クライアントとの継続的なリレーション構築と追加提案</li>
+        <li>パートナー企業開拓とリレーション構築</li>
+        <li>パートナー企業の経営課題ヒアリング〜共創プロジェクトの企画・提案</li>
+        <li>アライアンススキームの設計（レベニューシェア、JV、OEM連携等）</li>
+        <li>プロジェクト全体のPM（社内チームとパートナー企業のハブ）</li>
+        <li>契約条件の交渉・締結</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>320年の歴史を持つ酒蔵や不動産ディベロッパーなど、UMEZOOの既存パートナーとの共創案件に初期から関われます。「食×クリエイティブ×ビジネス」の交差点で、業界の常識を変えるようなアライアンスを自ら設計できる環境です。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>事業会社またはコンサルティングファームでの事業企画・経営企画経験</li>
-        <li>複数ステークホルダーを巻き込んだプロジェクトマネジメント経験</li>
-        <li>経営レベルとの折衝およびプレゼンテーション経験</li>
-        <li>食・クリエイティブ領域への強い関心</li>
+        <li>法人向け事業開発またはアライアンスの経験 3年以上</li>
+        <li>複数ステークホルダーを巻き込んだプロジェクト推進経験</li>
+        <li>契約条件の交渉・クロージング経験</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料・外食業界、またはIT・Web・テクノロジー業界での業務経験</li>
+        <li>新規事業の立ち上げまたはプロジェクトマネジメントの経験</li>
+        <li>スタートアップでの業務経験</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>単に案件を取るのではなく、パートナーと一緒に事業を作ることに面白さを感じる方。食の領域に強い関心があり、業界のプレイヤーとの信頼関係を長期で築ける方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>クライアントの課題を自分ごととして捉え、最後まで責任を持てる方</li>
-        <li>多様な専門家と協働し、チームとして成果を出すことに喜びを感じる方</li>
-        <li>未経験領域でも積極的に学び、自ら動ける方</li>
+        <li>雇用形態：正社員</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）／ハイブリッド</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）、出社・リモート比率はオファー時に提示</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   },
   2: {
     title: 'セールス',
     type: '正社員 / 業務委託',
-    location: 'ハイブリッド',
+    location: '東京',
     role: 'UMEZOOのサービスを必要とする企業を開拓し、継続的な取引関係を構築する営業担当',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>UMEZOOの運営支援サービス（マーケティング運用代行・商品開発パートナー・新規事業支援など）を食品メーカー・酒蔵・飲食企業等に提案・受注するポジションです。リストアップからアポ取得、商談、クロージングまでを一気通貫で担当します。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>ターゲット企業のリサーチとアプローチリスト作成</li>
-        <li>新規顧客へのアウトバウンド営業（電話・メール・SNS等）</li>
-        <li>商談設定および初回ヒアリングの実施</li>
-        <li>提案資料の作成支援と契約クロージング</li>
-        <li>CRMを活用した顧客管理とパイプライン可視化</li>
+        <li>ターゲット企業のリストアップ・アプローチ（テレアポ・メール・展示会等）</li>
+        <li>初回商談〜課題ヒアリング〜提案書作成〜クロージング</li>
+        <li>既存クライアントへのアップセル・クロスセル提案</li>
+        <li>セールスKPIの管理・改善（架電数、商談数、受注率等）</li>
+        <li>マーケティングチームとの連携によるリード獲得施策への参画</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>提案内容の自由度が高く、自らが考案した企画や計画が形になることを肌で感じられます。食の専門サービスという競合が少ない領域で、自分の提案スタイルを確立できます。立ち上げ初期のセールスチームで、仕組みづくりから関わることができます。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>法人向け新規営業経験（業界不問）</li>
-        <li>目標達成意欲が高く、PDCAを自ら回せる方</li>
-        <li>基本的なPCスキル（スプレッドシート、プレゼン資料作成）</li>
+        <li>法人営業経験 1年以上（業界不問）</li>
+        <li>新規開拓営業の経験（テレアポ・飛び込み等）</li>
+        <li>目標達成への強いコミットメント</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料・外食業界への営業経験</li>
+        <li>SaaSなどのストック型サービスの営業経験</li>
+        <li>CRMツールの運用経験</li>
+        <li>マーケティングや食品および飲料に関する興味と知識</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>泥臭い新規開拓もいとわず、数字にこだわれる方。同時に、クライアントの課題を深く理解し、最適な提案を組み立てることに喜びを感じる方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>フットワーク軽く、スピード感を持って行動できる方</li>
-        <li>断られても粘り強くアプローチを続けられる方</li>
-        <li>食やクリエイティブ業界への興味がある方</li>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   },
   3: {
-    title: 'フードプランナー',
-    type: '正社員 / 業務委託',
+    title: '法人営業マネージャー（課長〜部長クラス）',
+    type: '正社員',
     location: 'ハイブリッド',
-    role: 'レシピ開発・商品開発・メニュー設計など、フード領域の成果物を高い品質で納品する実務担当者',
+    role: '法人営業チームを統括し、売上目標の達成と顧客基盤の拡大を推進するマネジメントポジション',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>セールスチームを率い、チームの売上目標達成と営業組織の仕組みづくりを担うポジションです。プレイングマネージャーとして自ら重要案件のクロージングも行いながら、KPI設計・パイプライン管理・メンバー育成を推進します。また業務提携を含む新規プロジェクトの立ち上げも担う部門でもあるため、社会的にインパクトの大きな仕事を手掛けることもできます。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>クライアント要件に基づいたレシピ・メニューの開発</li>
-        <li>試作・試食会の実施とフィードバック反映</li>
-        <li>原価計算、栄養計算、商品仕様書の作成</li>
-        <li>製造工程の設計と外部パートナー（OEM工場等）との連携</li>
+        <li>セールスチームのマネジメント（目標設定・進捗管理・1on1・育成）</li>
+        <li>売上予算の策定と達成に向けた営業戦術立案・実行</li>
+        <li>営業プロセスの標準化（トークスクリプト・提案テンプレート・KPI設計）</li>
+        <li>重要案件のハンドリング・クロージング（プレイングマネージャー）</li>
+        <li>新規プロジェクトの企画・立案</li>
+        <li>経営層への売上報告・戦略提案</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>初期のPMFを経て組織化のフェーズで、営業組織の土台をイチから設計できます。単なる管理職ではなく、セールスの仕組み・カルチャー・採用まで含めた「営業組織そのもの」を作る経験ができます。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>飲食店・ホテル・食品メーカー等でのレシピ開発またはメニュー開発経験</li>
-        <li>調理師免許または栄養士資格（尚可）</li>
-        <li>食材・調味料・調理法に関する幅広い知識</li>
+        <li>法人営業チームのマネジメント経験 3年以上</li>
+        <li>5名以上のチームで売上目標を達成した実績</li>
+        <li>営業プロセスの設計・改善経験</li>
+        <li>KPIマネジメントの経験</li>
+        <li>営業をハックする思考を持つことができる</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料・外食業界での営業経験</li>
+        <li>スタートアップまたは成長期企業でのセールス組織立ち上げ経験</li>
+        <li>コンサルティングサービスなど無形商材の営業経験</li>
+        <li>1億円以上の事業インパクトを創出した経験</li>
+        <li>単価100万円以上の無形商材の営業経験</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>自ら数字を作りながら、チームの成果を最大化できる方。メンバーの成長にコミットし、再現性のある営業組織を構築することに情熱を持てる方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>美味しさと再現性を両立できる方</li>
-        <li>細部までこだわり、品質に妥協しない方</li>
-        <li>トレンドに敏感で、新しい食体験を探求し続ける方</li>
+        <li>雇用形態：正社員</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）／ハイブリッド</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）、出社・リモート比率はオファー時に提示</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   },
   4: {
-    title: 'フードコンサルタント',
+    title: 'フードプランナー',
     type: '正社員 / 業務委託',
-    location: 'Tokyo',
-    role: '市場分析・戦略立案・事業計画策定などの事業関連成果物を提供するコンサルタント',
+    location: '東京',
+    role: 'レシピ開発・商品開発・メニュー設計など、フード領域の成果物を高い品質で納品する実務担当者',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>レシピ開発・メニュー設計・商品企画を軸に、クライアントの食品事業を形にするポジションです。コンセプト設計から試作・原価計算・製造仕様書作成・OEM先との調整まで、商品が世に出るまでの全工程に関わります。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>市場調査（定量・定性）と競合分析の実施</li>
-        <li>事業計画書・ビジネスモデルの策定支援</li>
-        <li>ブランドコンセプト・ポジショニングの設計</li>
-        <li>クライアントへのプレゼンテーションと報告書作成</li>
+        <li>クライアントの商品コンセプトに基づくレシピ開発・試作・改良</li>
+        <li>飲食店メニューの開発・原価計算・オペレーション設計</li>
+        <li>製造仕様書の作成、OEM先・工場との製造調整</li>
+        <li>食品表示・栄養成分表示対応</li>
+        <li>ペアリング提案（日本酒・ワイン等）、テイスティング・品質評価</li>
+        <li>撮影用フードスタイリング</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>酒蔵との日本酒ペアリング、冷凍ビリヤニのD2Cブランド、惣菜工場の製造ライン設計など、ジャンルの幅が圧倒的に広いのが特徴です。「料理が作れる」だけでなく「食品事業を設計できる」プランナーとしてのキャリアを築けます。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>コンサルティングファームまたは事業会社での戦略立案経験</li>
-        <li>食品・飲食業界の知識（尚可）</li>
-        <li>リサーチスキルおよび論理的な資料作成能力</li>
-        <li>Excel/PowerPoint等を用いた分析・資料作成スキル</li>
+        <li>レシピ開発または食品商品開発の実務経験 2年以上</li>
+        <li>原価計算・利益率設計の理解</li>
+        <li>調理師免許または同等の調理技術</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>OEM先との製造調整経験</li>
+        <li>食品表示・HACCP関連の知識</li>
+        <li>フードスタイリング・料理撮影の経験</li>
+        <li>日本酒・ワイン等の酒類知識</li>
+        <li>工場での大量製造レシピへの変換経験</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>料理の腕だけでなく、事業として成立させるための数字感覚を持っている方。「美味しい」を再現可能な仕組みに落とし込むことに面白さを感じる方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>データと仮説を行き来しながら戦略を構築できる方</li>
-        <li>クライアントの意思決定を後押しする説得力のあるアウトプットを出せる方</li>
-        <li>食産業の未来に興味を持ち、業界課題を自分ごと化できる方</li>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   },
   5: {
-    title: '人材採用スタッフ',
+    title: 'マーケター',
     type: '正社員 / 業務委託',
-    location: 'ハイブリッド',
-    role: '採用計画の立案から母集団形成、選考運営、入社後フォローまで、採用プロセス全体を推進',
+    location: '東京',
+    role: 'デジタルマーケティング施策の企画から実行・分析までを担い、食品特化のコンテンツ戦略を推進',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>クライアントのSNS運用・コンテンツ制作・EC分析・LINE OA運用など、デジタルマーケティング施策の企画から実行・分析までを担うポジションです。食品特化のマーケティングに必要な撮影ディレクション・レシピコンテンツ企画にも関わります。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>採用計画の策定と採用チャネルの選定</li>
-        <li>求人票の作成、媒体運用、スカウト送信</li>
-        <li>応募者対応、面接日程調整、選考フローの運営</li>
-        <li>内定者フォローおよびオンボーディング支援</li>
-        <li>採用ブランディング施策の企画・実行</li>
+        <li>SNS運用代行（Instagram / X / TikTok等の投稿企画・制作・コミュニケーション管理）</li>
+        <li>コンテンツ企画・制作ディレクション（レシピ動画・静止画・記事）</li>
+        <li>GA / EC分析・月次レポーティング・KPI設計</li>
+        <li>LINE公式アカウント運用（配信設計・会員管理・ステップ配信）</li>
+        <li>メルマガ・note等の記事ライティング</li>
+        <li>マーケティング戦略の立案（市場調査・ターゲット分析・ブランディング）</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>食品SNSの成果は「料理の質」で決まります。UMEZOOでは社内にレシピ開発チームがいるため、コンテンツの企画から制作まで一気通貫でコントロールでき、マーケターとしての打ち手の幅が圧倒的に広がります。また、マーケティングを通じて食卓をデザインできる、食体験の提供に携わることができるのも、面白さの一つです。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>人事・採用担当としての実務経験</li>
-        <li>採用媒体、ダイレクトリクルーティングの運用経験</li>
-        <li>基本的なPCスキルと丁寧なコミュニケーション能力</li>
+        <li>SNS運用またはデジタルマーケティングの実務経験 2年以上</li>
+        <li>GA等のアクセス解析ツールの運用経験</li>
+        <li>コンテンツ企画・制作ディレクションの経験</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料業界でのマーケティング経験</li>
+        <li>LINE公式アカウント・CRM運用の経験</li>
+        <li>撮影ディレクション・動画制作の経験</li>
+        <li>EC運営・分析の経験</li>
+        <li>ライティングスキル（note・メルマガ等）</li>
+        <li>デザイン業務の経験</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>データに基づいて改善を回しながらも、クリエイティブの質にこだわれる方。食に対する感度が高く、生活者目線のコンテンツ設計ができる方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>候補者一人ひとりに真摯に向き合える方</li>
-        <li>会社のカルチャーを理解し、自ら発信できる方</li>
-        <li>スタートアップのスピード感を楽しめる方</li>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   },
   6: {
-    title: 'コンシューマー向け新規事業責任者',
-    type: '正社員',
-    location: 'Tokyo',
-    role: '一般消費者向けの新規事業を立ち上げ、成長させる責任者（部長レベル）',
+    title: '人材採用',
+    type: '正社員 / 業務委託',
+    location: 'ハイブリッド',
+    role: '採用計画の立案から母集団形成、選考運営、入社後フォローまで、採用プロセス全体を推進',
     body: `
-      <h3>主な業務内容</h3>
+      <h3>ポジション概要</h3>
+      <p>拡大フェーズへの組織構築を担う、UMEZOOの採用担当ポジションです。採用戦略の策定から母集団形成、面接設計、オファー、入社オンボーディングまでを一貫して担当します。採用だけでなく、組織設計・人事制度の整備にも関わる機会があります。</p>
+      <h3>業務内容</h3>
       <ul>
-        <li>新規事業のアイデア創出、市場検証（MVP構築）</li>
-        <li>事業計画の策定とKPI設計</li>
-        <li>チーム組成とマネジメント</li>
-        <li>プロダクト開発、マーケティング、オペレーション全般の推進</li>
-        <li>経営陣への進捗報告と意思決定サポート</li>
+        <li>採用戦略・採用計画の策定（職種別の要件定義・チャネル選定）</li>
+        <li>求人媒体・エージェント・ダイレクトリクルーティングの運用</li>
+        <li>候補者とのコミュニケーション・面接調整・面接実施</li>
+        <li>選考プロセスの設計・改善（歩留まり分析・面接品質の向上）</li>
+        <li>入社オンボーディングの設計・実行</li>
+        <li>採用ブランディング（採用ページ・SNS発信等）</li>
       </ul>
-      <h3>求める経験・スキル</h3>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>組織の倍増フェーズで、採用だけでなく「どんなチームを作るか」から設計できます。食×クリエイティブという独自領域での採用ブランディングを、ゼロから作り上げる経験ができます。</p>
+      <h3>必須スキル・経験</h3>
       <ul>
-        <li>新規事業立ち上げまたは事業責任者としての経験</li>
-        <li>P/L管理、チームマネジメントの経験</li>
-        <li>食品・飲食・消費財領域でのビジネス経験（尚可）</li>
-        <li>不確実性の高い環境で意思決定し、推進できる能力</li>
+        <li>中途採用の実務経験 2年以上（企業人事またはエージェント）</li>
+        <li>複数職種の同時採用をハンドリングした経験</li>
+        <li>候補者・現場双方とのコミュニケーション力</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>スタートアップまたは成長期企業での採用経験</li>
+        <li>ダイレクトリクルーティングの運用経験</li>
+        <li>人事制度設計・組織開発への関心</li>
+        <li>採用ブランディング・採用広報の経験</li>
       </ul>
       <h3>求める人物像</h3>
+      <p>「この人と一緒に働きたい」と思える人材を見極め、口説く力を持つ方。組織フェーズに合わせて、柔軟に手法を変えられる方。</p>
+      <h3>待遇</h3>
       <ul>
-        <li>ゼロイチを楽しみ、自ら手を動かせる方</li>
-        <li>事業成長に対するオーナーシップを持てる方</li>
-        <li>失敗を恐れず、高速でPDCAを回せる方</li>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）／ハイブリッド</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）、出社・リモート比率はオファー時に提示</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
+      </ul>
+    `
+  },
+  7: {
+    title: '事業戦略',
+    type: '正社員 / 業務委託',
+    location: 'ハイブリッド',
+    role: 'UMEZOOの経営戦略に紐づく事業戦略の構築、事業企画/事業開発を取締役直下で推進',
+    body: `
+      <h3>ポジション概要</h3>
+      <p>UMEZOOの経営戦略に紐づく事業戦略の構築、およびそれに伴う事業企画/事業開発など、幅広い業務領域を取締役直下で推進するポジションです。子会社事業のマネジメント、法人向け事業の標準化や戦略的パートナーシップ、M&A戦略の推進、新たな事業/サービスラインの設計、PMI業務など、UMEZOOの頭脳を担っていただきます。</p>
+      <h3>業務内容</h3>
+      <ul>
+        <li>新規事業のコンセプト設計・市場調査・事業計画策定</li>
+        <li>収支シミュレーション・投資判断の材料作成</li>
+        <li>事業立ち上げのプロジェクトマネジメント</li>
+        <li>中期経営戦略の策定支援（M&A・ロールアップ戦略含む）</li>
+        <li>既存事業の収益改善・サービス設計の最適化</li>
+        <li>サービスの体系化およびノウハウによるPMIの推進</li>
+      </ul>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>食業界のロールアップ戦略の初期フェーズに参画できます。役員直下で経営の意思決定プロセスに関わりながら、自ら事業を設計・実行する経験が積めます。</p>
+      <h3>必須スキル・経験</h3>
+      <ul>
+        <li>事業企画・事業開発・経営企画のいずれかの経験 5年以上</li>
+        <li>事業責任者またはプロジェクトマネージャーの経験3年以上</li>
+        <li>事業計画・収支モデルおよび打ち手の計画から実行</li>
+        <li>複数部門を巻き込んだプロジェクト推進力</li>
+        <li>常識を疑って考えることのできる論理的思考力</li>
+        <li>ネイティブレベルの日本語</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料・外食業界での事業経験</li>
+        <li>IT・Web・テクノロジー業界での事業経験</li>
+        <li>M&A・PMIの実務経験</li>
+        <li>コンサルティングファームでの業務経験</li>
+        <li>ビジネスレベルの英語</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <p>戦略を描くだけでなく、自ら手を動かして事業を形にできる方。不確実性を楽しみながら、仮説検証を高速で回せる方。</p>
+      <h3>待遇</h3>
+      <ul>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）／ハイブリッド</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）、出社・リモート比率はオファー時に提示</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+      </ul>
+    `
+  },
+  8: {
+    title: '新卒 / 第二新卒',
+    type: '正社員',
+    location: '東京',
+    role: 'UMEZOOの事業全体を経験しながら、自身の強みと志向に合わせてキャリアを形成',
+    body: `
+      <h3>ポジション概要</h3>
+      <p>UMEZOOの事業全体を経験しながら、自身の強みと志向に合わせてキャリアを形成するポジションです。OJTを通じて実務スキルを身につけます。</p>
+      <h3>業務内容</h3>
+      <ul>
+        <li>配属チームの実務（フードコミュニケーションチーム／フードクリエイティブチーム）</li>
+        <li>クライアントワークへの参加（先輩社員のサポートから段階的に主担当へ）</li>
+        <li>社内プロジェクトの企画・推進（改善提案含む）</li>
+        <li>全社定例・勉強会への参加、ナレッジの文書化</li>
+      </ul>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>少数精鋭のスタートアップで、入社初期からクライアントワークの最前線に立てます。食品業界のバリューチェーン全体（企画→開発→製造→マーケ→販売）を横断的に学べるのは、UMEZOOならではの環境です。</p>
+      <h3>必須スキル・経験</h3>
+      <ul>
+        <li>2026年3月以降に卒業済みまたは卒業見込みの方（第二新卒は社会人経験3年未満が目安）</li>
+        <li>食体験やテクノロジーに対する強い興味関心</li>
+        <li>主体的に学び、行動できる姿勢</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>飲食店・食品関連のアルバイト・インターン経験</li>
+        <li>SNS運用・コンテンツ制作の経験（個人・学生団体含む）</li>
+        <li>営業・接客のアルバイト経験</li>
+        <li>調理師免許・栄養士資格等の食関連資格</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <p>食の領域で自分のキャリアを作りたいという強い意志を持つ方。答えのない環境で試行錯誤を楽しめる方。大企業では得られないスピード感と裁量を求める方。</p>
+      <h3>待遇</h3>
+      <ul>
+        <li>雇用形態：正社員</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
+      </ul>
+    `
+  },
+  9: {
+    title: 'オープンポジション',
+    type: '正社員 / 業務委託',
+    location: '東京 / ハイブリッド',
+    role: 'UMEZOOの事業に共感し、自身のスキル・経験を活かして貢献したい方のためのポジション',
+    body: `
+      <h3>ポジション概要</h3>
+      <p>上記のポジションに当てはまらないが、UMEZOOの事業に共感し、自身のスキル・経験を活かして貢献したい方のためのポジションです。ご応募いただいた方のスキルセットと志向に応じて、最適な役割をご相談します。</p>
+      <h3>業務内容</h3>
+      <ul>
+        <li>ご経験・スキルに応じて決定</li>
+        <li>現在特に歓迎するスキルセット：映像制作・動画編集、Webデザイン・UI/UX、管理部門（経理・法務）、データ分析・BI構築</li>
+      </ul>
+      <h3>このポジションのユニークなチャレンジ</h3>
+      <p>成長フェーズのスタートアップで、自分の専門性を起点に新しい役割やチームをつくることができます。「ポジションがないから応募できない」ではなく「あなたの強みでポジションをつくる」という発想です。</p>
+      <h3>必須スキル・経験</h3>
+      <ul>
+        <li>何らかの専門領域で3年以上の実務経験</li>
+        <li>UMEZOOの事業内容・価値観への共感</li>
+        <li>自ら課題を発見し、提案・実行できる自走力</li>
+      </ul>
+      <h3>歓迎スキル・経験</h3>
+      <ul>
+        <li>食品・飲料・外食業界での業務経験</li>
+        <li>スタートアップでの業務経験</li>
+        <li>複数領域にまたがるスキルセット</li>
+      </ul>
+      <h3>求める人物像</h3>
+      <p>既存の枠にとらわれず、自分の強みで価値を生み出せる方。UMEZOOの「食体験をデザインする」というミッションに共感し、一緒に組織を作っていきたい方。</p>
+      <h3>待遇</h3>
+      <ul>
+        <li>雇用形態：正社員（業務委託の場合は別途条件提示）</li>
+        <li>勤務地：東京都千代田区東神田（馬喰町駅 徒歩2分）／ハイブリッド</li>
+        <li>勤務形態：フレックスタイム制（コアタイムあり）、出社・リモート比率はオファー時に提示</li>
+        <li>給与：年俸制（固定残業代 月45時間分を含む、超過分は別途支給）</li>
+        <li>賞与・昇給：成果連動型インセンティブあり、昇給年1回</li>
+        <li>試用期間：6ヶ月（待遇に差異なし）</li>
+        <li>休日・休暇：完全週休2日制、年次有給休暇、慶弔休暇、年末年始休暇</li>
+        <li>社会保険：完備（健康保険・厚生年金・雇用保険・労災保険）</li>
+        <li>通勤手当あり（合理的に最も経済的な移動手段を選択し、月額2万円まで）</li>
+        <li>福利厚生：試食・まかない、試作品持ち帰り、食体験イベントへの参加機会、AIなどの先端技術に関する勉強会</li>
       </ul>
     `
   }
