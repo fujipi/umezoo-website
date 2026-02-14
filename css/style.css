@@ -2607,10 +2607,12 @@ a.work-card:hover {
 
 .partners__logo--invert {
   filter: grayscale(100%) invert(1);
+  mix-blend-mode: normal;
 }
 
 .partners__logo--invert:hover {
   filter: invert(1);
+  mix-blend-mode: normal;
 }
 
 @keyframes partners-scroll {
