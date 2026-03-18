@@ -89,7 +89,7 @@ const translations = {
       business3: 'ケータリングサービス業',
       business4: 'インターネット、カタログによる食料品及び食品の通信販売及びその他通信網を利用する情報提供及び処理業務',
       addressLabel: '所在地',
-      address: '東京都渋谷区東３丁目１８番地８号'
+      address: '東京都千代田区東神田一丁目13番14号 Hide and seek TOKYO102号室'
     },
     // Work Page
     work: {
