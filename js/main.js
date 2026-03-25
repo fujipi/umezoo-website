@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize components
+  initHeroTitle();
   initSplash();
   initHeroBackground();
   initPageHeroBackground();
@@ -36,6 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply translations
   applyTranslations();
 });
+
+// Random hero title
+function initHeroTitle() {
+  const titles = [
+    'おいしい を、知っている',
+    'うまい を、知っている',
+    'うめぇ を、知っている'
+  ];
+  const el = document.getElementById('hero-title');
+  if (el) {
+    el.textContent = titles[Math.floor(Math.random() * titles.length)];
+  }
+}
 
 // Splash screen
 function initSplash() {
