@@ -133,6 +133,57 @@ p {
   background-color: var(--color-white);
   z-index: 1000;
   border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* Transparent header for top page */
+.header--transparent {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.header--transparent .nav__link,
+.header--transparent .lang-switcher__btn {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header--transparent .nav__link:hover,
+.header--transparent .nav__link--active,
+.header--transparent .lang-switcher__btn--active {
+  color: var(--color-white);
+}
+
+.header--transparent .menu-toggle__bar {
+  background-color: var(--color-white);
+}
+
+.header--transparent .header__logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* Scrolled state restores white background */
+.header--transparent.header--scrolled {
+  background-color: var(--color-white);
+  border-bottom-color: var(--color-border);
+}
+
+.header--transparent.header--scrolled .nav__link,
+.header--transparent.header--scrolled .lang-switcher__btn {
+  color: var(--color-text-light);
+}
+
+.header--transparent.header--scrolled .nav__link:hover,
+.header--transparent.header--scrolled .nav__link--active,
+.header--transparent.header--scrolled .lang-switcher__btn--active {
+  color: var(--color-text);
+}
+
+.header--transparent.header--scrolled .menu-toggle__bar {
+  background-color: var(--color-primary);
+}
+
+.header--transparent.header--scrolled .header__logo img {
+  filter: none;
 }
 
 .header__inner {
