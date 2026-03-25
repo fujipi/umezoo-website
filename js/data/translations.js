@@ -88,6 +88,7 @@ const translations = {
       business2: '食品及び飲料の企画、開発、販売',
       business3: 'ケータリングサービス業',
       business4: 'インターネット、カタログによる食料品及び食品の通信販売及びその他通信網を利用する情報提供及び処理業務',
+      business5: 'AIによる業務の事業化サービスの提供',
       addressLabel: '所在地',
       address: '東京都千代田区東神田一丁目13番14号 Hide and seek TOKYO102号室'
     },
@@ -367,6 +368,7 @@ const translations = {
       business2: 'Planning, development, and sales of food & beverages',
       business3: 'Catering services',
       business4: 'Online and catalog sales of food products, and information services via telecommunications networks',
+      business5: 'AI-powered business transformation services',
       addressLabel: 'Location',
       address: 'Tokyo, Japan'
     },
@@ -646,6 +648,7 @@ const translations = {
       business2: 'Planification, développement et vente de produits alimentaires et boissons',
       business3: 'Services de restauration',
       business4: 'Vente en ligne et par catalogue de produits alimentaires, et services d\'information via les réseaux de télécommunications',
+      business5: 'Services de transformation d\'entreprise par l\'IA',
       addressLabel: 'Adresse',
       address: 'Tokyo, Japon'
     },
