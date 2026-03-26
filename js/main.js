@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initHeroTitle() {
   const titles = [
     'おいしい を、知っている',
-    'うまい を、知っている',
-    'うめぇ を、知っている'
+    'うまい を、知っている'
   ];
   const el = document.getElementById('hero-title');
   if (el) {
