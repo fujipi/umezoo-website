@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI業務Ops | 食品・飲料メーカーのAI業務自動化 - UMEZOO</title>
+  <meta name="description" content="営業・マーケティング・バックオフィス。食品・飲料メーカーの現場業務をAIが引き取ります。業務棚卸しは無料。">
+  <meta property="og:title" content="AI業務Ops | 食品・飲料メーカーのAI業務自動化">
+  <meta property="og:description" content="採れない、回らない、を終わらせる。食品・飲料メーカーの現場業務を、AIが引き取ります。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a1a1a;
+      --color-secondary: #333333;
+      --color-text: #1a1a1a;
+      --color-text-light: #555555;
+      --color-text-muted: #888888;
+      --color-white: #ffffff;
+      --color-bg: #f8f8f8;
+      --color-bg-dark: #f0f0f0;
+      --color-border: #e0e0e0;
+      --font-primary: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
+      --max-width: 1100px;
+      --section-padding: 100px 24px;
+      --section-padding-mobile: 64px 16px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-primary); color: var(--color-text); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    .container { max-width: var(--max-width); margin: 0 auto; width: 100%; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: #1a1a1a;
+      color: #ffffff;
+      text-align: center;
+      padding: 160px 24px 120px;
+    }
+    .hero__eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+    }
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 32px;
+      letter-spacing: 0.02em;
+    }
+    .hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.9;
+      margin-bottom: 56px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 18px 48px;
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+      border-radius: 2px;
+      transition: background 0.25s ease, color 0.25s ease;
+      cursor: pointer;
+    }
+    .btn--hero {
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    .btn--hero:hover {
+      background: transparent;
+      color: #ffffff;
+    }
+    .btn--cta {
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    .btn--cta:hover {
+      background: transparent;
+      color: #ffffff;
+    }
+
+    /* ========== SECTION TITLES ========== */
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 56px;
+    }
+    .section-title--center { text-align: center; }
+    .section-title--light { color: #ffffff; }
+
+    /* ========== PAIN POINTS ========== */
+    .pain {
+      background: #f8f8f8;
+      padding: var(--section-padding);
+    }
+    .pain .container { padding: 0; }
+    .pain__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .pain__card {
+      background: #ffffff;
+      padding: 40px 32px;
+      border: 1px solid var(--color-border);
+    }
+    .pain__card-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--color-border);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .pain__card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .pain__card-text {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+    .pain__stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .pain__stat {
+      text-align: center;
+    }
+    .pain__stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .pain__stat-label {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ========== SERVICE OVERVIEW ========== */
+    .service {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: var(--section-padding);
+    }
+    .service__lead {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 680px;
+      margin: 0 auto 64px;
+      text-align: center;
+      line-height: 1.9;
+    }
+    .service__cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 64px;
+    }
+    .service__col-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .service__list {
+      list-style: none;
+    }
+    .service__list li {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      padding: 8px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      line-height: 1.6;
+    }
+    .service__list li::before {
+      content: '—';
+      color: rgba(255,255,255,0.4);
+      flex-shrink: 0;
+    }
+    .service__note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 40px;
+    }
+
+    /* ========== STEPS ========== */
+    .steps {
+      background: #f8f8f8;
+      padding: var(--section-padding);
+    }
+    .steps__flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    .steps__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--color-text-muted);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .steps__item {
+      flex: 1;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      padding: 40px 32px;
+    }
+    .steps__number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--color-border);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .steps__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .steps__desc {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .steps__price {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .steps__price--free {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* ========== AI PROCESS ========== */
+    .process {
+      background: #ffffff;
+      padding: var(--section-padding);
+    }
+    .process__flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+    .process__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      color: var(--color-text-muted);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .process__card {
+      flex: 1;
+      border: 1px solid var(--color-border);
+      padding: 28px 24px;
+      min-width: 0;
+    }
+    .process__icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .process__role {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+    .process__card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .process__card-desc {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .process__effect {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+    .process__effect-before {
+      text-decoration: line-through;
+      color: rgba(255,255,255,0.5);
+      margin-right: 4px;
+    }
+    .process__effect-badge {
+      display: inline-block;
+      background: #ffffff;
+      color: #1a1a1a;
+      padding: 1px 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .process__role-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: #f8f8f8;
+      border: 1px solid var(--color-border);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .process__role-bar-ai {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .process__role-bar-ai-label {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .process__role-bar-line {
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+      min-width: 32px;
+    }
+    .process__role-bar-divider {
+      color: var(--color-border);
+    }
+    .process__role-bar-human {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-text-light);
+    }
+    .sp-only { display: none; }
+
+    /* ========== CASES ========== */
+    .cases {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: var(--section-padding);
+    }
+    .cases__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .cases__card {
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 40px 36px;
+    }
+    .cases__company {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .cases__row {
+      margin-bottom: 16px;
+    }
+    .cases__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .cases__value {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+    }
+    .cases__result {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    /* ========== FAQ ========== */
+    .faq {
+      background: #f8f8f8;
+      padding: var(--section-padding);
+    }
+    .faq__list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .faq__item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq__item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+    .faq__item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 24px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      user-select: none;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      color: var(--color-text-muted);
+      line-height: 1;
+    }
+    .faq__item[open] summary::after {
+      content: '−';
+    }
+    .faq__answer {
+      padding: 0 0 24px 0;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    /* ========== CTA ========== */
+    .cta {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: var(--section-padding);
+      text-align: center;
+    }
+    .cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 600;
+      margin-bottom: 24px;
+      line-height: 1.35;
+    }
+    .cta__text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 48px;
+      line-height: 1.9;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: #1a1a1a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888888;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .hero { padding: var(--section-padding-mobile); padding-top: 100px; }
+      .pain { padding: var(--section-padding-mobile); }
+      .service { padding: var(--section-padding-mobile); }
+      .steps { padding: var(--section-padding-mobile); }
+      .process { padding: var(--section-padding-mobile); }
+      .cases { padding: var(--section-padding-mobile); }
+      .faq { padding: var(--section-padding-mobile); }
+      .cta { padding: var(--section-padding-mobile); }
+
+      .steps__flow {
+        flex-direction: column;
+        gap: 0;
+      }
+      .steps__arrow {
+        justify-content: center;
+        padding: 8px 0;
+        transform: rotate(90deg);
+      }
+      .process__flow {
+        flex-direction: column;
+        gap: 0;
+      }
+      .process__arrow {
+        justify-content: center;
+        padding: 8px 0;
+        transform: rotate(90deg);
+      }
+      .pain__stats {
+        gap: 32px;
+      }
+      .sp-only { display: inline; }
+      .process__role-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .process__role-bar-line { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero__eyebrow fade-in">AI業務Ops by UMEZOO</p>
+      <h1 class="hero__title fade-in">採れない、回らない、を終わらせる。</h1>
+      <p class="hero__subtitle fade-in">
+        営業・マーケティング・バックオフィス——<br>
+        食品・飲料メーカーの現場業務を、AIが引き取ります。
+      </p>
+      <a href="https://umezoo.co.jp/#contact" target="_blank" rel="noopener" class="btn btn--hero fade-in">無料で相談する</a>
+    </div>
+  </section>
+
+  <!-- ========== PAIN POINTS ========== -->
+  <section class="pain">
+    <div class="container">
+      <h2 class="section-title section-title--center fade-in">こんな課題、ありませんか？</h2>
+      <div class="pain__cards">
+        <div class="pain__card fade-in">
+          <div class="pain__card-number">01</div>
+          <h3 class="pain__card-title">人が採れない、定着しない</h3>
+          <p class="pain__card-text">求人を出しても応募が来ない。採用できても数年で辞める。人手不足が常態化している。</p>
+        </div>
+        <div class="pain__card fade-in">
+          <div class="pain__card-number">02</div>
+          <h3 class="pain__card-title">属人化で業務が回らない</h3>
+          <p class="pain__card-text">見積・請求・発注処理、レポート作成、SNS運用——特定の誰かが抜けると止まる業務がある。</p>
+        </div>
+        <div class="pain__card fade-in">
+          <div class="pain__card-number">03</div>
+          <h3 class="pain__card-title">Excelとメールのコピペでミスが絶えない</h3>
+          <p class="pain__card-text">手作業の転記や集計に毎月何十時間。ヒューマンエラーが減らない。</p>
+        </div>
+      </div>
+      <div class="pain__stats fade-in">
+        <div class="pain__stat">
+          <span class="pain__stat-number">69.3%</span>
+          <span class="pain__stat-label">中小企業の人手不足率（日商2024調査）</span>
+        </div>
+        <div class="pain__stat">
+          <span class="pain__stat-number">50%超</span>
+          <span class="pain__stat-label">管理部門が「兼務」で回す企業（中小企業白書）</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE OVERVIEW ========== -->
+  <section class="service">
+    <div class="container">
+      <h2 class="section-title section-title--center section-title--light fade-in">AI業務Ops — ツールではなく、業務を引き取る</h2>
+      <p class="service__lead fade-in">SaaSを入れて終わりではありません。業務の棚卸しから設計・実装・運用まで、UMEZOOが一貫して担います。</p>
+      <div class="service__cols">
+        <div class="fade-in">
+          <h3 class="service__col-title">法人営業</h3>
+          <ul class="service__list">
+            <li>競合・市場の調査レポート</li>
+            <li>提案書・見積書の自動生成</li>
+            <li>営業リストの作成・更新</li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <h3 class="service__col-title">マーケティング</h3>
+          <ul class="service__list">
+            <li>キャンペーン・販促の企画立案</li>
+            <li>SNS・メルマガ等のコンテンツ制作</li>
+            <li>アクセス・売上データの分析</li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <h3 class="service__col-title">バックオフィス</h3>
+          <ul class="service__list">
+            <li>請求・発注書の作成</li>
+            <li>経費精算・勤怠の集計</li>
+            <li>規格書・製品情報の管理</li>
+          </ul>
+        </div>
+      </div>
+      <p class="service__note fade-in">Claude・Gemini・ChatGPT——業務に最適なAIを選定し、ベンダーロックインなく運用します。</p>
+    </div>
+  </section>
+
+  <!-- ========== STEPS ========== -->
+  <section class="steps">
+    <div class="container">
+      <h2 class="section-title section-title--center fade-in">導入の流れ</h2>
+      <div class="steps__flow fade-in">
+        <div class="steps__item">
+          <span class="steps__number">01</span>
+          <h3 class="steps__title">業務棚卸し</h3>
+          <p class="steps__desc">現場の業務工程を可視化し、AI代替の対象業務とKPIを特定</p>
+          <span class="steps__price steps__price--free">無料</span>
+        </div>
+        <div class="steps__arrow">→</div>
+        <div class="steps__item">
+          <span class="steps__number">02</span>
+          <h3 class="steps__title">AI実装・移管</h3>
+          <p class="steps__desc">AI業務ワークフローの設計とAI運用環境の構築</p>
+          <span class="steps__price">15万円〜</span>
+        </div>
+        <div class="steps__arrow">→</div>
+        <div class="steps__item">
+          <span class="steps__number">03</span>
+          <h3 class="steps__title">継続運用代行</h3>
+          <p class="steps__desc">AI処理の改善や継続的な運用、セキュリティ保全、ガバナンス設計。月次レポートで成果を可視化</p>
+          <span class="steps__price">月額10万円＋成果報酬</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AI PROCESS & EFFECTS ========== -->
+  <section class="process">
+    <div class="container">
+      <h2 class="section-title section-title--center fade-in">具体的なAI化プロセスと<br class="sp-only">圧倒的な時短効果</h2>
+      <div class="process__flow fade-in">
+        <div class="process__card">
+          <span class="process__icon">&#128269;</span>
+          <div class="process__role">営業</div>
+          <h3 class="process__card-title">商談前調査の自動化</h3>
+          <p class="process__card-desc">企業・競合情報・業界ニュースを自動収集・要約</p>
+          <div class="process__effect">
+            <span class="process__effect-before">1件60分</span>→15分
+            <span class="process__effect-badge">75%削減</span>
+          </div>
+        </div>
+        <div class="process__arrow">→</div>
+        <div class="process__card">
+          <span class="process__icon">&#128196;</span>
+          <div class="process__role">営業</div>
+          <h3 class="process__card-title">提案書の骨子生成</h3>
+          <p class="process__card-desc">ヒアリング内容からドラフトを自動作成。顧客データに基づくパーソナライズ</p>
+          <div class="process__effect">
+            <span class="process__effect-before">3時間</span>→30分
+            <span class="process__effect-badge">83%削減</span>
+          </div>
+        </div>
+        <div class="process__arrow">→</div>
+        <div class="process__card">
+          <span class="process__icon">&#128247;</span>
+          <div class="process__role">マーケ</div>
+          <h3 class="process__card-title">SNSコンテンツ制作</h3>
+          <p class="process__card-desc">商品情報から投稿文・ハッシュタグ・画像案を自動生成</p>
+          <div class="process__effect">
+            <span class="process__effect-before">1本30分</span>→5分
+            <span class="process__effect-badge">83%削減</span>
+          </div>
+        </div>
+        <div class="process__arrow">→</div>
+        <div class="process__card">
+          <span class="process__icon">&#128203;</span>
+          <div class="process__role">バックオフィス</div>
+          <h3 class="process__card-title">請求・発注書の作成</h3>
+          <p class="process__card-desc">受注データから請求書・発注書を自動生成・チェック</p>
+          <div class="process__effect">
+            <span class="process__effect-before">1件20分</span>→3分
+            <span class="process__effect-badge">85%削減</span>
+          </div>
+        </div>
+      </div>
+      <div class="process__role-bar fade-in">
+        <div class="process__role-bar-ai">
+          <span class="process__role-bar-ai-label">AI</span>
+          <span>AIの作業領域</span>
+        </div>
+        <div class="process__role-bar-line"></div>
+        <div class="process__role-bar-divider">|</div>
+        <div class="process__role-bar-human">
+          <span>&#128100;</span>
+          <span>人間の決断・実行領域</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CASE STUDIES ========== -->
+  <section class="cases">
+    <div class="container">
+      <h2 class="section-title section-title--center section-title--light fade-in">導入事例</h2>
+      <div class="cases__grid">
+        <div class="cases__card fade-in">
+          <h3 class="cases__company">A社 — 調味料メーカー（従業員60名）</h3>
+          <div class="cases__row">
+            <span class="cases__label">課題</span>
+            <p class="cases__value">見積・発注の手作業に月40時間、ミスが頻発</p>
+          </div>
+          <div class="cases__row">
+            <span class="cases__label">導入</span>
+            <p class="cases__value">バックオフィス業務のAI自動化</p>
+          </div>
+          <div class="cases__row">
+            <span class="cases__label">成果</span>
+            <p class="cases__result">月30時間削減、ミス率90%減</p>
+          </div>
+        </div>
+        <div class="cases__card fade-in">
+          <h3 class="cases__company">B社 — 飲料メーカー（従業員80名）</h3>
+          <div class="cases__row">
+            <span class="cases__label">課題</span>
+            <p class="cases__value">営業資料の作成が属人化、商談準備に時間がかかる</p>
+          </div>
+          <div class="cases__row">
+            <span class="cases__label">導入</span>
+            <p class="cases__value">営業調査・提案書作成のAI化</p>
+          </div>
+          <div class="cases__row">
+            <span class="cases__label">成果</span>
+            <p class="cases__result">商談準備時間75%削減</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title section-title--center fade-in">よくある質問</h2>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary>AIに業務を任せて品質は大丈夫ですか？</summary>
+          <p class="faq__answer">AIが処理した結果は必ず人間が確認・承認するフローを設計します。判断が必要な工程は人間が担い、定型作業をAIが引き取る形です。</p>
+        </details>
+        <details class="faq__item">
+          <summary>社内にITに詳しい人がいなくても導入できますか？</summary>
+          <p class="faq__answer">はい。業務棚卸しから運用まで全てUMEZOOが担当します。特別なIT知識は不要です。</p>
+        </details>
+        <details class="faq__item">
+          <summary>どのAIツールを使いますか？</summary>
+          <p class="faq__answer">Claude・Gemini・ChatGPTなど、業務内容に最適なAIを選定します。特定ベンダーに縛られません。</p>
+        </details>
+        <details class="faq__item">
+          <summary>導入までどのくらいかかりますか？</summary>
+          <p class="faq__answer">業務棚卸し後、3営業日で運用開始できます。</p>
+        </details>
+        <details class="faq__item">
+          <summary>AIの利用で社外に情報が漏れるのでは？</summary>
+          <p class="faq__answer">社内で情報が完結するセキュリティプランを採用します。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta__title fade-in">まずは無料の業務棚卸しから</h2>
+      <p class="cta__text fade-in">御社の業務を可視化し、AI化の対象とコスト削減効果を無料でレポートします。</p>
+      <a href="https://umezoo.co.jp/#contact" target="_blank" rel="noopener" class="btn btn--cta fade-in">無料で相談する</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 UMEZOO Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var elements = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      elements.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>
