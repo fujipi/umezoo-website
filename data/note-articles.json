@@ -1,10 +1,20 @@
 {
-  "lastUpdated": "2026-03-31T01:44:44.449Z",
+  "lastUpdated": "2026-04-01T01:51:53.413Z",
   "feedTitle": "しゅわTokyo",
   "feedLink": "https://note.com/cccellars",
   "articles": [
     {
       "id": "note-1",
+      "tag": "Journey",
+      "date": "2026.03.31",
+      "title": "【ワイナリー訪問記】都内某所　堆肥撒き＆剪定",
+      "link": "https://note.com/cccellars/n/ncaa0c9666998",
+      "summary": "こんばんは。しゅわTokyo ワイン担当mayukuroです🐈‍⬛25年6月から毎月、都内の葡萄畑でワイン用ブドウの農業をまなぶ、『ブドウの學舎』に入学しているのでその様子をお届けします。講師は、K...",
+      "image": "",
+      "isExternal": true
+    },
+    {
+      "id": "note-2",
       "tag": "Journey",
       "date": "2026.02.27",
       "title": "【ペアリング体験記＆オーベルジュ宿泊記】山形県 山菜料理出羽屋",
@@ -14,7 +24,7 @@
       "isExternal": true
     },
     {
-      "id": "note-2",
+      "id": "note-3",
       "tag": "Journey",
       "date": "2026.02.18",
       "title": "【ワイナリー訪問＆宿泊記】7Cワイナリー（セブンシダーズワイナリー）",
@@ -24,7 +34,7 @@
       "isExternal": true
     },
     {
-      "id": "note-3",
+      "id": "note-4",
       "tag": "Journey",
       "date": "2026.01.14",
       "title": "【ワイナリー訪問記】サントリー登美の丘ワイナリー",
@@ -34,7 +44,7 @@
       "isExternal": true
     },
     {
-      "id": "note-4",
+      "id": "note-5",
       "tag": "Journey",
       "date": "2025.12.28",
       "title": "【ワイナリー訪問記】 アメリカ④ Opus One",
@@ -44,7 +54,7 @@
       "isExternal": true
     },
     {
-      "id": "note-5",
+      "id": "note-6",
       "tag": "Journey",
       "date": "2025.11.11",
       "title": "【ワイナリー訪問記】  アメリカ③ KENZO ESTATE",
@@ -54,7 +64,7 @@
       "isExternal": true
     },
     {
-      "id": "note-6",
+      "id": "note-7",
       "tag": "Journey",
       "date": "2025.11.01",
       "title": "【ワイナリー訪問記】都内某所　耕作＆2番果収穫",
@@ -64,7 +74,7 @@
       "isExternal": true
     },
     {
-      "id": "note-7",
+      "id": "note-8",
       "tag": "Journey",
       "date": "2025.10.16",
       "title": "【ワイナリー訪問記】 北海道ワイン旅② ドメーヌタカヒコ奮闘記 出版イベント",
@@ -74,7 +84,7 @@
       "isExternal": true
     },
     {
-      "id": "note-8",
+      "id": "note-9",
       "tag": "Journey",
       "date": "2025.09.27",
       "title": "【ワイナリー訪問記】 北海道ワイン旅① 余市ラフェト",
@@ -84,22 +94,12 @@
       "isExternal": true
     },
     {
-      "id": "note-9",
+      "id": "note-10",
       "tag": "Journey",
       "date": "2025.09.12",
       "title": "【ワイナリー訪問記】都内某所　収穫＆選果＆ジュース造り",
       "link": "https://note.com/cccellars/n/ne6dbddaa8f7a",
       "summary": "こんばんは。しゅわTokyoワイン担当 mayukuroです。6月から3月まで毎月、都内の葡萄畑でワイン用ブドウの農業をまなぶ、『ブドウの學舎』に入学したので、その様子をお届けします。講師は、Kisv...",
-      "image": "",
-      "isExternal": true
-    },
-    {
-      "id": "note-10",
-      "tag": "Journey",
-      "date": "2025.09.02",
-      "title": "【イベントレポート】Celler vol.10 〜2025/7/17 エレガントアメリカワイン会",
-      "link": "https://note.com/cccellars/n/n81ae289a5f38",
-      "summary": "25年6月にアメリカのワイナリー（オレゴン州と、カリフォルニア州ナパヴァレーの2エリア）に行き、現地で購入したワインをメインにしたイベントを開催しました🥂今回はその様子をお届け。続きをみる...",
       "image": "",
       "isExternal": true
     }
