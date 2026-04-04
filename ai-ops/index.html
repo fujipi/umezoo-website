@@ -426,8 +426,45 @@
       100% { transform: translate3d(80px, 80px, 0); }
     }
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,.4); }
-      70% { box-shadow: 0 0 0 16px rgba(255,255,255,0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(211,47,47,.4); }
+      70% { box-shadow: 0 0 0 14px rgba(211,47,47,0); }
+    }
+
+    .floating-cta {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 100;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 28px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      color: #fff;
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(211,47,47,.35);
+      animation: pulse 2s infinite;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity .4s ease, transform .4s ease, background .2s ease;
+    }
+    .floating-cta.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .floating-cta:hover {
+      background: var(--color-primary-light);
+      box-shadow: 0 12px 28px rgba(255,82,82,.4);
+    }
+    .floating-cta__icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
 
     @media (max-width: 920px) {
@@ -721,6 +758,11 @@
     </section>
   </main>
 
+  <a href="#contact" class="floating-cta" id="floating-cta" aria-label="無料で相談する">
+    <svg class="floating-cta__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    無料で相談する
+  </a>
+
   <footer class="footer">
     <p>&copy; 2026 UMEZOO Inc. All rights reserved.</p>
     <div class="footer__links">
@@ -737,12 +779,21 @@
       var nav = document.getElementById('site-nav');
       var links = nav ? nav.querySelectorAll('a') : [];
 
+      var floatingCta = document.getElementById('floating-cta');
+
       function onScroll() {
         if (!header) return;
         if (window.scrollY > 20) {
           header.classList.add('is-scrolled');
         } else {
           header.classList.remove('is-scrolled');
+        }
+        if (floatingCta) {
+          if (window.scrollY > 500) {
+            floatingCta.classList.add('is-visible');
+          } else {
+            floatingCta.classList.remove('is-visible');
+          }
         }
       }
 
