@@ -17,15 +17,15 @@
     :root {
       --color-primary: #D32F2F;
       --color-primary-dark: #B71C1C;
-      --color-primary-light: #FF5252;
+      --color-primary-light: #EF5350;
       --color-accent: #FF1744;
       --color-white: #ffffff;
-      --color-text: #121212;
-      --color-text-light: #515151;
-      --color-text-muted: #7f7f7f;
-      --color-bg: #f7f7f8;
-      --color-bg-dark: #12080a;
-      --color-border: #ececef;
+      --color-text: #2D2226;
+      --color-text-light: #5C4F52;
+      --color-text-muted: #8A7D80;
+      --color-bg: #FAF8F7;
+      --color-bg-dark: #1A0F11;
+      --color-border: #EDE8E6;
       --gradient-hero: linear-gradient(140deg, #13090b 0%, #4f1216 40%, #9d232d 75%, #d32f2f 100%);
       --gradient-dark: linear-gradient(135deg, #13090b 0%, #221115 52%, #360f14 100%);
       --gradient-cta: linear-gradient(120deg, #b71c1c 0%, #d32f2f 50%, #ff1744 100%);
@@ -58,9 +58,9 @@
       transition: background-color .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
     }
     .site-header.is-scrolled {
-      background: rgba(18, 8, 10, .9);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      background: rgba(26, 15, 17, .92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     }
     .site-header__inner {
       min-height: 72px;
@@ -170,7 +170,7 @@
       padding: 34px 28px;
       transition: transform .25s ease, box-shadow .25s ease;
     }
-    .pain__card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(183, 28, 28, .12); }
+    .pain__card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(183, 28, 28, .08); }
     .pain__card-number {
       font-family: var(--font-display);
       font-size: 2.3rem;
@@ -204,7 +204,7 @@
     @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
       .service__col { background: rgba(255,255,255,.14); }
     }
-    .service__col:hover { transform: translateY(-5px); border-color: rgba(255, 82, 82, .7); }
+    .service__col:hover { transform: translateY(-5px); border-color: rgba(239, 83, 80, .5); }
     .service__col-title { font-size: 1.1rem; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.22); }
     .service__list { list-style: none; }
     .service__list li { font-size: .9rem; color: rgba(255,255,255,.85); margin: 10px 0; padding-left: 20px; position: relative; }
@@ -404,7 +404,7 @@
     .cta__submit:hover { background: transparent; color: #fff; }
 
     .footer {
-      background: #12080a;
+      background: #1A0F11;
       color: rgba(255,255,255,.76);
       border-top: 1px solid rgba(255,255,255,.11);
       padding: 30px 24px;
