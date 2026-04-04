@@ -8,6 +8,8 @@
   <meta property="og:title" content="AI業務Ops | 食品・飲料メーカーのAI業務自動化">
   <meta property="og:description" content="採れない、回らない、を終わらせる。食品・飲料メーカーの現場業務を、AIが引き取ります。">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="./favicon-inverted.svg">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
@@ -81,6 +83,12 @@
     }
     .site-nav a:hover,
     .site-nav a:focus-visible { color: var(--color-primary-light); opacity: 1; }
+    .site-nav__home a {
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.34);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+    }
     .site-header__toggle {
       display: none;
       width: 42px;
@@ -466,6 +474,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="LP内ナビゲーション">
         <ul>
+          <li class="site-nav__home"><a href="../index.html">ウメズーとは</a></li>
           <li><a href="#service">サービス</a></li>
           <li><a href="#steps">導入の流れ</a></li>
           <li><a href="#cases">導入事例</a></li>
