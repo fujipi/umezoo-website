@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
   <title>AI業務Ops | 食品・飲料メーカーのAI業務自動化 - UMEZOO</title>
   <meta name="description" content="営業・マーケティング・バックオフィス。食品・飲料メーカーの現場業務をAIが引き取ります。業務棚卸しは無料。">
   <meta property="og:title" content="AI業務Ops | 食品・飲料メーカーのAI業務自動化">
   <meta property="og:description" content="採れない、回らない、を終わらせる。食品・飲料メーカーの現場業務を、AIが引き取ります。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://umezoo.co.jp/ai-ops/">
+  <meta property="og:image" content="https://umezoo.co.jp/images/og-ai-ops.jpg">
+  <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI業務Ops | 食品・飲料メーカーのAI業務自動化">
+  <meta name="twitter:description" content="採れない、回らない、を終わらせる。食品・飲料メーカーの現場業務を、AIが引き取ります。">
+  <meta name="twitter:image" content="https://umezoo.co.jp/images/og-ai-ops.jpg">
+  <meta name="keywords" content="AI業務自動化, AI Ops, 食品メーカー, 飲料メーカー, 業務効率化, バックオフィス自動化, AI導入, UMEZOO">
+  <meta name="author" content="UMEZOO株式会社">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://umezoo.co.jp/ai-ops/">
   <link rel="icon" type="image/svg+xml" href="./favicon-inverted.svg">
   <link rel="apple-touch-icon" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,6 +61,7 @@
     .container { max-width: var(--max-width); margin: 0 auto; width: 100%; }
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 
     .site-header {
       position: fixed;
@@ -498,6 +512,64 @@
       .cta__form-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI業務Ops",
+    "description": "食品・飲料メーカーの現場業務をAIが引き取る。営業・マーケティング・バックオフィスの業務自動化サービス。",
+    "provider": {
+      "@type": "Organization",
+      "name": "UMEZOO株式会社",
+      "url": "https://umezoo.co.jp"
+    },
+    "areaServed": "JP",
+    "availableLanguage": "ja"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AIに業務を任せて品質は大丈夫ですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "AIが処理した結果は必ず人間が確認・承認するフローを設計します。判断が必要な工程は人間が担い、定型作業をAIが引き取る形です。" }
+      },
+      {
+        "@type": "Question",
+        "name": "社内にITに詳しい人がいなくても導入できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "はい。業務棚卸しから運用まで全てUMEZOOが担当します。特別なIT知識は不要です。" }
+      },
+      {
+        "@type": "Question",
+        "name": "どのAIツールを使いますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Claude・Gemini・ChatGPTなど、業務内容に最適なAIを選定します。特定ベンダーに縛られません。" }
+      },
+      {
+        "@type": "Question",
+        "name": "導入までどのくらいかかりますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "業務棚卸し後、3営業日で運用開始できます。" }
+      },
+      {
+        "@type": "Question",
+        "name": "AIの利用で社外に情報が漏れるのでは？",
+        "acceptedAnswer": { "@type": "Answer", "text": "社内で情報が完結するセキュリティプランを採用します。" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "UMEZOO", "item": "https://umezoo.co.jp" },
+      { "@type": "ListItem", "position": 2, "name": "AI業務Ops", "item": "https://umezoo.co.jp/ai-ops/" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -718,8 +790,11 @@
         <p class="cta__text fade-in">無料診断前に必要情報をフォームでご入力ください。内容確認後、最短翌営業日でご連絡します。</p>
         <div class="cta__form-wrap fade-in" id="diagnosis-form">
           <h3 class="cta__form-title">無料診断前ヒアリングフォーム</h3>
-          <p class="cta__form-note">※入力内容は問い合わせ窓口（x-aaaasypl3h5bag2gepv6yyfm4q@umezoo.slack.com）へ送信されます。</p>
+          <p class="cta__form-note">※入力内容はUMEZOOの問い合わせ窓口へ送信されます。</p>
           <form action="mailto:x-aaaasypl3h5bag2gepv6yyfm4q@umezoo.slack.com" method="post" enctype="text/plain">
+            <div style="position:absolute;left:-9999px;" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
             <div class="cta__form-grid">
               <div class="cta__field">
                 <label class="cta__label" for="company-name">会社名（必須）</label>
