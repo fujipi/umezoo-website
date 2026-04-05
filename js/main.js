@@ -81,11 +81,8 @@ const heroImages = [
   'images/hero/pasta-strozzapreti-zucchini.jpg',
   'images/hero/pasta-ravioli-saffron-beet.jpg',
   'images/hero/pasta-tagliatelle-fish-beet.jpg',
-  'images/hero/pasta-capellini-pumpkin-art.jpg',
-  'images/hero/dessert-chocolate-purple-dark.jpg',
   'images/hero/pasta-ravioli-herb-butter-foam.jpg',
   'images/hero/pasta-ravioli-broccoli-cream.jpg',
-  'images/hero/pasta-paccheri-caramel-tuile.jpg',
   'images/hero/dish-risotto-fish-zucchini.jpg',
   'images/hero/pasta-ravioli-rosemary-simple.jpg'
 ];
