@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-src https://docs.google.com;">
   <title>AI業務Ops | 食品・飲料メーカーのAI業務自動化 - UMEZOO</title>
   <meta name="description" content="営業・マーケティング・バックオフィス。食品・飲料メーカーの現場業務をAIが引き取ります。業務棚卸しは無料。">
   <meta property="og:title" content="AI業務Ops | 食品・飲料メーカーのAI業務自動化">
@@ -382,40 +382,7 @@
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
-    .cta__form-title { font-size: 1.05rem; margin-bottom: 6px; }
-    .cta__form-note { font-size: .82rem; color: rgba(255,255,255,.75); margin-bottom: 16px; }
-    .cta__form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .cta__field { display: flex; flex-direction: column; gap: 6px; }
-    .cta__field--full { grid-column: 1 / -1; }
-    .cta__label { font-size: .8rem; color: rgba(255,255,255,.92); font-weight: 600; }
-    .cta__input, .cta__textarea, .cta__select {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,.28);
-      border-radius: 10px;
-      background: rgba(10, 10, 14, .32);
-      color: #fff;
-      padding: 11px 12px;
-      font: inherit;
-    }
-    .cta__input::placeholder, .cta__textarea::placeholder { color: rgba(255,255,255,.52); }
-    .cta__textarea { min-height: 120px; resize: vertical; }
-    .cta__submit {
-      margin-top: 16px;
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid #fff;
-      background: #fff;
-      color: var(--color-primary);
-      padding: 12px 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .2s ease;
-    }
-    .cta__submit:hover { background: transparent; color: #fff; }
+
 
     .footer {
       background: #1A0F11;
@@ -509,7 +476,6 @@
       .steps__arrow { justify-content: center; transform: rotate(90deg); padding: 6px 0; }
       .process__role-bar { flex-wrap: wrap; }
       .process__role-bar-line { display: none; }
-      .cta__form-grid { grid-template-columns: 1fr; }
     }
   </style>
   <script type="application/ld+json">
@@ -789,45 +755,16 @@
         <h2 class="cta__title fade-in">まずは無料の業務棚卸しから</h2>
         <p class="cta__text fade-in">無料診断前に必要情報をフォームでご入力ください。内容確認後、最短翌営業日でご連絡します。</p>
         <div class="cta__form-wrap fade-in" id="diagnosis-form">
-          <h3 class="cta__form-title">無料診断前ヒアリングフォーム</h3>
-          <p class="cta__form-note">※入力内容はUMEZOOの問い合わせ窓口へ送信されます。</p>
-          <form action="mailto:x-aaaasypl3h5bag2gepv6yyfm4q@umezoo.slack.com" method="post" enctype="text/plain">
-            <div style="position:absolute;left:-9999px;" aria-hidden="true">
-              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-            </div>
-            <div class="cta__form-grid">
-              <div class="cta__field">
-                <label class="cta__label" for="company-name">会社名（必須）</label>
-                <input class="cta__input" id="company-name" name="会社名" type="text" required placeholder="例：株式会社サンプルフーズ">
-              </div>
-              <div class="cta__field">
-                <label class="cta__label" for="person-name">ご担当者名（必須）</label>
-                <input class="cta__input" id="person-name" name="担当者名" type="text" required placeholder="例：山田 太郎">
-              </div>
-              <div class="cta__field">
-                <label class="cta__label" for="email">メールアドレス（必須）</label>
-                <input class="cta__input" id="email" name="メールアドレス" type="email" required placeholder="example@company.co.jp">
-              </div>
-              <div class="cta__field">
-                <label class="cta__label" for="industry">業態（必須）</label>
-                <select class="cta__select" id="industry" name="業態" required>
-                  <option value="">選択してください</option>
-                  <option>生産</option>
-                  <option>加工・メーカー</option>
-                  <option>製造</option>
-                  <option>卸</option>
-                  <option>飲食店</option>
-                  <option>小売店</option>
-                  <option>その他</option>
-                </select>
-              </div>
-              <div class="cta__field cta__field--full">
-                <label class="cta__label" for="issue">現在の課題（必須）</label>
-                <textarea class="cta__textarea" id="issue" name="現在の課題" required placeholder="例：受発注処理に毎日2時間以上かかっている／製造記録の監査対応が煩雑 など"></textarea>
-              </div>
-            </div>
-            <button class="cta__submit" type="submit">必要情報を送信して無料診断を申し込む</button>
-          </form>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfmbXkqECexBmRRGJG_4Lb7k4z10MCFdkbWAD7cZ9Imu5ak4Q/viewform?embedded=true"
+            width="100%"
+            height="2908"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="無料診断前ヒアリングフォーム"
+            loading="lazy"
+          >読み込んでいます…</iframe>
         </div>
       </div>
     </section>
