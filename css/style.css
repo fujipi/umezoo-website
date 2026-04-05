@@ -2443,9 +2443,10 @@ a.work-card:hover {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.fade-in-up.is-visible,
+.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* Staggered animation delay for values */

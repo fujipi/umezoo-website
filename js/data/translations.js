@@ -20,7 +20,7 @@ const translations = {
       legal: 'Legal',
       privacyPolicy: 'Privacy Policy',
       security: 'Security',
-      copyright: '© 2024 UMEZOO Inc. All rights reserved.',
+      copyright: '© 2025 UMEZOO Inc. All rights reserved.',
       desc: '創造的な食体験を事業活動に浸透させる、フードクリエイティブファーム'
     },
     // Hero
@@ -308,7 +308,7 @@ const translations = {
       legal: 'Legal',
       privacyPolicy: 'Privacy Policy',
       security: 'Security',
-      copyright: '© 2024 UMEZOO Inc. All rights reserved.',
+      copyright: '© 2025 UMEZOO Inc. All rights reserved.',
       desc: 'A food creative farm that integrates creative food experiences into business activities.'
     },
     // Hero
@@ -596,7 +596,7 @@ const translations = {
       legal: 'Juridique',
       privacyPolicy: 'Politique de confidentialité',
       security: 'Sécurité',
-      copyright: '© 2024 UMEZOO Inc. Tous droits réservés.',
+      copyright: '© 2025 UMEZOO Inc. Tous droits réservés.',
       desc: 'Une ferme créative alimentaire qui intègre des expériences alimentaires créatives dans les activités commerciales.'
     },
     // Hero

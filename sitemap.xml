@@ -54,6 +54,13 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <!-- AI業務Ops -->
+  <url>
+    <loc>https://umezoo.co.jp/ai-ops/</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- しゅわTokyo -->
   <url>
     <loc>https://umezoo.co.jp/shuwa.html</loc>
