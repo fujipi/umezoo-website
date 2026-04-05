@@ -234,18 +234,6 @@ function initAnimations() {
   });
 }
 
-// Add animation styles when visible
-document.addEventListener('DOMContentLoaded', () => {
-  const style = document.createElement('style');
-  style.textContent = `
-    .is-visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-  `;
-  document.head.appendChild(style);
-});
-
 // Contact form handling
 function initContactForm() {
   const form = document.querySelector('.contact-form');
