@@ -44,6 +44,20 @@ const translations = {
         text: '内装、パッケージ、ビジュアルなど、食体験を彩るデザインを提供します。'
       }
     },
+    // Cards
+    cards: {
+      title: 'What We Do',
+      subtitle: '創造的な食体験を、あらゆる角度から。',
+      aboutTitle: 'About',
+      aboutDesc: '食の可能性を、創造する。UMEZOO の理念とチームをご紹介します。',
+      aboutTag: 'Company',
+      workTitle: 'Work',
+      workDesc: 'これまでに手がけたプロジェクトと実績をご覧ください。',
+      workTag: 'Portfolio',
+      serviceTitle: 'Service',
+      serviceDesc: 'つくる・とどける・ひろげる・まわす — 4つの領域で事業を動かします。',
+      serviceTag: 'Service'
+    },
     // CTA
     cta: {
       title: 'お問い合わせ',
@@ -332,6 +346,20 @@ const translations = {
         text: 'Providing design that enhances food experiences, including interior, packaging, and visuals.'
       }
     },
+    // Cards
+    cards: {
+      title: 'What We Do',
+      subtitle: 'Creative food experiences, from every angle.',
+      aboutTitle: 'About',
+      aboutDesc: 'Creating the possibilities of food. Meet the UMEZOO team and philosophy.',
+      aboutTag: 'Company',
+      workTitle: 'Work',
+      workDesc: 'Explore our portfolio of projects and achievements.',
+      workTag: 'Portfolio',
+      serviceTitle: 'Service',
+      serviceDesc: 'Create, deliver, expand, sustain — driving business across four domains.',
+      serviceTag: 'Service'
+    },
     // CTA
     cta: {
       title: 'Contact Us',
@@ -619,6 +647,20 @@ const translations = {
         title: 'Design Créatif',
         text: 'Fournir un design qui améliore les expériences alimentaires, y compris l\'intérieur, l\'emballage et les visuels.'
       }
+    },
+    // Cards
+    cards: {
+      title: 'Ce Que Nous Faisons',
+      subtitle: 'Des expériences culinaires créatives, sous tous les angles.',
+      aboutTitle: 'About',
+      aboutDesc: 'Créer les possibilités de la nourriture. Découvrez l\'équipe et la philosophie d\'UMEZOO.',
+      aboutTag: 'Entreprise',
+      workTitle: 'Work',
+      workDesc: 'Découvrez notre portfolio de projets et réalisations.',
+      workTag: 'Portfolio',
+      serviceTitle: 'Service',
+      serviceDesc: 'Créer, livrer, développer, pérenniser — dynamiser les activités dans quatre domaines.',
+      serviceTag: 'Service'
     },
     // CTA
     cta: {

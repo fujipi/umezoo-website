@@ -1,40 +1,75 @@
 /* ========================================
-   しゅわTokyo LP - Stylesheet
+   しゅわTokyo LP — Stylesheet (Renewal)
    ======================================== */
 
-/* Variables */
+/* ---- Variables ---- */
 :root {
-  --shuwa-gold: #c9a962;
-  --shuwa-gold-light: #e6d5a8;
-  --shuwa-gold-dark: #a68b4b;
-  --shuwa-champagne: #f7f3e9;
-  --shuwa-cream: #fdfbf7;
-  --shuwa-dark: #2c2c2c;
-  --shuwa-text: #4a4a4a;
-  --shuwa-text-light: #7a7a7a;
-  --shuwa-green: #8b9f7c;
-  --shuwa-green-light: #d4dece;
+  --sw-gold:        #C5A55A;
+  --sw-gold-dark:   #B8943D;
+  --sw-gold-light:  #E6D5A8;
+  --sw-cream:       #FDF8F0;
+  --sw-champagne:   #F7F2E4;
+  --sw-text:        #2D2A26;
+  --sw-sub:         #6B6560;
+  --sw-border:      #E8E0D0;
+  --sw-green:       #4A7C59;
+  --sw-green-light: #D4EADC;
+  --sw-line:        #06C755;
+  --sw-white:       #FFFFFF;
 }
 
-/* Page Base */
+/* ---- Reset / Base ---- */
 .shuwa-page {
-  background-color: var(--shuwa-cream);
+  background-color: var(--sw-cream);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--sw-text);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Hide header on shuwa page */
 .shuwa-page .header {
   display: none;
 }
 
-/* SP only line break */
-.sp-only {
-  display: none;
+/* ---- Container ---- */
+.sw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-@media (max-width: 768px) {
-  .sp-only {
-    display: inline;
-  }
+/* ---- Section titles ---- */
+.sw-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--sw-text);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sw-section-sub {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--sw-sub);
+  line-height: 1.9;
+  margin-bottom: 3rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Fade-in animation ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ========================================
@@ -62,70 +97,42 @@
 
 .shuwa-splash__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background-color: var(--sw-cream);
   background-size: cover;
   background-position: center;
-  background-color: var(--shuwa-cream);
   animation: splashZoom 3s ease forwards;
 }
 
 @keyframes splashZoom {
-  0% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+  from { transform: scale(1.05); }
+  to   { transform: scale(1); }
 }
 
-/* 木漏れ日エフェクト */
 .shuwa-splash__komorebi {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background:
-    radial-gradient(ellipse 80px 80px at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 70%),
-    radial-gradient(ellipse 60px 100px at 70% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 70%),
-    radial-gradient(ellipse 100px 60px at 40% 70%, rgba(255, 255, 255, 0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 70px 90px at 80% 60%, rgba(255, 255, 255, 0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 50px 70px at 10% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 70%),
-    radial-gradient(ellipse 90px 50px at 60% 40%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    radial-gradient(ellipse 80px 80px at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 60px 100px at 70% 20%, rgba(255,255,255,0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 100px 60px at 40% 70%, rgba(255,255,255,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 70px 90px at 80% 60%, rgba(255,255,255,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 50px 70px at 10% 80%, rgba(255,255,255,0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 90px 50px at 60% 40%, rgba(255,255,255,0.2) 0%, transparent 70%);
   animation: komorebi 2s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
 @keyframes komorebi {
-  0% {
-    opacity: 0.6;
-    transform: translateX(-2px) translateY(-1px);
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0.7;
-    transform: translateX(2px) translateY(1px);
-  }
+  0%   { opacity: 0.6; transform: translateX(-2px) translateY(-1px); }
+  50%  { opacity: 0.9; }
+  100% { opacity: 0.7; transform: translateX(2px) translateY(1px); }
 }
 
-/* 軽い網掛けオーバーレイ */
 .shuwa-splash__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.05) 100%);
   pointer-events: none;
 }
 
@@ -143,30 +150,23 @@
 
 .shuwa-hero__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background-color: var(--sw-champagne);
   background-size: cover;
   background-position: center;
-  background-color: var(--shuwa-champagne);
   transition: filter 0.8s ease;
 }
 
-/* 木漏れ日エフェクト (Hero) */
 .shuwa-hero__komorebi {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background:
-    radial-gradient(ellipse 120px 120px at 15% 25%, rgba(255, 255, 255, 0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 80px 140px at 75% 15%, rgba(255, 255, 255, 0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 140px 80px at 35% 75%, rgba(255, 255, 255, 0.3) 0%, transparent 70%),
-    radial-gradient(ellipse 100px 120px at 85% 55%, rgba(255, 255, 255, 0.2) 0%, transparent 70%),
-    radial-gradient(ellipse 70px 100px at 5% 85%, rgba(255, 255, 255, 0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 130px 70px at 55% 35%, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    radial-gradient(ellipse 120px 120px at 15% 25%, rgba(255,255,255,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 80px 140px at 75% 15%, rgba(255,255,255,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 140px 80px at 35% 75%, rgba(255,255,255,0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 100px 120px at 85% 55%, rgba(255,255,255,0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 70px 100px at 5% 85%, rgba(255,255,255,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 130px 70px at 55% 35%, rgba(255,255,255,0.15) 0%, transparent 70%);
   animation: komorebi 3s ease-in-out infinite alternate;
   pointer-events: none;
   z-index: 1;
@@ -174,29 +174,16 @@
 
 .shuwa-hero__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
   z-index: 2;
   transition: background 0.8s ease;
 }
 
-/* スプラッシュ終了後、網掛けを強くして読みやすく */
 .shuwa-hero.is-ready .shuwa-hero__overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.85) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.82) 100%);
 }
 
-/* スプラッシュ終了後、背景をぼかす */
 .shuwa-hero.is-ready .shuwa-hero__bg {
   filter: blur(3px);
 }
@@ -205,10 +192,9 @@
   position: relative;
   z-index: 3;
   text-align: center;
-  color: var(--color-white);
+  color: var(--sw-white);
   padding: 3rem 2.5rem;
-  max-width: 700px;
-  /* テキスト背後にブラー効果 + 半透明背景 */
+  max-width: 720px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.35);
@@ -217,59 +203,64 @@
 }
 
 .shuwa-hero__tagline {
-  font-size: 0.875rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.25rem;
   font-weight: 400;
-  letter-spacing: 0.25em;
-  margin-bottom: 1rem;
-  /* 強化されたテキストシャドウ */
-  text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 4px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
   opacity: 0;
   animation: shuwaFadeInUp 0.8s ease 0.3s forwards;
 }
 
-.shuwa-hero__title {
-  font-family: var(--font-display);
-  font-size: 3.5rem;
+.shuwa-hero__h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9375rem;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   margin-bottom: 1.5rem;
-  /* 強化されたテキストシャドウ */
-  text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.9),
-    0 6px 20px rgba(0, 0, 0, 0.6);
-  opacity: 0;
+  opacity: 0.85;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
   animation: shuwaFadeInUp 0.8s ease 0.5s forwards;
+  opacity: 0;
 }
 
 .shuwa-hero__subtitle {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 2;
-  margin-bottom: 1.5rem;
-  /* 強化されたテキストシャドウ */
-  text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 4px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
   opacity: 0;
   animation: shuwaFadeInUp 0.8s ease 0.7s forwards;
 }
 
-.shuwa-hero__note {
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 2rem;
-  /* 強化されたテキストシャドウ */
-  text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 4px 12px rgba(0, 0, 0, 0.5);
+.shuwa-hero__cta {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: var(--sw-gold);
+  color: var(--sw-white);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
   opacity: 0;
-  animation: shuwaFadeInUp 0.8s ease 0.85s forwards;
+  animation: shuwaFadeInUp 0.8s ease 0.9s forwards;
 }
 
-.shuwa-hero__cta {
+.shuwa-hero__cta:hover {
+  background: var(--sw-gold-dark);
+  transform: translateY(-2px);
+}
+
+.shuwa-hero__subnote {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 0.875rem;
+  letter-spacing: 0.04em;
   opacity: 0;
-  animation: shuwaFadeInUp 0.8s ease 1s forwards;
+  animation: shuwaFadeInUp 0.8s ease 1.05s forwards;
 }
 
 .shuwa-hero__scroll {
@@ -283,17 +274,15 @@
   gap: 0.5rem;
   font-size: 0.6875rem;
   letter-spacing: 0.15em;
-  color: var(--color-white);
+  color: var(--sw-white);
   opacity: 0;
-  animation: shuwaFadeInUp 0.8s ease 1.1s forwards;
+  animation: shuwaFadeInUp 0.8s ease 1.2s forwards;
   cursor: pointer;
   transition: opacity 0.3s ease;
   z-index: 10;
 }
 
-.shuwa-hero__scroll:hover {
-  opacity: 0.7;
-}
+.shuwa-hero__scroll:hover { opacity: 0.65; }
 
 .shuwa-hero__scroll-mouse {
   width: 20px;
@@ -322,456 +311,729 @@
 }
 
 @keyframes scrollWheel {
-  0%, 100% {
-    opacity: 1;
-    top: 6px;
-  }
-  50% {
-    opacity: 0.3;
-    top: 14px;
-  }
+  0%, 100% { opacity: 1; top: 6px; }
+  50%       { opacity: 0.3; top: 14px; }
 }
 
 @keyframes scrollArrow {
-  0%, 100% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(4px);
-    opacity: 0.4;
-  }
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50%       { transform: translateY(4px); opacity: 0.4; }
 }
 
 @keyframes shuwaFadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ========================================
-   Section Titles
+   Pain Section
    ======================================== */
-.shuwa-section-title {
-  font-family: var(--font-primary);
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--shuwa-dark);
+.shuwa-pain {
+  padding: 80px 0;
+  background: var(--sw-white);
 }
 
-.shuwa-section-subtitle {
-  font-size: 0.9375rem;
-  text-align: center;
-  color: var(--shuwa-text-light);
-  margin-bottom: 3rem;
+.shuwa-pain .sw-section-title {
+  margin-bottom: 2.5rem;
 }
 
-/* ========================================
-   Introduction Section
-   ======================================== */
-.shuwa-intro {
-  padding: 5rem 0 6rem;
-  background: var(--shuwa-cream);
+.shuwa-pain__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-/* Pain Points */
-.shuwa-intro__pain {
-  text-align: center;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid var(--color-border);
+.shuwa-pain__card {
+  padding: 1.75rem 2rem;
+  background: var(--sw-cream);
+  border-radius: 10px;
+  border-left: 3px solid var(--sw-gold);
 }
 
-.shuwa-intro__lead {
+.shuwa-pain__heading {
+  font-family: 'Noto Serif JP', serif;
   font-size: 1rem;
-  color: var(--shuwa-text-light);
-  margin-bottom: 2rem;
-}
-
-.shuwa-intro__pain-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 2rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.shuwa-intro__pain-list li {
-  font-size: 1.125rem;
-  color: var(--shuwa-text);
-  padding: 0.75rem 1.5rem;
-  background: var(--color-white);
-  border-radius: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.shuwa-intro__pain-list li strong {
-  color: var(--shuwa-gold-dark);
-  font-weight: 600;
-}
-
-/* Solution */
-.shuwa-intro__solution {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.shuwa-intro__solution-lead {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--shuwa-gold-dark);
-  background: linear-gradient(135deg, var(--shuwa-gold-light) 0%, var(--shuwa-champagne) 100%);
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
-}
-
-.shuwa-intro__title {
-  font-size: 2.25rem;
   font-weight: 500;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: var(--shuwa-dark);
+  color: var(--sw-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
 }
 
-.shuwa-intro__subtitle {
-  font-size: 1.0625rem;
-  line-height: 2;
-  color: var(--shuwa-text);
-  max-width: 600px;
+.shuwa-pain__text {
+  font-size: 0.875rem;
+  color: var(--sw-sub);
+  line-height: 1.9;
+}
+
+.shuwa-pain__close {
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, var(--sw-champagne) 0%, var(--sw-cream) 100%);
+  border-radius: 8px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
-/* Value Points */
-.shuwa-intro__values {
+/* ========================================
+   Solution Section
+   ======================================== */
+.shuwa-solution {
+  padding: 80px 0;
+  background: var(--sw-cream);
+}
+
+.shuwa-solution__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.shuwa-intro__value {
+.shuwa-solution__item {
   text-align: center;
-  padding: 2rem 1.5rem;
-  background: var(--color-white);
+  padding: 2.25rem 1.75rem;
+  background: var(--sw-white);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.shuwa-intro__value-icon {
+.shuwa-solution__icon-wrap {
   width: 64px;
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.25rem;
-  background: linear-gradient(135deg, var(--shuwa-champagne) 0%, var(--shuwa-gold-light) 100%);
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--sw-champagne) 0%, var(--sw-gold-light) 100%);
   border-radius: 50%;
-  color: var(--shuwa-gold-dark);
+  color: var(--sw-gold-dark);
 }
 
-.shuwa-intro__value-title {
+.shuwa-solution__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--sw-gold-dark);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.shuwa-solution__heading {
+  font-family: 'Noto Serif JP', serif;
   font-size: 1.0625rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--shuwa-dark);
+  font-weight: 500;
+  color: var(--sw-text);
+  margin-bottom: 0.875rem;
+  line-height: 1.6;
 }
 
-.shuwa-intro__value-text {
+.shuwa-solution__text {
   font-size: 0.875rem;
-  line-height: 1.8;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
+  line-height: 1.9;
 }
 
 /* ========================================
    Steps Section
    ======================================== */
 .shuwa-steps {
-  padding: 3rem 0;
-  background: var(--color-white);
+  padding: 80px 0;
+  background: var(--sw-champagne);
 }
 
-.shuwa-steps__image {
-  max-width: 1000px;
-  margin: 0 auto;
+.shuwa-steps__grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2.5rem;
 }
 
-.shuwa-steps__image img {
-  width: 100%;
-  height: auto;
+.shuwa-steps__item {
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.shuwa-steps__arrow {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  color: var(--sw-gold);
+  flex-shrink: 0;
+}
+
+.shuwa-steps__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--sw-gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.shuwa-steps__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.shuwa-steps__text {
+  font-size: 0.875rem;
+  color: var(--sw-sub);
+  line-height: 1.9;
+}
+
+.shuwa-steps__close {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--sw-sub);
+  letter-spacing: 0.04em;
 }
 
 /* ========================================
    Plans Section
    ======================================== */
 .shuwa-plans {
-  padding: 5rem 0 6rem;
-  background: linear-gradient(180deg, var(--shuwa-champagne) 0%, var(--shuwa-cream) 100%);
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--sw-cream) 0%, var(--sw-champagne) 100%);
 }
 
 .shuwa-plans__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  align-items: start;
+  margin-bottom: 2rem;
 }
 
 .shuwa-plan {
   position: relative;
-  background: var(--color-white);
+  background: var(--sw-white);
   border-radius: 12px;
-  padding: 2rem 1.5rem;
+  padding: 2.25rem 1.75rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px solid transparent;
 }
 
 .shuwa-plan:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.1);
 }
 
 .shuwa-plan--featured {
-  border: 2px solid var(--shuwa-gold);
-  transform: scale(1.02);
+  border-color: var(--sw-gold);
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .shuwa-plan--featured:hover {
-  transform: scale(1.02) translateY(-4px);
+  transform: scale(1.05) translateY(-4px);
 }
 
 .shuwa-plan--premium {
-  background: linear-gradient(135deg, var(--shuwa-dark) 0%, #1a1a1a 100%);
-  color: var(--color-white);
+  background: linear-gradient(160deg, #2D2A26 0%, #1a1714 100%);
+  color: var(--sw-white);
 }
 
 .shuwa-plan__badge {
   position: absolute;
-  top: -12px;
+  top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--shuwa-gold);
-  color: var(--color-white);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.375rem 1rem;
+  background: var(--sw-text);
+  color: var(--sw-white);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 1rem;
   border-radius: 20px;
-  letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
-.shuwa-plan__header {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.shuwa-plan--premium .shuwa-plan__header {
-  border-bottom-color: rgba(255, 255, 255, 0.15);
+.shuwa-plan__badge--gold {
+  background: var(--sw-gold);
 }
 
 .shuwa-plan__name {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding-top: 0.5rem;
+  color: var(--sw-text);
 }
 
-.shuwa-plan__tagline {
-  font-size: 0.8125rem;
-  color: var(--shuwa-text-light);
-}
-
-.shuwa-plan--premium .shuwa-plan__tagline {
-  color: rgba(255, 255, 255, 0.7);
+.shuwa-plan--premium .shuwa-plan__name {
+  color: var(--sw-white);
 }
 
 .shuwa-plan__price {
+  margin-bottom: 0.25rem;
+}
+
+.shuwa-plan__amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.75rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  letter-spacing: -0.01em;
+}
+
+.shuwa-plan--premium .shuwa-plan__amount {
+  color: var(--sw-gold-light);
+}
+
+.shuwa-plan__unit {
+  font-size: 0.8125rem;
+  color: var(--sw-sub);
+}
+
+.shuwa-plan--premium .shuwa-plan__unit {
+  color: rgba(255,255,255,0.55);
+}
+
+.shuwa-plan__per {
+  font-size: 0.8125rem;
+  color: var(--sw-sub);
   margin-bottom: 1.5rem;
 }
 
-.shuwa-plan__price-amount {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: var(--shuwa-dark);
-}
-
-.shuwa-plan--premium .shuwa-plan__price-amount {
-  color: var(--shuwa-gold-light);
-}
-
-.shuwa-plan__price-tax {
-  font-size: 0.8125rem;
-  color: var(--shuwa-text-light);
-}
-
-.shuwa-plan--premium .shuwa-plan__price-tax {
-  color: rgba(255, 255, 255, 0.6);
+.shuwa-plan--premium .shuwa-plan__per {
+  color: rgba(255,255,255,0.5);
 }
 
 .shuwa-plan__features {
-  margin-bottom: 2rem;
   text-align: left;
+  margin-bottom: 1.75rem;
+  border-top: 1px solid var(--sw-border);
+  padding-top: 1.25rem;
+}
+
+.shuwa-plan--premium .shuwa-plan__features {
+  border-top-color: rgba(255,255,255,0.15);
 }
 
 .shuwa-plan__features li {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.625rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  margin-bottom: 0.75rem;
-  color: var(--shuwa-text);
+  margin-bottom: 0.625rem;
+  color: var(--sw-text);
 }
 
 .shuwa-plan--premium .shuwa-plan__features li {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.88);
 }
 
 .shuwa-plan__features li svg {
   flex-shrink: 0;
-  margin-top: 2px;
-  color: var(--shuwa-gold);
+  margin-top: 3px;
+  color: var(--sw-gold);
 }
 
 .shuwa-plan__btn {
+  display: block;
   width: 100%;
-  padding: 1rem;
+  padding: 0.9rem;
   font-size: 0.875rem;
-  font-weight: 600;
-  background: var(--shuwa-dark);
-  color: var(--color-white);
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  background: var(--sw-text);
+  color: var(--sw-white);
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .shuwa-plan__btn:hover {
-  background: var(--color-primary);
-  transform: translateY(-2px);
+  background: #1a1714;
+  transform: translateY(-1px);
 }
 
-.shuwa-plan__btn--featured {
-  background: var(--shuwa-gold);
+.shuwa-plan__btn--gold {
+  background: var(--sw-gold);
+  color: var(--sw-white);
 }
 
-.shuwa-plan__btn--featured:hover {
-  background: var(--shuwa-gold-dark);
+.shuwa-plan__btn--gold:hover {
+  background: var(--sw-gold-dark);
 }
 
 .shuwa-plan__btn--premium {
-  background: var(--shuwa-gold);
-  color: var(--shuwa-dark);
+  background: var(--sw-gold);
+  color: var(--sw-white);
 }
 
 .shuwa-plan__btn--premium:hover {
-  background: var(--shuwa-gold-light);
+  background: var(--sw-gold-dark);
 }
 
-.shuwa-plan__note {
-  font-size: 0.75rem;
-  color: var(--shuwa-text-light);
-  margin-top: 0.75rem;
+/* Assurance Banner */
+.shuwa-assurance-banner {
+  background: var(--sw-green-light);
+  border-radius: 10px;
+  padding: 1.25rem 2rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.shuwa-plan--premium .shuwa-plan__note {
-  color: rgba(255, 255, 255, 0.5);
+.shuwa-assurance-banner__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.5rem;
+}
+
+.shuwa-assurance-banner__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sw-green);
+}
+
+.shuwa-assurance-banner__list li svg {
+  color: var(--sw-green);
+  flex-shrink: 0;
 }
 
 /* ========================================
-   Features Section
+   Testimonials Section
    ======================================== */
-.shuwa-features {
-  padding: 5rem 0;
-  background: var(--color-white);
+.shuwa-testimonials {
+  padding: 80px 0;
+  background: var(--sw-white);
 }
 
-.shuwa-features__grid {
+.shuwa-testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 900px;
-  margin: 2rem auto 0;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-.shuwa-feature {
+.shuwa-testimonial {
+  background: var(--sw-cream);
+  border-radius: 12px;
+  padding: 1.75rem;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.shuwa-testimonial__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.shuwa-testimonial__text {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: var(--sw-text);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.shuwa-testimonial__author {
+  font-size: 0.8125rem;
+  color: var(--sw-sub);
+  font-weight: 500;
+}
+
+.shuwa-testimonials__note {
   text-align: center;
-  padding: 2rem 1.5rem;
+  font-size: 0.75rem;
+  color: var(--sw-sub);
 }
 
-.shuwa-feature__icon {
-  width: 64px;
-  height: 64px;
+/* ========================================
+   Sommelier Section
+   ======================================== */
+.shuwa-sommelier {
+  padding: 80px 0;
+  background: var(--sw-champagne);
+}
+
+.shuwa-sommelier__inner {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* photo removed — text-only layout */
+.shuwa-sommelier__inner--text-only {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.shuwa-sommelier__body {
+  flex: 1;
+}
+
+.shuwa-sommelier__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.shuwa-sommelier__badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--sw-gold-dark);
+  background: rgba(197, 165, 90, 0.12);
+  border: 1px solid var(--sw-gold);
+  border-radius: 20px;
+  padding: 0.25rem 0.875rem;
+  letter-spacing: 0.04em;
+}
+
+.shuwa-sommelier__name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  margin-bottom: 0.75rem;
+}
+
+.shuwa-sommelier__bio {
+  font-size: 0.9375rem;
+  color: var(--sw-sub);
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.shuwa-sommelier__quote {
+  border-left: 3px solid var(--sw-gold);
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.shuwa-sommelier__quote p {
+  font-size: 0.9375rem;
+  color: var(--sw-text);
+  line-height: 1.9;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.shuwa-sommelier__quote footer {
+  font-size: 0.8125rem;
+  color: var(--sw-sub);
+  font-style: normal;
+}
+
+/* ========================================
+   Assurance Section
+   ======================================== */
+.shuwa-assurance {
+  padding: 80px 0;
+  background: var(--sw-white);
+}
+
+.shuwa-assurance__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.shuwa-assurance__item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: var(--sw-cream);
+  border-radius: 10px;
+}
+
+.shuwa-assurance__icon {
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.25rem;
-  background: var(--shuwa-champagne);
+  background: var(--sw-green-light);
   border-radius: 50%;
-  color: var(--shuwa-gold-dark);
+  color: var(--sw-green);
+  flex-shrink: 0;
 }
 
-.shuwa-feature__title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--shuwa-dark);
+.shuwa-assurance__heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
 }
 
-.shuwa-feature__text {
+.shuwa-assurance__text {
   font-size: 0.875rem;
-  line-height: 1.8;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
+  line-height: 1.85;
 }
 
 /* ========================================
-   CTA Section
+   FAQ Section
    ======================================== */
-.shuwa-cta {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, var(--shuwa-green) 0%, var(--shuwa-green-light) 100%);
+.shuwa-faq {
+  padding: 80px 0;
+  background: var(--sw-cream);
+}
+
+.shuwa-faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.shuwa-faq__item {
+  border-bottom: 1px solid var(--sw-border);
+}
+
+.shuwa-faq__item:first-child {
+  border-top: 1px solid var(--sw-border);
+}
+
+.shuwa-faq__q {
+  list-style: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sw-text);
+  padding: 1.25rem 2rem 1.25rem 0;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.6;
+  user-select: none;
+}
+
+.shuwa-faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.shuwa-faq__q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--sw-gold);
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.shuwa-faq__item[open] .shuwa-faq__q::after {
+  content: '−';
+}
+
+.shuwa-faq__a {
+  padding: 0 0 1.25rem;
+}
+
+.shuwa-faq__a p {
+  font-size: 0.9375rem;
+  color: var(--sw-sub);
+  line-height: 1.9;
+}
+
+/* ========================================
+   Final CTA Section
+   ======================================== */
+.shuwa-final-cta {
+  padding: 100px 0;
+  background: linear-gradient(160deg, #2D2A26 0%, #1a1714 100%);
   text-align: center;
 }
 
-.shuwa-cta__title {
-  font-size: 1.5rem;
+.shuwa-final-cta__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.875rem;
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--sw-white);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.shuwa-final-cta__sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+
+.shuwa-final-cta__btn-main {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--sw-gold);
+  color: var(--sw-white);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+  margin-bottom: 0.875rem;
+}
+
+.shuwa-final-cta__btn-main:hover {
+  background: var(--sw-gold-dark);
+  transform: translateY(-2px);
+}
+
+.shuwa-final-cta__note {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+
+.shuwa-final-cta__btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 2rem;
+  background: var(--sw-line);
+  color: var(--sw-white);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
   margin-bottom: 0.75rem;
 }
 
-.shuwa-cta__text {
-  font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
+.shuwa-final-cta__btn-line:hover {
+  background: #05a847;
+  transform: translateY(-2px);
 }
 
-.shuwa-cta__btn {
-  background: var(--color-white);
-  color: var(--shuwa-green);
-  border-color: var(--color-white);
-  padding: 1rem 2.5rem;
-  font-weight: 600;
-}
-
-.shuwa-cta__btn:hover {
-  background: transparent;
-  color: var(--color-white);
-}
-
-.shuwa-cta__btn svg {
-  width: 20px;
-  height: 20px;
+.shuwa-final-cta__line-note {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
 }
 
 /* ========================================
@@ -779,59 +1041,56 @@
    ======================================== */
 .shuwa-footer {
   padding: 3rem 0 2rem;
-  background: var(--shuwa-cream);
+  background: var(--sw-cream);
   text-align: center;
+  border-top: 1px solid var(--sw-border);
 }
 
 .shuwa-footer__logo {
   margin-bottom: 1.5rem;
 }
 
-.shuwa-footer__logo img {
-  height: 40px;
-  width: auto;
-  margin: 0 auto;
-}
-
 .shuwa-footer__logo-text {
-  font-family: var(--font-display);
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--shuwa-dark);
-  letter-spacing: 0.05em;
+  color: var(--sw-text);
+  letter-spacing: 0.06em;
 }
 
 .shuwa-footer__nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
   margin-bottom: 1.5rem;
 }
 
 .shuwa-footer__nav a {
   font-size: 0.8125rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .shuwa-footer__nav a:hover {
-  color: var(--shuwa-dark);
+  color: var(--sw-text);
 }
 
 .shuwa-footer__copyright {
   font-size: 0.75rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
   margin-bottom: 1rem;
 }
 
 .shuwa-footer__notice {
   font-size: 0.6875rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
   line-height: 1.8;
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0,0,0,0.03);
   border-radius: 4px;
 }
 
@@ -844,40 +1103,32 @@
   right: 24px;
   width: 60px;
   height: 60px;
-  background: #06C755;
+  background: var(--sw-line);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
+  color: var(--sw-white);
   box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
 .shuwa-line-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(6, 199, 85, 0.5);
-}
-
-.shuwa-line-float svg {
-  width: 28px;
-  height: 28px;
+  box-shadow: 0 6px 28px rgba(6, 199, 85, 0.55);
 }
 
 /* ========================================
-   Responsive Design
+   Responsive
    ======================================== */
 @media (max-width: 1024px) {
-  .shuwa-intro__values {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
   .shuwa-plans__grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .shuwa-plan--featured {
@@ -889,102 +1140,99 @@
     transform: translateY(-4px);
   }
 
-  .shuwa-features__grid {
+  .shuwa-solution__grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .shuwa-hero__title {
-    font-size: 2.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .shuwa-hero__tagline {
-    font-size: 0.8125rem;
-    letter-spacing: 0.2em;
+  .shuwa-assurance__grid {
+    grid-template-columns: 1fr;
   }
 
-  .shuwa-hero__subtitle {
-    font-size: 1rem;
-    line-height: 1.9;
-  }
-
-  .shuwa-hero__note {
-    font-size: 0.8125rem;
-  }
-
-  .shuwa-intro {
-    padding: 4rem 0 5rem;
-  }
-
-  .shuwa-intro__pain {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .shuwa-intro__pain-list {
-    gap: 0.75rem;
-  }
-
-  .shuwa-intro__pain-list li {
-    font-size: 1rem;
-    padding: 0.625rem 1.25rem;
-  }
-
-  .shuwa-intro__solution {
-    margin-bottom: 3rem;
-  }
-
-  .shuwa-intro__title {
-    font-size: 1.75rem;
-  }
-
-  .shuwa-intro__subtitle {
-    font-size: 1rem;
-  }
-
-  .shuwa-steps {
-    padding: 4rem 0;
+  .shuwa-testimonials__grid {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
   }
 
   .shuwa-steps__grid {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
 
-  .shuwa-step {
-    max-width: 280px;
+  .shuwa-steps__arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sw-section-title {
+    font-size: 1.375rem;
   }
 
-  .shuwa-step__arrow {
-    display: none;
+  .shuwa-pain,
+  .shuwa-solution,
+  .shuwa-steps,
+  .shuwa-plans,
+  .shuwa-testimonials,
+  .shuwa-sommelier,
+  .shuwa-assurance,
+  .shuwa-faq {
+    padding: 56px 0;
   }
 
-  .shuwa-plans {
-    padding: 4rem 0 5rem;
+  .shuwa-final-cta {
+    padding: 72px 0;
   }
 
-  .shuwa-section-title {
-    font-size: 1.25rem;
+  .shuwa-hero__tagline {
+    font-size: 1.625rem;
   }
 
-  .shuwa-features {
-    padding: 4rem 0;
+  .shuwa-hero__h1 {
+    font-size: 0.875rem;
   }
 
-  .shuwa-cta {
-    padding: 4rem 0;
+  .shuwa-hero__subtitle {
+    font-size: 1rem;
   }
 
-  .shuwa-cta__title {
-    font-size: 1.25rem;
+  .shuwa-hero__content {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .shuwa-pain__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shuwa-testimonials__grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    padding-bottom: 1rem;
+  }
+
+  .shuwa-sommelier__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shuwa-sommelier__badges {
+    justify-content: center;
+  }
+
+  .shuwa-sommelier__quote {
+    text-align: left;
+  }
+
+  .shuwa-final-cta__title {
+    font-size: 1.5rem;
   }
 
   .shuwa-footer__nav {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .shuwa-line-float {
@@ -994,36 +1242,34 @@
     height: 54px;
   }
 
-  .shuwa-line-float svg {
-    width: 24px;
-    height: 24px;
+  .shuwa-assurance-banner__list {
+    gap: 0.625rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .shuwa-hero__title {
-    font-size: 2rem;
+  .shuwa-hero__tagline {
+    font-size: 1.375rem;
   }
 
   .shuwa-hero__subtitle {
     font-size: 0.9375rem;
   }
 
-  .shuwa-hero__note {
-    font-size: 0.75rem;
+  .shuwa-hero__cta {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9375rem;
   }
 
-  .shuwa-plan {
-    padding: 1.5rem 1.25rem;
+  .shuwa-final-cta__btn-main {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
   }
 
-  .shuwa-plan__price-amount {
-    font-size: 2rem;
-  }
 }
 
 /* ========================================
-   Legal Pages
+   Legal Pages (preserved)
    ======================================== */
 .shuwa-legal-header {
   position: fixed;
@@ -1031,8 +1277,8 @@
   left: 0;
   right: 0;
   height: 72px;
-  background: var(--shuwa-cream);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--sw-cream);
+  border-bottom: 1px solid var(--sw-border);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -1046,7 +1292,7 @@
 .shuwa-legal-hero {
   padding-top: 120px;
   padding-bottom: 3rem;
-  background: var(--shuwa-cream);
+  background: var(--sw-cream);
   text-align: center;
 }
 
@@ -1054,19 +1300,19 @@
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: var(--shuwa-dark);
+  color: var(--sw-text);
 }
 
 .shuwa-legal-hero__subtitle {
-  font-family: var(--font-display);
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.875rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
   letter-spacing: 0.1em;
 }
 
 .shuwa-legal-content {
   padding: 3rem 0 5rem;
-  background: var(--color-white);
+  background: var(--sw-white);
 }
 
 .shuwa-legal-content .legal-content {
@@ -1077,33 +1323,32 @@
 .shuwa-legal-content .legal-content p:first-child {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--sw-border);
 }
 
 .legal-content__date {
   margin-top: 3rem;
   font-size: 0.875rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
 }
 
 .legal-content__company {
   font-size: 0.875rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
 }
 
-/* Tokushoho Table */
 .tokushoho-table {
   margin: 2rem 0;
 }
 
 .tokushoho-row {
   display: flex;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--sw-border);
   padding: 1.25rem 0;
 }
 
 .tokushoho-row:first-child {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--sw-border);
 }
 
 .tokushoho-label {
@@ -1111,23 +1356,23 @@
   flex-shrink: 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--shuwa-dark);
+  color: var(--sw-text);
 }
 
 .tokushoho-value {
   flex: 1;
   font-size: 0.9375rem;
-  color: var(--shuwa-text);
+  color: var(--sw-text);
   line-height: 1.8;
 }
 
 .tokushoho-value small {
   font-size: 0.8125rem;
-  color: var(--shuwa-text-light);
+  color: var(--sw-sub);
 }
 
 .contact-info {
-  background: var(--shuwa-champagne);
+  background: var(--sw-champagne);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1rem 0;
@@ -1140,12 +1385,12 @@
 }
 
 .contact-info a {
-  color: var(--shuwa-gold-dark);
+  color: var(--sw-gold-dark);
   text-decoration: underline;
 }
 
 .contact-info a:hover {
-  color: var(--shuwa-dark);
+  color: var(--sw-text);
 }
 
 @media (max-width: 768px) {
@@ -1165,5 +1410,60 @@
 
   .tokushoho-label {
     width: auto;
+  }
+}
+
+/* === Margarete Review Fixes === */
+
+/* Hero sub CTA */
+.shuwa-hero__cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.shuwa-hero__cta-sub {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--sw-gold);
+  border: 1px solid var(--sw-gold);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.shuwa-hero__cta-sub:hover {
+  background: var(--sw-gold);
+  color: #fff;
+}
+
+/* Final CTA - plans link */
+.shuwa-final-cta__btn-plans {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.shuwa-final-cta__btn-plans:hover {
+  color: #fff;
+}
+
+/* Testimonial scroll hint (mobile only) */
+.shuwa-testimonials__scroll-hint {
+  display: none;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--sw-sub);
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .shuwa-testimonials__scroll-hint {
+    display: block;
   }
 }

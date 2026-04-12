@@ -53,7 +53,7 @@ body {
   font-family: var(--font-primary);
   font-size: 1rem;
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: #F2F2F2;
   line-height: 1.8;
   font-feature-settings: "palt";
   -webkit-font-smoothing: antialiased;
@@ -111,6 +111,24 @@ p {
 /* ========================================
    Layout Components
    ======================================== */
+.main-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .main-wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-wrapper {
+    padding: 1.5rem;
+  }
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -215,6 +233,26 @@ p {
 
 .nav__list {
   display: flex;
+  gap: 0.25rem;
+}
+
+/* Frosted glass nav for transparent header */
+.header--transparent .nav__list {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header--transparent.header--scrolled .nav__list {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-radius: 0;
+  padding: 0;
+  border: none;
   gap: 2.5rem;
 }
 
@@ -223,8 +261,22 @@ p {
   font-weight: 500;
   letter-spacing: 0.05em;
   color: var(--color-text-light);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.header--transparent .nav__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header--transparent.header--scrolled .nav__link {
   padding: 0.5rem 0;
-  transition: color var(--transition-fast);
+  border-radius: 0;
+}
+
+.header--transparent.header--scrolled .nav__link:hover {
+  background: transparent;
 }
 
 .nav__link:hover,
@@ -360,6 +412,11 @@ p {
 
 .hero--main {
   background: transparent;
+  height: 95vh;
+  min-height: 700px;
+  border-radius: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding-top: 0;
 }
 
 .hero__bg {
@@ -371,6 +428,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .hero__overlay {
@@ -379,7 +437,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 40%, rgba(0, 0, 0, 0.7));
 }
 
 .hero--main .hero__content {
@@ -392,33 +450,61 @@ p {
 }
 
 .hero__tagline {
-  font-size: 0.8125rem;
-  font-weight: 400;
-  letter-spacing: 0.25em;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
-  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  padding: 0.375rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   animation: heroFadeInUp 0.8s ease 0.3s forwards;
   opacity: 0;
 }
 
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.02em;
   animation: heroFadeInUp 0.8s ease 0.5s forwards;
   opacity: 0;
 }
 
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 4.5rem;
+  }
+}
+
 .hero__desc {
-  font-size: 0.9375rem;
-  line-height: 2;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
   animation: heroFadeInUp 0.8s ease 0.7s forwards;
   opacity: 0;
+}
+
+@media (min-width: 640px) {
+  .hero__desc {
+    font-size: 1.125rem;
+  }
 }
 
 .hero__br {
@@ -426,16 +512,37 @@ p {
 }
 
 .btn--white {
-  background: transparent;
-  border: 1px solid var(--color-white);
-  color: var(--color-white);
+  background: var(--color-white);
+  border: none;
+  color: var(--color-text);
+  border-radius: 9999px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  gap: 1rem;
+  font-weight: 500;
   animation: heroFadeInUp 0.8s ease 0.9s forwards;
   opacity: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn--white::after {
+  content: '→';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 1.125rem;
 }
 
 .btn--white:hover {
-  background: var(--color-white);
-  color: var(--color-text);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.btn--white:hover::after {
+  background: var(--color-secondary);
 }
 
 @keyframes heroFadeInUp {
@@ -535,20 +642,135 @@ p {
 }
 
 /* ========================================
+   Page Cards Section
+   ======================================== */
+.page-cards {
+  padding: 6rem 0;
+}
+
+.page-cards__header {
+  margin-bottom: 3rem;
+}
+
+.page-cards__title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.page-cards__subtitle {
+  color: var(--color-text-muted);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.page-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.page-card {
+  background: var(--color-white);
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  display: block;
+  color: inherit;
+}
+
+.page-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.page-card__image {
+  height: 16rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.page-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.page-card:hover .page-card__image img {
+  transform: scale(1.05);
+}
+
+.page-card__body {
+  padding: 1rem 1rem 1.5rem;
+}
+
+.page-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.page-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.page-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.page-card__tag {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.page-card__arrow {
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .page-cards {
+    padding: 4rem 0;
+  }
+
+  .page-cards__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .page-card__image {
+    height: 12rem;
+  }
+}
+
+/* ========================================
    CTA Section
    ======================================== */
-.cta {
+.section.cta {
   text-align: center;
   background: var(--color-primary);
   color: var(--color-white);
-  padding: var(--spacing-lg) 0 var(--spacing-xl);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5rem 3rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .cta__title {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
   font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .cta__text {
@@ -581,8 +803,9 @@ p {
 
 .btn--outline {
   background-color: transparent;
-  border: 1px solid var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--color-white);
+  border-radius: 9999px;
 }
 
 .btn--outline:hover {
@@ -594,14 +817,9 @@ p {
    Footer
    ======================================== */
 .footer {
-  background-color: var(--color-white);
+  background-color: transparent;
   color: var(--color-text);
-  padding: var(--spacing-md) 0;
-}
-
-/* Remove gap between CTA and Footer */
-.cta + .footer {
-  padding-top: 0;
+  padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
 .footer__inner {
@@ -2513,6 +2731,7 @@ a.work-card:hover {
   background: var(--color-white);
   padding: var(--spacing-lg) 0 var(--spacing-xl);
   overflow: hidden;
+  border-radius: 2rem;
 }
 
 .partners__label {
