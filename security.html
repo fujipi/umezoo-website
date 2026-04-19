@@ -32,6 +32,11 @@
   <meta property="og:description" content="UMEZOO株式会社の情報セキュリティ方針。情報資産の保護と適切なセキュリティ対策。">
   <meta property="og:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
   <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -68,7 +73,7 @@
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
-        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -145,6 +150,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="shuwa.html">しゅわTokyo</a>
+        <a href="ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -156,10 +165,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data/translations.js"></script>
-  <script src="js/data/news-data.js"></script>
-  <script src="js/data/job-data.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data/translations.js" defer></script>
+  <script src="js/data/news-data.js" defer></script>
+  <script src="js/data/job-data.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

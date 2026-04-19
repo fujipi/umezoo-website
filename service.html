@@ -29,6 +29,11 @@
   <meta property="og:description" content="UMEZOO株式会社のサービス。食品事業の「つくる」「とどける」「ひろげる」「まわす」を支援します。">
   <meta property="og:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
   <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -57,13 +62,69 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "name": "UMEZOOのフードクリエイティブサービス",
     "provider": {
       "@type": "Organization",
-      "name": "UMEZOO株式会社"
+      "name": "UMEZOO株式会社",
+      "url": "https://umezoo.co.jp"
     },
     "serviceType": ["商品・メニュー開発", "SNS運用・コンテンツ制作", "映像制作", "ブランド戦略", "店舗設計", "事業計画", "事業運営改善"],
-    "areaServed": "JP",
-    "description": "食品事業の「つくる」「とどける」「ひろげる」「まわす」を支援。バリューチェーン全体をワンストップでサポートします。"
+    "areaServed": {"@type": "Country", "name": "Japan"},
+    "description": "食品事業の「つくる」「とどける」「ひろげる」「まわす」を支援。バリューチェーン全体をワンストップでサポートします。",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "UMEZOOのサービス領域",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "つくる / Create",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "新商品企画・レシピ開発", "description": "試作・改良を繰り返し、味と事業性を両立"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "製造管理・OEM調整", "description": "製造仕様書作成、工場との品質・コスト交渉"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "原価計算・利益率設計", "description": "売れる価格帯を逆算した収益設計"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "メニュー開発・OP設計", "description": "飲食店の調理オペレーションまで最適化"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "食品表示・規格対応", "description": "栄養成分表示、HACCP、賞味期限設定"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ペアリング・テイスティング", "description": "日本酒・ワイン等との組み合わせ提案"}}
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "とどける / Deliver",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SNS運用・コンテンツ制作", "description": "Instagram / X / TikTok の企画・投稿・分析"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "レシピコンテンツ企画", "description": "ペアリング・アレンジレシピの開発と撮影"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "料理撮影・動画制作", "description": "フードスタイリングから撮影・編集まで内製"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "EC・GA分析・レポーティング", "description": "データに基づく改善提案とKPI管理"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LINE OA・メルマガ・note", "description": "CRM設計からコンテンツ配信まで一貫運用"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ブランディング戦略", "description": "市場調査・ターゲット分析・ブランド設計"}}
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "ひろげる / Expand",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "コンセプト設計・事業計画", "description": "市場調査、競合分析、収支シミュレーション"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "物件選定・店舗設計施工", "description": "立地分析から内装・設備導入まで"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "厨房設計・機器選定", "description": "業態最適化された厨房レイアウトとOP設計"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "セントラルキッチン開発", "description": "製造ライン設計、HACCP対応、品質管理体制"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "補助金申請支援", "description": "事業計画に基づく資金調達サポート"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "開業後の運営支援", "description": "メニュー改良・マーケ運用・品質管理の継続伴走"}}
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "まわす / Operate",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "売上・KPI分析・改善提案", "description": "データに基づく月次レビューと改善アクション"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "メニュー・商品の定期リニューアル", "description": "季節やトレンドに応じた改廃・ブラッシュアップ"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "スタッフ教育・オペレーション改善", "description": "調理・接客・衛生のトレーニング設計と実施"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "品質管理・衛生管理体制の維持", "description": "HACCP運用、定期監査、改善フロー構築"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "顧客満足度調査・VOC分析", "description": "アンケート設計・集計・施策への反映"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "月次レポート・経営会議支援", "description": "KPIダッシュボード作成と改善提案"}}
+          ]
+        }
+      ]
+    }
   }
   </script>
 
@@ -84,7 +145,7 @@
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
-        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -304,6 +365,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="shuwa.html">しゅわTokyo</a>
+        <a href="ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -315,10 +380,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data/translations.js"></script>
-  <script src="js/data/news-data.js"></script>
-  <script src="js/data/job-data.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data/translations.js" defer></script>
+  <script src="js/data/news-data.js" defer></script>
+  <script src="js/data/job-data.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

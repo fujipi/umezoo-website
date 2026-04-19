@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "UMEZOO Inc. official website",
   "scripts": {
-    "sync-note": "node scripts/sync-note-rss.js"
+    "sync-note": "node scripts/sync-note-rss.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"

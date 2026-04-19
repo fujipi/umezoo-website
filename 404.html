@@ -19,6 +19,25 @@
   <meta name="description" content="お探しのページが見つかりませんでした。UMEZOO株式会社の公式サイトトップページからお探しの情報をご覧ください。">
   <meta name="robots" content="noindex, follow">
 
+  <!-- Open Graph (minimal for shareability) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://umezoo.co.jp/">
+  <meta property="og:title" content="UMEZOO株式会社 | フードクリエイティブファーム">
+  <meta property="og:description" content="お探しのページが見つかりませんでした。UMEZOO株式会社の公式サイトはこちら。">
+  <meta property="og:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
+  <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UMEZOO株式会社">
+  <meta name="twitter:description" content="お探しのページが見つかりませんでした。">
+  <meta name="twitter:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/favicon.png">
@@ -36,7 +55,7 @@
   <header class="header">
     <div class="header__inner">
       <a href="/index.html" class="header__logo">
-        <img src="/umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+        <img src="/umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -85,6 +104,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="/shuwa.html">しゅわTokyo</a>
+        <a href="/ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -95,10 +118,10 @@
     </div>
   </footer>
 
-  <script src="/js/data/translations.js"></script>
-  <script src="/js/data/news-data.js"></script>
-  <script src="/js/data/job-data.js"></script>
-  <script src="/js/modal.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/data/translations.js" defer></script>
+  <script src="/js/data/news-data.js" defer></script>
+  <script src="/js/data/job-data.js" defer></script>
+  <script src="/js/modal.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

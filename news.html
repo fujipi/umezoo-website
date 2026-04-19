@@ -29,6 +29,11 @@
   <meta property="og:description" content="UMEZOO株式会社からのお知らせ・最新情報。">
   <meta property="og:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
   <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -40,29 +45,8 @@
   <link rel="alternate" hreflang="ja" href="https://umezoo.co.jp/news.html">
   <link rel="alternate" hreflang="x-default" href="https://umezoo.co.jp/news.html">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "お知らせ | UMEZOO株式会社",
-    "url": "https://umezoo.co.jp/news.html",
-    "description": "UMEZOO株式会社からのお知らせ・最新情報。",
-    "publisher": {
-      "@type": "Organization",
-      "name": "UMEZOO株式会社",
-      "url": "https://umezoo.co.jp"
-    },
-    "blogPost": [
-      {"@type": "BlogPosting", "headline": "福島県大熊町「Fun Eat Makers」プロジェクトに参画", "datePublished": "2025-06-01"},
-      {"@type": "BlogPosting", "headline": "「YAMAGATA FUSION」を開催しました", "datePublished": "2024-09-14"},
-      {"@type": "BlogPosting", "headline": "三井不動産「&mog」にてワークショップを共催", "datePublished": "2024-05-10"},
-      {"@type": "BlogPosting", "headline": "UMEZOO株式会社を設立しました", "datePublished": "2024-03-15"},
-      {"@type": "BlogPosting", "headline": "公式ウェブサイトを公開しました", "datePublished": "2024-03-20"},
-      {"@type": "BlogPosting", "headline": "代表・梅津信吾が語る「食とクリエイティブの未来」", "datePublished": "2024-03-25"}
-    ]
-  }
-  </script>
+  <!-- Structured Data: Blog + BlogPosting[] (runtime-rendered from js/data/news-data.js via initNewsFromData in js/main.js) -->
+  <script id="news-jsonld" type="application/ld+json"></script>
 
   <script type="application/ld+json">
   {
@@ -92,7 +76,7 @@
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
-        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -136,6 +120,8 @@
   <!-- News Grid -->
   <section class="content-section">
     <div class="container">
+      <h2 class="u-visually-hidden">お知らせ一覧</h2>
+
       <!-- Filter Buttons -->
       <div class="news-filter">
         <button class="news-filter__btn is-active" data-category="すべて">すべて</button>
@@ -146,97 +132,8 @@
         <button class="news-filter__btn" data-category="お知らせ">お知らせ</button>
       </div>
 
-      <div class="news-grid">
-        <!-- News 4: YAMAGATA FUSION -->
-        <article class="news-card" data-news-id="4" data-tag="プロジェクト" data-date="2024.09.14">
-          <div class="news-card__image" style="background-image: url('images/work/yamagata-fusion.jpg');">
-            <span class="news-card__image-placeholder">YAMAGATA FUSION</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">プロジェクト</span>
-              <time class="news-card__date">2024.09.14</time>
-            </div>
-            <h3 class="news-card__title">「YAMAGATA FUSION」を開催しました</h3>
-            <p class="news-card__summary">東京にて、山形の料理とワインによる新たな食体験を発信するコラボイベント「YAMAGATA FUSION」を開催。高畠ワイナリー協力のもと実現しました。</p>
-          </div>
-        </article>
-
-        <!-- News 5: &mog ワークショップ -->
-        <article class="news-card" data-news-id="5" data-tag="プロジェクト" data-date="2024.05.10">
-          <div class="news-card__image" style="background-image: url('images/work/andmog.jpg');">
-            <span class="news-card__image-placeholder">&mog Workshop</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">プロジェクト</span>
-              <time class="news-card__date">2024.05.10</time>
-            </div>
-            <h3 class="news-card__title">三井不動産「&mog」にてワークショップを共催</h3>
-            <p class="news-card__summary">三井不動産様の飲食事業者共創プラットフォーム「&mog」にて、消費者向け食品プロモーションにおけるクリエイティブ制作ワークショップを共催しました。</p>
-          </div>
-        </article>
-
-        <!-- News 6: Fun Eat Makers -->
-        <article class="news-card" data-news-id="6" data-tag="プロジェクト" data-date="2025.06.01">
-          <div class="news-card__image" style="background-image: url('images/work/fun-eat-makers.jpg');">
-            <span class="news-card__image-placeholder">Fun Eat Makers</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">プロジェクト</span>
-              <time class="news-card__date">2025.06（予定）</time>
-            </div>
-            <h3 class="news-card__title">福島県大熊町「Fun Eat Makers」プロジェクトに参画</h3>
-            <p class="news-card__summary">福島県大熊町の農業再生プロジェクト「Fun Eat Makers in Okuma」に参画。「つくる・たべる・つながる」をコンセプトに農業と食の拠点創出に取り組んでいます。2025年6月ローンチ予定。</p>
-          </div>
-        </article>
-
-        <!-- News 1: 会社設立 -->
-        <article class="news-card" data-news-id="1" data-tag="プレスリリース" data-date="2024.03.15">
-          <div class="news-card__image" style="background-image: url('images/news/company-founding.jpg');">
-            <span class="news-card__image-placeholder">UMEZOO設立</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">プレスリリース</span>
-              <time class="news-card__date">2024.03.15</time>
-            </div>
-            <h3 class="news-card__title">UMEZOO株式会社を設立しました</h3>
-            <p class="news-card__summary">フードクリエイティブファームとして、UMEZOO株式会社を設立いたしました。創造的な食体験を事業活動に浸透させることをミッションに掲げ、活動を開始いたします。</p>
-          </div>
-        </article>
-
-        <!-- News 2: ウェブサイト公開 -->
-        <article class="news-card" data-news-id="2" data-tag="お知らせ" data-date="2024.03.20">
-          <div class="news-card__image" style="background-image: url('images/news/website-launch.jpg');">
-            <span class="news-card__image-placeholder">Website Launch</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">お知らせ</span>
-              <time class="news-card__date">2024.03.20</time>
-            </div>
-            <h3 class="news-card__title">公式ウェブサイトを公開しました</h3>
-            <p class="news-card__summary">UMEZOOの公式ウェブサイトを公開いたしました。私たちのサービス、実績、そしてフードクリエイティブに対する想いをご覧いただけます。</p>
-          </div>
-        </article>
-
-        <!-- News 3: 代表メッセージ -->
-        <article class="news-card" data-news-id="3" data-tag="Journey" data-date="2024.03.25">
-          <div class="news-card__image" style="background-image: url('images/news/founder-message.jpg');">
-            <span class="news-card__image-placeholder">Founder Message</span>
-          </div>
-          <div class="news-card__content">
-            <div class="news-card__meta">
-              <span class="news-card__tag">Journey</span>
-              <time class="news-card__date">2024.03.25</time>
-            </div>
-            <h3 class="news-card__title">代表・梅津信吾が語る「食とクリエイティブの未来」</h3>
-            <p class="news-card__summary">RED U-35シルバーエッグ受賞シェフである代表・梅津信吾が、UMEZOO設立の背景と、フードクリエイティブが切り拓く新しい食体験について語ります。</p>
-          </div>
-        </article>
-      </div>
+      <!-- Cards are rendered from js/data/news-data.js by initNewsFromData() in js/main.js -->
+      <div class="news-grid" id="news-grid"></div>
     </div>
   </section>
 
@@ -276,6 +173,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="shuwa.html">しゅわTokyo</a>
+        <a href="ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -287,10 +188,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data/translations.js"></script>
-  <script src="js/data/news-data.js"></script>
-  <script src="js/data/job-data.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data/translations.js" defer></script>
+  <script src="js/data/news-data.js" defer></script>
+  <script src="js/data/job-data.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
   initAnimations();
   initContactForm();
+  initNewsFromData();
   initNewsModal();
   initCareerModal();
   initWorkstyleModal();
@@ -87,10 +88,12 @@ const heroImages = [
   'images/hero/pasta-ravioli-rosemary-simple.jpg'
 ];
 
-// Hero background random image (for index.html)
+// Hero background random image (for index.html). Skips if the author has pinned
+// the LCP image in HTML (data-lcp-pinned) so the preload + first paint match.
 function initHeroBackground() {
   const heroBg = document.getElementById('hero-bg');
   if (!heroBg) return;
+  if (heroBg.dataset.lcpPinned === 'true') return;
 
   const randomIndex = Math.floor(Math.random() * heroImages.length);
   heroBg.style.backgroundImage = `url('${heroImages[randomIndex]}')`;
@@ -342,6 +345,85 @@ function initWorkstyleModal() {
   }
 }
 
+
+// Render corporate news cards + Blog/BlogPosting JSON-LD from newsData.
+// Single source of truth = js/data/news-data.js. Runs only on pages that have
+// .news-grid in the DOM (i.e. news.html).
+function initNewsFromData() {
+  const grid = document.querySelector('.news-grid');
+  if (!grid || typeof newsData === 'undefined') return;
+
+  const base = 'https://umezoo.co.jp/';
+  const entries = Object.entries(newsData).map(([id, n]) => ({ id, ...n }));
+
+  // Render cards (must match the class/data-* contract modal.js relies on)
+  grid.innerHTML = entries.map(n => {
+    const placeholder = n.title.length > 24 ? n.title.substring(0, 24) + '…' : n.title;
+    return (
+      '<article class="news-card" data-news-id="' + n.id +
+        '" data-tag="' + escapeAttr(n.tag) +
+        '" data-date="' + escapeAttr(n.date) + '">' +
+        '<div class="news-card__image" style="background-image: url(\'' + n.image + '\');">' +
+          '<span class="news-card__image-placeholder">' + escapeHtml(placeholder) + '</span>' +
+        '</div>' +
+        '<div class="news-card__content">' +
+          '<div class="news-card__meta">' +
+            '<span class="news-card__tag">' + escapeHtml(n.tag) + '</span>' +
+            '<time class="news-card__date" datetime="' + (n.dateISO || '') + '">' + escapeHtml(n.date) + '</time>' +
+          '</div>' +
+          '<h3 class="news-card__title">' + escapeHtml(n.title) + '</h3>' +
+          '<p class="news-card__summary">' + escapeHtml(n.summary || '') + '</p>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join('');
+
+  // Render JSON-LD Blog with BlogPosting[]
+  const ldEl = document.getElementById('news-jsonld');
+  if (ldEl) {
+    const publisher = {
+      '@type': 'Organization',
+      name: 'UMEZOO株式会社',
+      url: base,
+      logo: { '@type': 'ImageObject', url: base + 'umezoo_logo_yoko_color.jpg' }
+    };
+    const blog = {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'お知らせ | UMEZOO株式会社',
+      url: base + 'news.html',
+      description: 'UMEZOO株式会社からのお知らせ・最新情報。',
+      publisher: publisher,
+      blogPost: entries.map(n => ({
+        '@type': 'BlogPosting',
+        headline: n.title,
+        datePublished: n.dateISO,
+        dateModified: n.dateModified || n.dateISO,
+        image: base + n.image,
+        author: { '@type': 'Organization', name: 'UMEZOO株式会社', url: base },
+        publisher: publisher,
+        description: n.summary || '',
+        articleBody: (n.body || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+        keywords: [n.tag].filter(Boolean),
+        mainEntityOfPage: { '@type': 'WebPage', '@id': base + 'news.html' }
+      }))
+    };
+    ldEl.textContent = JSON.stringify(blog);
+  }
+}
+
+// Tiny HTML/attr escapers for safe text interpolation
+function escapeHtml(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function escapeAttr(str) {
+  return escapeHtml(str);
+}
 
 // Load note articles and integrate with news grid
 async function initNoteArticles() {
