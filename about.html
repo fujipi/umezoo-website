@@ -29,6 +29,11 @@
   <meta property="og:description" content="UMEZOO株式会社（ウメズー）の会社概要。代表 梅津信吾が率いるフードクリエイティブファーム。">
   <meta property="og:image" content="https://umezoo.co.jp/umezoo_logo_yoko_color.jpg">
   <meta property="og:site_name" content="UMEZOO株式会社">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -82,6 +87,25 @@
   }
   </script>
 
+  <!-- Person: 代表 梅津信吾 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "梅津信吾",
+    "alternateName": ["Shingo Umetsu", "うめつしんご", "うめずしんご"],
+    "jobTitle": "代表取締役",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "UMEZOO株式会社",
+      "url": "https://umezoo.co.jp"
+    },
+    "award": "RED-U35 2021 シルバーエッグ",
+    "knowsAbout": ["フードクリエイティブ", "レシピ開発", "パスタ", "Pasta", "シェフズテーブル", "Chef's Table", "フードビジネス"],
+    "url": "https://umezoo.co.jp/about.html"
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
@@ -99,7 +123,7 @@
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
-        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+        <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -272,6 +296,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="shuwa.html">しゅわTokyo</a>
+        <a href="ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -283,10 +311,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data/translations.js"></script>
-  <script src="js/data/news-data.js"></script>
-  <script src="js/data/job-data.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data/translations.js" defer></script>
+  <script src="js/data/news-data.js" defer></script>
+  <script src="js/data/job-data.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

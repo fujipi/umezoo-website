@@ -31,6 +31,13 @@
   <meta property="og:site_name" content="UMEZOO株式会社">
   <meta property="og:locale" content="ja_JP">
 
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="UMEZOO">
+
+  <!-- Search Console (TODO: replace the placeholder content with the real token) -->
+  <meta name="google-site-verification" content="TODO_REPLACE_WITH_TOKEN">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="UMEZOO株式会社 | フードクリエイティブファーム">
@@ -92,6 +99,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- LCP: pin hero image so the preload actually matches first paint.
+       main.js:initHeroBackground skips the random swap when data-lcp-pinned is set. -->
+  <link rel="preload" as="image" href="images/hero/pasta-ravioli-herb-cream.jpg" fetchpriority="high">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -99,7 +110,7 @@
   <!-- Splash Screen -->
   <div class="splash" id="splash">
     <div class="splash__logo">
-      <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO">
+      <img src="umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
     </div>
   </div>
 
@@ -107,7 +118,7 @@
   <header class="header header--transparent" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
-        <img src="umezoo_logo_yoko_color.png" alt="UMEZOO">
+        <img src="umezoo_logo_yoko_color.png" alt="UMEZOO" width="240" height="60">
       </a>
 
       <nav class="nav">
@@ -143,7 +154,7 @@
 
   <!-- Hero Section with Background Image -->
   <section class="hero hero--main" id="hero">
-    <div class="hero__bg" id="hero-bg"></div>
+    <div class="hero__bg" id="hero-bg" data-lcp-pinned="true" style="background-image:url('images/hero/pasta-ravioli-herb-cream.jpg');"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__tagline" data-i18n="hero.subtitle">Food Creative Farm</p>
@@ -252,6 +263,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <nav class="footer__links" aria-label="関連サイト">
+        <a href="shuwa.html">しゅわTokyo</a>
+        <a href="ai-ops/">AI業務Ops</a>
+      </nav>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -265,10 +280,10 @@
   </div><!-- /.main-wrapper -->
 
   <!-- Scripts -->
-  <script src="js/data/translations.js"></script>
-  <script src="js/data/news-data.js"></script>
-  <script src="js/data/job-data.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/data/translations.js" defer></script>
+  <script src="js/data/news-data.js" defer></script>
+  <script src="js/data/job-data.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

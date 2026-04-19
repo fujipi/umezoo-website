@@ -11,6 +11,10 @@ Sitemap: https://umezoo.co.jp/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 
+# Orphan / mockup pages we don't want indexed
+Disallow: /estetico-caf-44.html
+Disallow: /ai-ops/design-mockup.html
+
 # Allow all crawlers to access the site
 User-agent: Googlebot
 Allow: /

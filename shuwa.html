@@ -24,15 +24,26 @@
   <meta property="og:url" content="https://umezoo.co.jp/shuwa.html">
   <meta property="og:title" content="ソムリエ厳選スパークリングワイン定期便 | しゅわTokyo">
   <meta property="og:description" content="月¥12,000〜。ソムリエ資格保有者が世界5,000種から厳選したスパークリングワインを毎月お届け。プロ監修レシピ付き。いつでも解約OK・違約金なし。しゅわTokyo — 東京発のワインサブスク。">
-  <meta property="og:image" content="https://umezoo.co.jp/images/shuwa/og-image.jpg">
+  <!-- TODO: dedicated OG asset (images/shuwa/og-image.jpg is not in repo yet; using hero.jpg as fallback) -->
+  <meta property="og:image" content="https://umezoo.co.jp/images/shuwa/hero.jpg">
   <meta property="og:site_name" content="しゅわTokyo">
   <meta property="og:locale" content="ja_JP">
+
+  <!-- Mobile / PWA polish -->
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-title" content="しゅわTokyo">
+
+  <!-- Search Console (TODO: replace the placeholder content with the real token) -->
+  <meta name="google-site-verification" content="TODO_REPLACE_WITH_TOKEN">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="しゅわTokyo, しゅわ東京, スパークリングワイン, スパークリングワイン定期便, スパークリングワインサブスク, ワイン定期便, ワインサブスク, ソムリエ厳選, シャンパン定期便, シャンパンサブスク, ペアリング, レシピ付きワイン, 東京, UMEZOO">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ソムリエ厳選スパークリングワイン定期便 | しゅわTokyo">
   <meta name="twitter:description" content="月¥12,000〜。ソムリエ資格保有者が世界5,000種から厳選したスパークリングワインを毎月お届け。プロ監修レシピ付き。いつでも解約OK・違約金なし。">
-  <meta name="twitter:image" content="https://umezoo.co.jp/images/shuwa/og-image.jpg">
+  <meta name="twitter:image" content="https://umezoo.co.jp/images/shuwa/hero.jpg">
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="ja" href="https://umezoo.co.jp/shuwa.html">
@@ -46,6 +57,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- LCP preload (shuwa-splash.js randomizes among splash-1..6, but preload still helps when it hits) -->
+  <link rel="preload" as="image" href="images/shuwa/splash-1.jpg" fetchpriority="high">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -72,7 +86,8 @@
     "description": "ソムリエ資格保有者が世界5,000種から厳選したスパークリングワインを毎月お届けする定期便サービス。プロ監修レシピ付き。",
     "brand": {
       "@type": "Brand",
-      "name": "しゅわTokyo"
+      "name": "しゅわTokyo",
+      "logo": "https://umezoo.co.jp/images/shuwa/shuwa-favicon.jpg"
     },
     "provider": {
       "@type": "Organization",
@@ -647,7 +662,7 @@
     </svg>
   </a>
 
-  <script src="js/shuwa-splash.js"></script>
+  <script src="js/shuwa-splash.js" defer></script>
   <script>
     (function() {
       /* スプラッシュを2000msで早期フェードアウト（shuwa-splash.jsの2500msを上書き） */

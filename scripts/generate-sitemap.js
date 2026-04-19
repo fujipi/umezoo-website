@@ -1,0 +1,92 @@
+// Regenerate sitemap.xml from a whitelist of indexable pages.
+// lastmod is derived from git (last commit touching the file), falling back to mtime.
+// Run: npm run generate-sitemap
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+const ROOT = path.join(__dirname, '..');
+const BASE_URL = 'https://umezoo.co.jp/';
+const OUTPUT_PATH = path.join(ROOT, 'sitemap.xml');
+
+// Image sitemap entries per URL (absolute URLs).
+const IMAGE_MAP = {
+  '/': [
+    BASE_URL + 'umezoo_logo_yoko_color.jpg',
+    BASE_URL + 'images/hero/pasta-ravioli-herb-cream.jpg'
+  ],
+  'work.html': [
+    BASE_URL + 'images/work/yamagata-fusion.jpg',
+    BASE_URL + 'images/work/fun-eat-makers.jpg',
+    BASE_URL + 'images/work/andmog.jpg',
+    BASE_URL + 'images/work/nishinoshima.jpg'
+  ],
+  'shuwa.html': [
+    BASE_URL + 'images/shuwa/hero.jpg',
+    BASE_URL + 'images/shuwa/shuwa-favicon.jpg'
+  ]
+};
+
+// Indexable pages — keep noindex / mockup pages out of this list deliberately.
+// file: path relative to repo root used for lastmod lookup. "" means index.
+const PAGES = [
+  { loc: '/',                         file: 'index.html',          priority: '1.0', changefreq: 'weekly'  },
+  { loc: 'about.html',                file: 'about.html',          priority: '0.8', changefreq: 'monthly' },
+  { loc: 'work.html',                 file: 'work.html',           priority: '0.9', changefreq: 'weekly'  },
+  { loc: 'service.html',              file: 'service.html',        priority: '0.8', changefreq: 'monthly' },
+  { loc: 'career.html',               file: 'career.html',         priority: '0.7', changefreq: 'weekly'  },
+  { loc: 'news.html',                 file: 'news.html',           priority: '0.7', changefreq: 'weekly'  },
+  { loc: 'contact.html',              file: 'contact.html',        priority: '0.6', changefreq: 'monthly' },
+  { loc: 'privacy.html',              file: 'privacy.html',        priority: '0.3', changefreq: 'yearly'  },
+  { loc: 'security.html',             file: 'security.html',       priority: '0.3', changefreq: 'yearly'  },
+  { loc: 'ai-ops/',                   file: 'ai-ops/index.html',   priority: '0.8', changefreq: 'monthly' },
+  { loc: 'shuwa.html',                file: 'shuwa.html',          priority: '0.9', changefreq: 'weekly'  },
+  { loc: 'shuwa-terms.html',          file: 'shuwa-terms.html',    priority: '0.3', changefreq: 'yearly'  },
+  { loc: 'shuwa-tokushoho.html',      file: 'shuwa-tokushoho.html', priority: '0.3', changefreq: 'yearly' },
+  { loc: 'shuwa-privacy.html',        file: 'shuwa-privacy.html',  priority: '0.3', changefreq: 'yearly'  }
+];
+
+function lastmodFor(relFile) {
+  const absFile = path.join(ROOT, relFile);
+  try {
+    const iso = execSync(`git log -1 --format=%cI -- "${relFile}"`, {
+      cwd: ROOT,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+    if (iso) return iso.slice(0, 10); // YYYY-MM-DD
+  } catch (_) {}
+  try {
+    return fs.statSync(absFile).mtime.toISOString().slice(0, 10);
+  } catch (_) {
+    return new Date().toISOString().slice(0, 10);
+  }
+}
+
+function urlBlock(p) {
+  const loc = BASE_URL + (p.loc === '/' ? '' : p.loc);
+  const lastmod = lastmodFor(p.file);
+  const images = IMAGE_MAP[p.loc] || [];
+  const imageXml = images.map(url => `    <image:image><image:loc>${url}</image:loc></image:image>`).join('\n');
+  return [
+    '  <url>',
+    `    <loc>${loc}</loc>`,
+    `    <lastmod>${lastmod}</lastmod>`,
+    `    <changefreq>${p.changefreq}</changefreq>`,
+    `    <priority>${p.priority}</priority>`,
+    imageXml,
+    '  </url>'
+  ].filter(Boolean).join('\n');
+}
+
+const xml = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+  '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+  PAGES.map(urlBlock).join('\n'),
+  '</urlset>',
+  ''
+].join('\n');
+
+fs.writeFileSync(OUTPUT_PATH, xml, 'utf8');
+console.log(`Wrote ${PAGES.length} URLs to ${OUTPUT_PATH}`);
