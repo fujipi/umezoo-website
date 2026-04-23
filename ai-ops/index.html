@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.google.com https://*.g.doubleclick.net; frame-src https://docs.google.com;">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18050771174"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
     gtag('config', 'AW-18050771174');
   </script>
@@ -17,7 +16,6 @@
   <title>食品・飲料メーカー向けAI業務自動化BPO | AI業務Ops by UMEZOO</title>
   <meta name="description" content="食品・飲料メーカーの営業・製造・バックオフィス業務をAIが丸ごと引き取るBPOサービス。受発注工数78%削減・製造日報自動化など23社の支援実績。無料業務診断実施中。まず1業務から最短2週間で稼働。AI業務Ops by UMEZOO。">
 
-  <!-- OGP -->
   <meta property="og:title" content="食品・飲料メーカー向けAI業務自動化BPO | AI業務Ops by UMEZOO">
   <meta property="og:description" content="食品・飲料メーカーの営業・製造・バックオフィス業務をAIが引き取り。受発注工数78%削減の実績。無料業務診断実施中。">
   <meta property="og:type" content="website">
@@ -26,7 +24,6 @@
   <meta property="og:site_name" content="UMEZOO株式会社">
   <meta property="og:locale" content="ja_JP">
 
-  <!-- Mobile / PWA polish -->
   <meta name="theme-color" content="#1a1a1a">
   <meta name="apple-mobile-web-app-title" content="AI業務Ops">
 
@@ -44,130 +41,28 @@
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <link rel="apple-touch-icon" href="../images/favicon.png">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Structured Data: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "UMEZOO", "item": "https://umezoo.co.jp" },
-      { "@type": "ListItem", "position": 2, "name": "AI業務Ops", "item": "https://umezoo.co.jp/ai-ops/" }
-    ]
-  }
-  </script>
-
-  <!-- Structured Data: Service -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "AI業務Ops",
-    "description": "食品・飲料メーカーの営業・製造・バックオフィス業務をAIが引き取るBPOサービス。業務棚卸しから設計・実装・継続運用まで一貫して担う。",
-    "provider": {
-      "@type": "Organization",
-      "name": "UMEZOO株式会社",
-      "url": "https://umezoo.co.jp"
-    },
-    "areaServed": "JP",
-    "availableLanguage": "ja",
-    "serviceType": "業務プロセスアウトソーシング（BPO）"
-  }
-  </script>
-
-  <!-- Structured Data: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "費用はどのくらいかかりますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "無料業務診断→AI実装（15万円〜）→継続運用代行（月額10万円〜＋業務削減成果に連動した報酬）の3ステップです。成果が出なければ費用はいただきません。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "導入にどのくらいの期間がかかりますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "無料業務診断でAI化対象を特定した後、最短2週間で試験稼働を開始できます。効果を確認してから本格導入・拡大できます。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "既存のシステムと連携できますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "はい。Excel・FAX・基幹システム・クラウドサービスなど、現在お使いの環境に合わせて設計します。大規模なシステム入れ替えは不要です。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "セキュリティは大丈夫ですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "社内情報が外部に漏れないセキュリティ設計を前提としています。詳細はセキュリティポリシーをご確認ください。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "最低契約期間はありますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "継続運用代行は3ヶ月を最低期間としています。まず試験稼働で成果を確認してからご判断いただけます。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "食品・飲料業界以外でも対応できますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "現在は食品・飲料メーカーを専門としています。深い業界知識があってこそ現場に刺さる自動化を設計できるためです。他業種のご相談はまずお問い合わせください。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "AIの精度が低くてミスが出た場合は？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AIの出力は必ず人間が確認・承認するフローを設計します。ミスが発生した場合はUMEZOOが原因を分析し、精度改善を継続運用の中で対応します。"
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
-
-  <!-- =================== HEADER =================== -->
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="../index.html" aria-label="UMEZOO メインサイトへ">
         <span class="site-header__logo-name">UMEZOO</span>
         <span class="site-header__logo-sub">AI業務Ops</span>
       </a>
-
-      <button class="site-header__toggle" id="menu-toggle" type="button"
-        aria-label="メニューを開閉" aria-controls="site-nav" aria-expanded="false">
+      <button class="site-header__toggle" id="menu-toggle" type="button" aria-label="メニューを開閉" aria-controls="site-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="site-nav" id="site-nav" aria-label="LP内ナビゲーション">
         <ul>
           <li><a href="#pain">課題</a></li>
-          <li><a href="#service">サービス</a></li>
-          <li><a href="#cases">導入事例</a></li>
+          <li><a href="#service">業務領域</a></li>
+          <li><a href="#results">成果</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li class="nav-cta"><a href="#contact">無料診断</a></li>
         </ul>
@@ -176,350 +71,159 @@
   </header>
 
   <main id="top">
-
-    <!-- =================== HERO =================== -->
     <section class="hero">
-      <div class="container">
-        <p class="hero__eyebrow fade-in">AI業務Ops by UMEZOO</p>
-        <h1 class="hero__title fade-in">人が足りない現場で、<br>AIが業務を回し続ける。</h1>
-        <p class="hero__subtitle fade-in">食品・飲料メーカーの生産管理、受発注、営業資料作成——現場の定型業務を、UMEZOOのAI業務Opsが丸ごと引き取ります。導入企業の業務工数、平均78%削減。まずは無料の業務診断から。</p>
-        <div class="hero__cta-group fade-in">
-          <a href="#contact" class="btn btn--primary">無料で業務診断する</a>
-          <p class="hero__micro">申込後、翌営業日以内にご連絡します。営業電話はしません。</p>
+      <div class="container hero__layout">
+        <div class="hero__copy">
+          <p class="hero__eyebrow fade-in">AI業務OPS BY UMEZOO</p>
+          <h1 class="hero__title fade-in">人が足りない現場で、<br>AIが業務を回し続ける。</h1>
+          <p class="hero__subtitle fade-in">食品・飲料メーカーの生産管理、受発注、営業資料作成。現場の定型業務をUMEZOOが設計し、AIと運用代行で丸ごと引き取ります。まずは無料の業務診断から。</p>
+          <div class="hero__cta-group fade-in">
+            <a href="#contact" class="btn btn--primary">無料で業務診断する <span class="btn__dot" aria-hidden="true"></span></a>
+            <p class="hero__micro">翌営業日ご連絡 / 営業電話なし</p>
+          </div>
+        </div>
+        <div class="hero__kpis fade-in" aria-label="支援実績">
+          <article class="kpi-card kpi-card--blue"><span>23社</span><p>食品・飲料メーカーを支援</p></article>
+          <article class="kpi-card"><span>78%</span><p>対象業務の平均削減</p></article>
+          <article class="kpi-card kpi-card--warm"><span>最短2週間</span><p>試験稼働まで</p></article>
         </div>
       </div>
     </section>
 
-    <!-- =================== TRUST BAR =================== -->
-    <div class="trust-bar">
-      <div class="trust-bar__inner">
-        <p class="trust-bar__main">食品・飲料メーカー 23社の業務を支援</p>
-        <div class="trust-bar__badges">
-          <span class="trust-badge">業務工数 平均78%削減</span>
-          <span class="trust-badge">生産・製造・販売・バックオフィス</span>
-          <span class="trust-badge">無料診断→最短2週間で稼働</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- =================== PAIN =================== -->
-    <section class="pain" id="pain">
+    <section class="pain section" id="pain">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">「人手不足」「属人化」「手作業ミス」。<br>食品現場の三重苦に、そろそろ向き合う時期です。</h2>
-
-        <div class="pain__cards">
-          <div class="pain__card fade-in">
-            <h3>採用しても、定着しない。現場業務が回らない。</h3>
-            <p>パートを増やしても離職が続く。正社員に頼み続けることで疲弊が蓄積する。人手不足の根本解決は、採用ではなく業務設計の変革です。</p>
-          </div>
-          <div class="pain__card fade-in">
-            <h3>あの担当者が休むと、業務が止まる。</h3>
-            <p>長年の勘やExcelノウハウが一人に集中。引き継ぎができない業務が増え続けることで、組織の脆弱性は年々高まります。</p>
-          </div>
-          <div class="pain__card fade-in">
-            <h3>毎月の転記作業で必ずどこかでミスが出る。</h3>
-            <p>FAXやExcelの転記、日報の手入力。ヒューマンエラーが減らないのは社員の問題ではなく、業務構造の問題です。</p>
-          </div>
+        <div class="section__head split fade-in">
+          <h2 class="section-heading">よくある悩みではなく、<br>構造問題として解く。</h2>
+          <p class="section-lead">採用で埋まらない不足、属人化、転記ミス。現場を疲弊させる3つの問題を、業務設計と運用体制から立て直します。</p>
         </div>
-
-        <div class="pain__stats fade-in">
-          <div class="pain__stat">
-            <span class="pain__stat-number">69.3%</span>
-            <span class="pain__stat-label">食品関連の中小企業が「人手不足」と回答<br>（日本商工会議所 2024年調査）</span>
-          </div>
-          <div class="pain__stat">
-            <span class="pain__stat-number">62.0%</span>
-            <span class="pain__stat-label">管理部門が「兼務」で運用されている<br>中小企業の割合（中小企業白書 2024年版）</span>
-          </div>
+        <div class="problem-grid">
+          <article class="problem-card problem-card--a fade-in"><span>01</span><h3>採用しても、定着しない</h3><p>採用強化だけでは回らない業務を、運用ごと再設計します。</p></article>
+          <article class="problem-card problem-card--b fade-in"><span>02</span><h3>担当者が休むと止まる</h3><p>勘と属人ノウハウを業務フローに落とし、止まらない体制へ。</p></article>
+          <article class="problem-card problem-card--c fade-in"><span>03</span><h3>転記作業でミスが出る</h3><p>FAX・Excel・日報入力を自動化し、ヒューマンエラーを削減します。</p></article>
         </div>
       </div>
     </section>
 
-    <!-- =================== SERVICE =================== -->
-    <section class="service" id="service">
+    <section class="service section" id="service">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">AI業務Ops — ツール導入ではなく、業務を引き取る</h2>
-        <p class="section-lead fade-in">SaaSを入れるだけでは、業務は変わりません。棚卸しから設計・実装・日々の運用まで、UMEZOOが一貫して担います。</p>
-
-        <div class="service__cols">
-          <div class="service__col fade-in">
-            <h3 class="service__col-title">生産・調達</h3>
-            <p>原料価格・相場・天候の変動をAIが毎日収集し、発注計画と在庫補充シミュレーションを自動生成。</p>
-            <ul class="service__list">
-              <li>原料価格・相場・天候の収集レポート</li>
-              <li>発注計画と在庫補充シミュレーション</li>
-              <li>仕入先評価シートの自動更新</li>
-            </ul>
-          </div>
-          <div class="service__col fade-in">
-            <h3 class="service__col-title">製造・品質管理</h3>
-            <p>複数ラインの製造日報・温度記録をAIが自動集計し、規格逸脱があれば即アラート。</p>
-            <ul class="service__list">
-              <li>製造日報・温度記録の自動集計</li>
-              <li>規格逸脱アラートと原因分析</li>
-              <li>監査向け帳票・トレーサビリティ資料作成</li>
-            </ul>
-          </div>
-          <div class="service__col fade-in">
-            <h3 class="service__col-title">営業・販促・店舗運営</h3>
-            <p>小売・外食・ECそれぞれに最適化した提案書をAIが自動ドラフト。</p>
-            <ul class="service__list">
-              <li>販路別提案資料・商品説明の自動作成</li>
-              <li>SNS/EC/店頭の販促文面を量産</li>
-              <li>受発注・請求・問い合わせ一次対応の省力化</li>
-            </ul>
-          </div>
+        <h2 class="section-heading section-heading--center fade-in">ツール販売ではなく、業務を引き取る。</h2>
+        <div class="scope-grid">
+          <article class="scope-card fade-in">
+            <h3><span class="dot dot--y"></span>生産・調達</h3>
+            <p>原料価格・相場・天候の変動をAIが毎日収集し、発注計画を支援。</p>
+            <div class="chip-list"><span>相場レポート</span><span>在庫補充シミュレーション</span><span>仕入先評価更新</span></div>
+          </article>
+          <article class="scope-card fade-in">
+            <h3><span class="dot dot--g"></span>製造・品質管理</h3>
+            <p>製造日報・温度記録を自動集計し、逸脱時は即アラート。</p>
+            <div class="chip-list"><span>日報統合</span><span>規格逸脱アラート</span><span>監査帳票作成</span></div>
+          </article>
+          <article class="scope-card fade-in">
+            <h3><span class="dot dot--b"></span>営業・販促・店舗運営</h3>
+            <p>販路別提案、販促文面、受発注処理までまとめて省力化。</p>
+            <div class="chip-list"><span>提案書ドラフト</span><span>SNS/EC文面量産</span><span>請求処理自動化</span></div>
+          </article>
         </div>
-
-        <p class="service__note fade-in">Claude・Gemini・ChatGPTなど、業務に最適なAIを選定。特定ベンダーへのロックインなく、継続的に改善し続けます。</p>
+        <p class="service-note fade-in">Claude・Gemini・ChatGPTなど、業務に最適なAIを選定。特定ベンダーにロックインせず継続改善します。</p>
       </div>
     </section>
 
-    <!-- =================== DIFFERENTIATOR =================== -->
-    <section class="diff">
+    <section class="why section" id="why">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">なぜUMEZOOか。4つの理由があります。</h2>
-
-        <div class="diff__list">
-          <div class="diff__item fade-in">
-            <span class="diff__number">01</span>
-            <div class="diff__content">
-              <h3>食品・飲料業界の業務を、深く知っている</h3>
-              <p>原料調達の商流から、製造ライン特有の品質管理ルール、小売バイヤーへの提案様式まで。食産業の現場を知らないと設計できない自動化を、私たちは日常として扱います。</p>
-            </div>
-          </div>
-          <div class="diff__item fade-in">
-            <span class="diff__number">02</span>
-            <div class="diff__content">
-              <h3>ツールだけ渡して終わり、ではない</h3>
-              <p>UMEZOOは業務運用代行（BPO）として、AIが処理した結果の確認・改善・レポーティングまで継続的に担います。御社の担当者がいなくても業務が回り続ける体制を作ります。</p>
-            </div>
-          </div>
-          <div class="diff__item fade-in">
-            <span class="diff__number">03</span>
-            <div class="diff__content">
-              <h3>1業務から始められる。失敗リスクがない</h3>
-              <p>まず1業務を無料診断で特定し、2週間以内に試験稼働。効果を確認してから拡大できます。初期費用を抑えながら、確実に成果を積み上げます。</p>
-            </div>
-          </div>
-          <div class="diff__item fade-in">
-            <span class="diff__number">04</span>
-            <div class="diff__content">
-              <h3>削減できなければ、費用はいただかない</h3>
-              <p>月額料金に加え、業務工数削減の成果に連動した報酬体系を採用しています。成果を出すことが私たちのビジネスモデルです。</p>
-            </div>
-          </div>
+        <h2 class="section-heading section-heading--center fade-in">なぜUMEZOOか</h2>
+        <div class="why-grid">
+          <article class="why-card why-card--strong fade-in"><span>01</span><h3>食品・飲料業界の業務を深く知っている</h3></article>
+          <article class="why-card why-card--strong fade-in"><span>02</span><h3>ツールだけ渡して終わり、ではない</h3></article>
+          <article class="why-card fade-in"><span>03</span><h3>1業務から始められる。失敗リスクが低い</h3></article>
+          <article class="why-card fade-in"><span>04</span><h3>成果に連動した設計ができる</h3></article>
         </div>
       </div>
     </section>
 
-    <!-- =================== PROCESS CASES =================== -->
-    <section class="process">
+    <section class="results section" id="results">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">食産業向け・業務ごとのAI化事例</h2>
-        <p class="section-lead fade-in">「どこまでAIに任せられるのか」。3つの実例で確認ください。</p>
-
-        <div class="process__cards">
-          <div class="process__card fade-in">
-            <span class="process__tag">製造</span>
-            <h3>製造日報・温度記録の自動集計</h3>
-            <p>複数ラインの記録を自動統合し、監査向けフォーマットまで一括出力。</p>
-            <div class="process__metric">
-              <span class="process__metric-num">78%削減</span>
-              <span class="process__metric-label">1日90分 → 20分</span>
-            </div>
-          </div>
-          <div class="process__card fade-in">
-            <span class="process__tag">卸・営業</span>
-            <h3>販路別提案書のドラフト自動生成</h3>
-            <p>小売・外食・EC向けに、商品特長と価格条件を反映した提案を自動作成。</p>
-            <div class="process__metric">
-              <span class="process__metric-num">79%削減</span>
-              <span class="process__metric-label">1件120分 → 25分</span>
-            </div>
-          </div>
-          <div class="process__card fade-in">
-            <span class="process__tag">バックオフィス</span>
-            <h3>受発注・請求処理の自動化</h3>
-            <p>FAX/PDF/メールの注文情報を読み取り、基幹システム入力まで自動連携。</p>
-            <div class="process__metric">
-              <span class="process__metric-num">84%削減</span>
-              <span class="process__metric-label">1件25分 → 4分</span>
-            </div>
-          </div>
+        <div class="section__head split fade-in">
+          <h2 class="section-heading">成果を、最速で伝える。</h2>
+          <p class="section-lead">どの業務がどれだけ削減できるかを、事例ベースで具体化します。</p>
+        </div>
+        <div class="results-grid">
+          <article class="result-card fade-in"><h3>製造日報・温度記録の自動集計</h3><p class="rate">78%削減</p><p class="sub">1日90分 → 20分</p></article>
+          <article class="result-card fade-in"><h3>販路別提案書のドラフト自動生成</h3><p class="rate">79%削減</p><p class="sub">1件120分 → 25分</p></article>
+          <article class="result-card fade-in"><h3>受発注・請求処理の自動化</h3><p class="rate">84%削減</p><p class="sub">1件25分 → 4分</p></article>
         </div>
       </div>
     </section>
 
-    <!-- =================== CASES =================== -->
-    <section class="cases" id="cases">
+    <section class="flow section" id="flow">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">食品・飲料メーカーの現場から、変化のリポートをお届けします。</h2>
-
-        <div class="cases__grid">
-          <div class="cases__card fade-in">
-            <h3 class="cases__company">A社 — 調味料メーカー（従業員60名）</h3>
-            <span class="cases__label">課題</span>
-            <p class="cases__value">見積・発注の手作業に月40時間。ヒューマンエラーが繰り返し発生し、取引先への謝罪対応が続いていた。</p>
-            <span class="cases__label">成果</span>
-            <p class="cases__result">月30時間削減、ミス率90%減</p>
-            <p class="cases__comment">「最初は社員が戸惑うかと思いましたが、むしろ『この作業なくなったんですか』と喜んでいました。」（管理部門責任者）</p>
-          </div>
-          <div class="cases__card fade-in">
-            <h3 class="cases__company">B社 — 飲料メーカー（従業員80名）</h3>
-            <span class="cases__label">課題</span>
-            <p class="cases__value">営業資料作成が属人化し、ベテラン社員1名が全案件の準備を担っていた。商談のスピードが上がらず機会損失が続いていた。</p>
-            <span class="cases__label">成果</span>
-            <p class="cases__result">商談準備時間75%削減</p>
-            <p class="cases__comment">「提案書のクオリティが均一になり、若手でも自信を持って商談に臨めるようになりました。」（営業部長）</p>
-          </div>
-          <div class="cases__card fade-in">
-            <h3 class="cases__company">C社 — 冷凍食品メーカー（従業員120名）</h3>
-            <span class="cases__label">課題</span>
-            <p class="cases__value">製造ラインごとの日報集計に毎日2時間。監査時の書類準備に3日間を要し、担当者の残業が常態化していた。</p>
-            <span class="cases__label">成果</span>
-            <p class="cases__result">日報集計78%削減 / 監査書類3日→半日</p>
-            <p class="cases__comment">「監査の書類準備で毎回3日間潰れていたのが、半日で終わるようになりました。担当者の表情が変わりました。」（品質管理課長）</p>
-          </div>
-        </div>
-
-        <p class="cases__disclaimer">※ 上記事例は、実際のご導入企業の成果をもとに構成したモデルケースです。</p>
-      </div>
-    </section>
-
-    <!-- =================== STEPS =================== -->
-    <section class="steps" id="steps">
-      <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">最短2週間で稼働。3ステップで業務を変えます。</h2>
-
-        <div class="steps__flow fade-in">
-          <div class="steps__item">
-            <span class="steps__num">01</span>
-            <h3>無料業務診断（棚卸し）</h3>
-            <p>現在の業務工程をヒアリングし、AIで代替できる業務と削減できる工数を試算します。</p>
-            <span class="steps__price">無料<span class="steps__tag">FREE</span></span>
-          </div>
-          <div class="steps__connector" aria-hidden="true">→</div>
-          <div class="steps__item">
-            <span class="steps__num">02</span>
-            <h3>AI実装・移管</h3>
-            <p>AI業務ワークフローの設計・実装。現行システムを活かした形で最短2週間で試験稼働。</p>
-            <span class="steps__price">15万円〜</span>
-          </div>
-          <div class="steps__connector" aria-hidden="true">→</div>
-          <div class="steps__item">
-            <span class="steps__num">03</span>
-            <h3>継続運用代行</h3>
-            <p>AI処理の精度改善・運用保守・成果レポーティングまで継続的に担います。</p>
-            <span class="steps__price">月額10万円〜＋成果報酬</span>
-          </div>
+        <h2 class="section-heading section-heading--center fade-in">3ステップで、導入ハードルを下げる。</h2>
+        <div class="flow-grid fade-in">
+          <article class="flow-card"><span>01</span><h3>無料業務診断</h3><p>現状業務を棚卸しし、AI化対象を特定。</p><strong>無料</strong></article>
+          <article class="flow-card"><span>02</span><h3>AI実装・移管</h3><p>現行システムを活かし最短2週間で試験稼働。</p><strong>15万円〜</strong></article>
+          <article class="flow-card"><span>03</span><h3>継続運用代行</h3><p>精度改善と運用保守、成果レポートまで伴走。</p><strong>月額10万円〜＋成果報酬</strong></article>
         </div>
       </div>
     </section>
 
-    <!-- =================== TESTIMONIALS =================== -->
-    <section class="testimonials">
+    <section class="voice section" id="cases">
       <div class="container">
-        <h2 class="section-heading section-heading--center fade-in">現場の声が、一番の説明です。</h2>
-
-        <div class="testimonials__grid">
-          <div class="testimonial-card fade-in">
-            <span class="testimonial-card__badge">月30時間削減</span>
-            <p class="testimonial-card__quote">「導入前は『AIって難しそう』と思っていましたが、UMEZOOさんが全部設計してくれるので、私たちはただ使うだけ。気づいたら業務が半分になっていました。」</p>
-            <p class="testimonial-card__author">調味料メーカー / 管理部門責任者 / 従業員60名</p>
-          </div>
-          <div class="testimonial-card fade-in">
-            <span class="testimonial-card__badge">商談準備75%削減</span>
-            <p class="testimonial-card__quote">「ベテランしか作れなかった提案書が、AIで誰でも作れるようになった。チーム全体の動き方が変わりました。これが一番の変化です。」</p>
-            <p class="testimonial-card__author">飲料メーカー / 営業部長 / 従業員80名</p>
-          </div>
-          <div class="testimonial-card fade-in">
-            <span class="testimonial-card__badge">監査書類3日→半日</span>
-            <p class="testimonial-card__quote">「監査のたびに3日間潰していた作業が半日で終わる。これだけで担当者の残業がなくなりました。数字以上に、職場の雰囲気が変わりました。」</p>
-            <p class="testimonial-card__author">冷凍食品メーカー / 品質管理課長 / 従業員120名</p>
-          </div>
+        <h2 class="section-heading section-heading--center fade-in">現場で起きた変化</h2>
+        <div class="voice-grid">
+          <article class="voice-card fade-in"><span class="badge">月30時間削減</span><p>「私たちはただ使うだけ。気づいたら業務が半分になっていました。」</p><small>調味料メーカー / 管理部門責任者 / 従業員60名</small></article>
+          <article class="voice-card fade-in"><span class="badge">商談準備75%削減</span><p>「提案書の質が均一になり、若手でも商談に自信を持てるように。」</p><small>飲料メーカー / 営業部長 / 従業員80名</small></article>
+          <article class="voice-card fade-in"><span class="badge">監査書類3日→半日</span><p>「数字以上に、現場の空気が軽くなりました。」</p><small>冷凍食品メーカー / 品質管理課長 / 従業員120名</small></article>
         </div>
-
-        <p class="testimonials__disclaimer">※ ご導入企業の声をもとに構成したモデルケースです。</p>
       </div>
     </section>
 
-    <!-- =================== FAQ =================== -->
-    <section class="faq" id="faq">
+    <section class="faq section" id="faq">
       <div class="container">
         <h2 class="section-heading section-heading--center fade-in">よくある質問</h2>
-
         <div class="faq__list fade-in">
-          <details class="faq__item">
-            <summary>費用はどのくらいかかりますか？</summary>
-            <p class="faq__answer">無料業務診断→AI実装（15万円〜）→継続運用代行（月額10万円〜＋業務削減成果に連動した報酬）の3ステップです。成果が出なければ費用はいただきません。</p>
+          <details class="faq__item" open>
+            <summary>導入にはどのくらいの期間がかかりますか？</summary>
+            <p class="faq__answer">無料業務診断で対象業務を特定した後、最短2週間で試験稼働を開始できます。効果確認後に本格導入へ拡大します。</p>
           </details>
-          <details class="faq__item">
-            <summary>導入にどのくらいの期間がかかりますか？</summary>
-            <p class="faq__answer">無料業務診断でAI化対象を特定した後、最短2週間で試験稼働を開始できます。効果を確認してから本格導入・拡大できます。</p>
-          </details>
-          <details class="faq__item">
-            <summary>既存のシステムと連携できますか？</summary>
-            <p class="faq__answer">はい。Excel・FAX・基幹システム・クラウドサービスなど、現在お使いの環境に合わせて設計します。大規模なシステム入れ替えは不要です。</p>
-          </details>
-          <details class="faq__item">
-            <summary>セキュリティは大丈夫ですか？</summary>
-            <p class="faq__answer">社内情報が外部に漏れないセキュリティ設計を前提としています。AIが扱うデータの範囲・保管場所・アクセス権限を明確に定義した上で導入します。詳細は<a href="../security.html">セキュリティポリシー</a>をご確認ください。</p>
-          </details>
-          <details class="faq__item">
-            <summary>最低契約期間はありますか？</summary>
-            <p class="faq__answer">継続運用代行は3ヶ月を最低期間としています。まず試験稼働で成果を確認してからご判断いただけます。</p>
-          </details>
-          <details class="faq__item">
-            <summary>食品・飲料業界以外でも対応できますか？</summary>
-            <p class="faq__answer">現在は食品・飲料メーカーを専門としています。深い業界知識があってこそ現場に刺さる自動化を設計できるためです。他業種のご相談はまずお問い合わせください。</p>
-          </details>
-          <details class="faq__item">
-            <summary>AIの精度が低くてミスが出た場合は？</summary>
-            <p class="faq__answer">AIの出力は必ず人間が確認・承認するフローを設計します。ミスが発生した場合はUMEZOOが原因を分析し、精度改善を継続運用の中で対応します。</p>
-          </details>
+          <details class="faq__item"><summary>既存のシステムと連携できますか？</summary><p class="faq__answer">はい。Excel・FAX・基幹システム・クラウドサービスなど、現在の運用を活かして設計します。</p></details>
+          <details class="faq__item"><summary>セキュリティは大丈夫ですか？</summary><p class="faq__answer">社内情報が外部に漏れない設計を前提に、データ範囲・保管場所・アクセス権限を明確にした上で導入します。</p></details>
+          <details class="faq__item"><summary>最低契約期間はありますか？</summary><p class="faq__answer">継続運用代行は3ヶ月が目安です。試験稼働で成果を確認してから判断いただけます。</p></details>
+          <details class="faq__item"><summary>食品・飲料業界以外でも対応できますか？</summary><p class="faq__answer">現在は食品・飲料メーカーを中心に支援しています。他業種も内容に応じてご相談可能です。</p></details>
+          <details class="faq__item"><summary>AIの精度が低くてミスが出た場合は？</summary><p class="faq__answer">必ず人が確認・承認する業務フローを設計し、ミス発生時は原因分析と精度改善を継続して対応します。</p></details>
         </div>
       </div>
     </section>
 
-    <!-- =================== CONTACT =================== -->
-    <section class="contact" id="contact">
+    <section class="final-cta section" id="contact">
+      <div class="container final-cta__inner fade-in">
+        <h2 class="section-heading">まずは無料診断から、現場に合うAI業務Opsを設計します。</h2>
+        <p>押し売りはしません。翌営業日以内にご連絡します。</p>
+        <div class="final-cta__buttons">
+          <a href="#diagnosis-form" class="btn btn--primary">無料診断を申し込む <span class="btn__dot" aria-hidden="true"></span></a>
+          <a href="../contact.html" class="btn btn--secondary">資料を請求する</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form section">
       <div class="container">
-        <div class="contact__inner">
-          <h2 class="section-heading fade-in">まず、業務の「無駄」を一緒に数えてみませんか。</h2>
-          <p class="contact__sub fade-in">無料業務診断では、現在の業務工程をヒアリングし、AIで代替できる業務と削減できる工数を試算します。押し売りはしません。</p>
-
-          <p class="contact__form-lead fade-in">お申し込みはGoogleフォームで完結します。入力項目は9問。記入後、翌営業日以内にご連絡します。</p>
-
-          <div class="contact__micro-list fade-in">
-            <span class="contact__micro-item">入力は約2分で完了</span>
-            <span class="contact__micro-item">営業電話はしません</span>
-            <span class="contact__micro-item">翌営業日以内にご連絡</span>
-            <span class="contact__micro-item">業務診断は完全無料</span>
-          </div>
-
-          <div class="contact__form-wrap fade-in" id="diagnosis-form">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfmbXkqECexBmRRGJG_4Lb7k4z10MCFdkbWAD7cZ9Imu5ak4Q/viewform?embedded=true"
-              width="100%"
-              height="2000"
-              title="無料業務診断お申し込みフォーム"
-              loading="lazy"
-            >読み込んでいます…</iframe>
-          </div>
+        <div class="contact__form-wrap fade-in" id="diagnosis-form">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfmbXkqECexBmRRGJG_4Lb7k4z10MCFdkbWAD7cZ9Imu5ak4Q/viewform?embedded=true"
+            width="100%"
+            height="2000"
+            title="無料業務診断お申し込みフォーム"
+            loading="lazy"
+          >読み込んでいます…</iframe>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- =================== FLOATING CTA =================== -->
   <a href="#contact" class="floating-cta" id="floating-cta" aria-label="無料で業務診断する">
     <span class="floating-cta__label">無料で業務診断する</span>
     <span class="floating-cta__micro">翌営業日ご連絡 / 営業電話なし</span>
   </a>
 
-  <!-- =================== FOOTER =================== -->
   <footer class="footer">
     <p>© 2025 UMEZOO Inc. All rights reserved.</p>
     <div class="footer__links">
@@ -528,7 +232,6 @@
     </div>
   </footer>
 
-  <!-- =================== SCRIPTS =================== -->
   <script>
     (function () {
       var header = document.getElementById('site-header');
@@ -570,7 +273,6 @@
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      // IntersectionObserver fade-in
       var elements = document.querySelectorAll('.fade-in');
       if (!('IntersectionObserver' in window)) {
         elements.forEach(function (el) { el.classList.add('visible'); });
@@ -588,7 +290,6 @@
     })();
   </script>
 
-  <!-- Google Ads conversion tracking: detect Google Form submission via iframe reload -->
   <script>
     (function() {
       var formIframe = document.querySelector('#diagnosis-form iframe');
@@ -596,15 +297,11 @@
       var loadCount = 0;
       formIframe.addEventListener('load', function() {
         loadCount++;
-        // 1回目 = 初期読み込み、2回目以降 = フォーム送信完了
         if (loadCount > 1 && typeof gtag === 'function') {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-18050771174/KrrJCOfT1ZQcEObRo59D'
-          });
+          gtag('event', 'conversion', { 'send_to': 'AW-18050771174/KrrJCOfT1ZQcEObRo59D' });
         }
       });
     })();
   </script>
-
 </body>
 </html>
