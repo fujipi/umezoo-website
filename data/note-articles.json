@@ -1,10 +1,20 @@
 {
-  "lastUpdated": "2026-04-30T02:09:12.717Z",
+  "lastUpdated": "2026-05-01T02:13:29.832Z",
   "feedTitle": "しゅわTokyo",
   "feedLink": "https://note.com/cccellars",
   "articles": [
     {
       "id": "note-1",
+      "tag": "Journey",
+      "date": "2026.04.30",
+      "title": "【ワイナリー訪問記】 NIKI Hills Winery（ニキヒルズワイナリー）",
+      "link": "https://note.com/cccellars/n/n3c41828055b5",
+      "summary": "こんばんは。しゅわTokyoワイン担当mayukuroです🐈‍⬛ 今回は、25年12月、北海道余市郡仁木町にある「NIKI Hills Winery」を訪問した際の様子をお届けします💁‍♀️ 仁木...",
+      "image": "",
+      "isExternal": true
+    },
+    {
+      "id": "note-2",
       "tag": "Journey",
       "date": "2026.03.31",
       "title": "【ワイナリー訪問記】都内某所　堆肥撒き＆剪定",
@@ -14,7 +24,7 @@
       "isExternal": true
     },
     {
-      "id": "note-2",
+      "id": "note-3",
       "tag": "Journey",
       "date": "2026.02.27",
       "title": "【ペアリング体験記＆オーベルジュ宿泊記】山形県 山菜料理出羽屋",
@@ -24,7 +34,7 @@
       "isExternal": true
     },
     {
-      "id": "note-3",
+      "id": "note-4",
       "tag": "Journey",
       "date": "2026.02.18",
       "title": "【ワイナリー訪問＆宿泊記】7Cワイナリー（セブンシダーズワイナリー）",
@@ -34,7 +44,7 @@
       "isExternal": true
     },
     {
-      "id": "note-4",
+      "id": "note-5",
       "tag": "Journey",
       "date": "2026.01.14",
       "title": "【ワイナリー訪問記】サントリー登美の丘ワイナリー",
@@ -44,7 +54,7 @@
       "isExternal": true
     },
     {
-      "id": "note-5",
+      "id": "note-6",
       "tag": "Journey",
       "date": "2025.12.28",
       "title": "【ワイナリー訪問記】 アメリカ④ Opus One",
@@ -54,7 +64,7 @@
       "isExternal": true
     },
     {
-      "id": "note-6",
+      "id": "note-7",
       "tag": "Journey",
       "date": "2025.11.11",
       "title": "【ワイナリー訪問記】  アメリカ③ KENZO ESTATE",
@@ -64,7 +74,7 @@
       "isExternal": true
     },
     {
-      "id": "note-7",
+      "id": "note-8",
       "tag": "Journey",
       "date": "2025.11.01",
       "title": "【ワイナリー訪問記】都内某所　耕作＆2番果収穫",
@@ -74,7 +84,7 @@
       "isExternal": true
     },
     {
-      "id": "note-8",
+      "id": "note-9",
       "tag": "Journey",
       "date": "2025.10.16",
       "title": "【ワイナリー訪問記】 北海道ワイン旅② ドメーヌタカヒコ奮闘記 出版イベント",
@@ -84,22 +94,12 @@
       "isExternal": true
     },
     {
-      "id": "note-9",
+      "id": "note-10",
       "tag": "Journey",
       "date": "2025.09.27",
       "title": "【ワイナリー訪問記】 北海道ワイン旅① 余市ラフェト",
       "link": "https://note.com/cccellars/n/nd657c04be705",
       "summary": "こんばんは。しゅわTokyo ワイン担当mayukuroです🐈‍⬛昨年に続き、9/7日曜に北海道余市町で開催されたLa Fête des Vignerons à YOICHI（通称ラフェト）へ行って...",
-      "image": "",
-      "isExternal": true
-    },
-    {
-      "id": "note-10",
-      "tag": "Journey",
-      "date": "2025.09.12",
-      "title": "【ワイナリー訪問記】都内某所　収穫＆選果＆ジュース造り",
-      "link": "https://note.com/cccellars/n/ne6dbddaa8f7a",
-      "summary": "こんばんは。しゅわTokyoワイン担当 mayukuroです。6月から3月まで毎月、都内の葡萄畑でワイン用ブドウの農業をまなぶ、『ブドウの學舎』に入学したので、その様子をお届けします。講師は、Kisv...",
       "image": "",
       "isExternal": true
     }
