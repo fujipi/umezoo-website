@@ -129,3 +129,8 @@ const newsData = {
 
 // News categories for filtering
 const NEWS_CATEGORIES = ['すべて', 'Journey', 'プレスリリース', 'プロジェクト', 'レポート', 'お知らせ'];
+
+// Node.js (build scripts) からの読み込み用。ブラウザでは無視される。
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { newsData, NEWS_CATEGORIES };
+}

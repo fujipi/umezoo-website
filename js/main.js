@@ -316,14 +316,14 @@ function initWorkstyleModal() {
 }
 
 
-// Render corporate news cards + Blog/BlogPosting JSON-LD from newsData.
-// Single source of truth = js/data/news-data.js. Runs only on pages that have
+// Render corporate news cards from newsData. Single source of truth =
+// js/data/news-data.js. The matching Blog/BlogPosting JSON-LD is rendered at
+// build time by scripts/generate-news-jsonld.js. Runs only on pages that have
 // .news-grid in the DOM (i.e. news.html).
 function initNewsFromData() {
   const grid = document.querySelector('.news-grid');
   if (!grid || typeof newsData === 'undefined') return;
 
-  const base = 'https://umezoo.co.jp/';
   const entries = Object.entries(newsData).map(([id, n]) => ({ id, ...n }));
 
   // Render cards (must match the class/data-* contract modal.js relies on)
@@ -348,38 +348,23 @@ function initNewsFromData() {
     );
   }).join('');
 
-  // Render JSON-LD Blog with BlogPosting[]
-  const ldEl = document.getElementById('news-jsonld');
-  if (ldEl) {
-    const publisher = {
-      '@type': 'Organization',
-      name: 'UMEZOO株式会社',
-      url: base,
-      logo: { '@type': 'ImageObject', url: base + 'umezoo_logo_yoko_color.jpg' }
-    };
-    const blog = {
-      '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: 'お知らせ | UMEZOO株式会社',
-      url: base + 'news.html',
-      description: 'UMEZOO株式会社からのお知らせ・最新情報。',
-      publisher: publisher,
-      blogPost: entries.map(n => ({
-        '@type': 'BlogPosting',
-        headline: n.title,
-        datePublished: n.dateISO,
-        dateModified: n.dateModified || n.dateISO,
-        image: base + n.image,
-        author: { '@type': 'Organization', name: 'UMEZOO株式会社', url: base },
-        publisher: publisher,
-        description: n.summary || '',
-        articleBody: (n.body || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
-        keywords: [n.tag].filter(Boolean),
-        mainEntityOfPage: { '@type': 'WebPage', '@id': base + 'news.html' }
-      }))
-    };
-    ldEl.textContent = JSON.stringify(blog);
-  }
+  applyQueryFilter();
+}
+
+// Filter news cards by ?q=<term> for the WebSite SearchAction in index.html.
+// Hides cards whose visible text doesn't contain the query (case-insensitive).
+function applyQueryFilter() {
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get('q') || '').trim().toLowerCase();
+  if (!q) return;
+
+  document.querySelectorAll('.news-grid .news-card').forEach(card => {
+    const haystack = card.textContent.toLowerCase();
+    if (!haystack.includes(q)) card.style.display = 'none';
+  });
+
+  // Disable category filter buttons while a query is active to avoid conflicts.
+  document.querySelectorAll('.news-filter__btn').forEach(b => { b.disabled = true; });
 }
 
 // Tiny HTML/attr escapers for safe text interpolation
@@ -434,9 +419,11 @@ async function initNoteArticles() {
 
     // Initialize filter after adding note articles
     initNewsFilter();
+    applyQueryFilter();
 
   } catch (error) {
     initNewsFilter(); // Initialize filter even on error
+    applyQueryFilter();
   }
 }
 

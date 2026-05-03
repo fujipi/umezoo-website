@@ -5,8 +5,9 @@
   "scripts": {
     "sync-note": "node scripts/sync-note-rss.js",
     "generate-career-pages": "node scripts/generate-career-pages.js",
+    "generate-news-jsonld": "node scripts/generate-news-jsonld.js",
     "generate-sitemap": "node scripts/generate-sitemap.js",
-    "build": "npm run generate-career-pages && npm run generate-sitemap"
+    "build": "npm run generate-career-pages && npm run generate-news-jsonld && npm run generate-sitemap"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"
