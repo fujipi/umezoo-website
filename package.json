@@ -4,7 +4,9 @@
   "description": "UMEZOO Inc. official website",
   "scripts": {
     "sync-note": "node scripts/sync-note-rss.js",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-career-pages": "node scripts/generate-career-pages.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "build": "npm run generate-career-pages && npm run generate-sitemap"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"

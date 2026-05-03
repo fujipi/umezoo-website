@@ -1680,6 +1680,8 @@ a.work-card:hover {
   background: var(--color-white);
   transition: all var(--transition-normal);
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
 .position-card:hover {
@@ -2927,4 +2929,68 @@ a.work-card:hover {
 }
 .footer__links a:hover {
   opacity: 1;
+}
+
+/* ==========================================================================
+   Career Detail Page (/careers/<slug>.html)
+   ========================================================================== */
+
+.page-hero__breadcrumb {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+.page-hero__breadcrumb a {
+  color: inherit;
+  text-decoration: underline;
+}
+.page-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.page-hero__meta span {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+}
+
+.job-detail__body {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.85;
+}
+.job-detail__body h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-left: 3px solid var(--color-accent, #c8a96a);
+  padding-left: 0.75rem;
+}
+.job-detail__body h3:first-child {
+  margin-top: 0;
+}
+.job-detail__body p {
+  margin: 0 0 1rem;
+}
+.job-detail__body ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+.job-detail__body li {
+  margin-bottom: 0.4rem;
+}
+
+.job-detail__cta {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }

@@ -5,6 +5,7 @@
 // Job data for career modal
 const jobData = {
   1: {
+    slug: 'business-producer-alliance',
     title: 'ビジネスプロデューサー（アライアンス）',
     type: '正社員',
     location: 'ハイブリッド',
@@ -52,6 +53,7 @@ const jobData = {
     `
   },
   2: {
+    slug: 'sales',
     title: 'セールス',
     type: '正社員 / 業務委託',
     location: '東京',
@@ -100,6 +102,7 @@ const jobData = {
     `
   },
   3: {
+    slug: 'sales-manager',
     title: '法人営業マネージャー（課長〜部長クラス）',
     type: '正社員',
     location: 'ハイブリッド',
@@ -152,6 +155,7 @@ const jobData = {
     `
   },
   4: {
+    slug: 'food-planner',
     title: 'フードプランナー',
     type: '正社員 / 業務委託',
     location: '東京',
@@ -202,6 +206,7 @@ const jobData = {
     `
   },
   5: {
+    slug: 'marketer',
     title: 'マーケター',
     type: '正社員 / 業務委託',
     location: '東京',
@@ -253,6 +258,7 @@ const jobData = {
     `
   },
   6: {
+    slug: 'recruiter',
     title: '人材採用',
     type: '正社員 / 業務委託',
     location: 'ハイブリッド',
@@ -302,6 +308,7 @@ const jobData = {
     `
   },
   7: {
+    slug: 'business-strategy',
     title: '事業戦略',
     type: '正社員 / 業務委託',
     location: 'ハイブリッド',
@@ -354,6 +361,7 @@ const jobData = {
     `
   },
   8: {
+    slug: 'new-graduate',
     title: '新卒 / 第二新卒',
     type: '正社員',
     location: '東京',
@@ -401,6 +409,7 @@ const jobData = {
     `
   },
   9: {
+    slug: 'open-position',
     title: 'オープンポジション',
     type: '正社員 / 業務委託',
     location: '東京 / ハイブリッド',
@@ -445,3 +454,7 @@ const jobData = {
     `
   }
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = jobData;
+}
