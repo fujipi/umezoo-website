@@ -4,7 +4,6 @@
  * Dependencies (loaded before this file):
  *   - js/data/translations.js (translations)
  *   - js/data/news-data.js (newsData, NEWS_CATEGORIES)
- *   - js/data/job-data.js (jobData)
  *   - js/modal.js (initModal)
  */
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initNewsFromData();
   initNewsModal();
-  initCareerModal();
   initWorkstyleModal();
   initNoteArticles();
 
@@ -294,34 +292,6 @@ function initNewsModal() {
         modalTitle.textContent = news.title;
         modalImage.style.backgroundImage = `url('${news.image}')`;
         modalBody.innerHTML = news.body;
-      }
-    }
-  });
-}
-
-// Career modal functionality
-function initCareerModal() {
-  const modal = document.getElementById('careerModal');
-  if (!modal) return;
-
-  const modalType = modal.querySelector('.career-modal__type');
-  const modalLocation = modal.querySelector('.career-modal__location');
-  const modalTitle = modal.querySelector('.career-modal__title');
-  const modalRole = modal.querySelector('.career-modal__role');
-  const modalBody = modal.querySelector('.career-modal__body');
-
-  initModal({
-    modalId: 'careerModal',
-    prefix: 'career-modal',
-    triggerSelector: '.position-card',
-    onOpen: (card) => {
-      const job = jobData[card.dataset.jobId];
-      if (job) {
-        modalType.textContent = job.type;
-        modalLocation.textContent = job.location;
-        modalTitle.textContent = job.title;
-        modalRole.textContent = job.role;
-        modalBody.innerHTML = job.body;
       }
     }
   });
