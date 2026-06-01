@@ -1,0 +1,324 @@
+{
+  "images/founder.jpg": {
+    "width": 620,
+    "height": 684,
+    "hash": "7f20ac673980057462d56967fdd9416c60213570",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/dish-green-vegetables-wood.jpg": {
+    "width": 1920,
+    "height": 1433,
+    "hash": "c6764b104ac3c1f884a1f17f93bdfe20a7213b79",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/dish-lobster-pumpkin-stripe.jpg": {
+    "width": 1920,
+    "height": 1438,
+    "hash": "c2dbc75447203adeafc6a8cb28cc496ffe24fc2d",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/dish-risotto-fish-zucchini.jpg": {
+    "width": 1920,
+    "height": 1908,
+    "hash": "b6b58f2705857c7e07eab6a3967fd8c0e3f5eb5e",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/dish-zucchini-shrimp-roll.jpg": {
+    "width": 1920,
+    "height": 1436,
+    "hash": "7fbf90738a4829514821a5c996b2128f09416856",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-beet-rose.jpg": {
+    "width": 1920,
+    "height": 1432,
+    "hash": "c8d15fe77ef5af3b11af3fb5f4e93c07fbe72e80",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-fusilli-corn-style.jpg": {
+    "width": 1920,
+    "height": 1432,
+    "hash": "51f2a8bd0c8886a5dfa63467437c0f2d2db91a06",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-paccheri-mushroom-cheese.jpg": {
+    "width": 1920,
+    "height": 1423,
+    "hash": "a134833289a06e81adbf57956a6e7514f91699b5",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-broccoli-cream.jpg": {
+    "width": 1920,
+    "height": 1629,
+    "hash": "77d70c0aeea330e7d2c49f6523a574eb1ac5f3e9",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-colorful-red.jpg": {
+    "width": 1920,
+    "height": 1424,
+    "hash": "fedcb3284d5bd6ad49d7d0ff644bb0f0f10d5557",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-cream-green.jpg": {
+    "width": 1920,
+    "height": 1275,
+    "hash": "f64ed026444841e538d118a974b67c73ae14316c",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-fish-tuile.jpg": {
+    "width": 1920,
+    "height": 1766,
+    "hash": "d598b140f4fcfec0dabfd78732836f8319810387",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-herb-butter-foam.jpg": {
+    "width": 1920,
+    "height": 1901,
+    "hash": "54fc3b7d86d8890ea7ee2f552d76805e351491ed",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-herb-cream.jpg": {
+    "width": 1920,
+    "height": 1565,
+    "hash": "054bc0b8387d1d67d499d5db632566ec38ffe0b3",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-rosemary-simple.jpg": {
+    "width": 1920,
+    "height": 1564,
+    "hash": "aadbb5631c410d6bd880d8df3e1b7c0fbfb83a6f",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-ravioli-saffron-beet.jpg": {
+    "width": 1920,
+    "height": 1440,
+    "hash": "ccc9bf31aef48ad3ff9c0971afce0dcd19a6d5b4",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-squid-ink-spaghetti.jpg": {
+    "width": 1920,
+    "height": 1605,
+    "hash": "cc98783c85301813c4f5788b3dfe23a0a30e8c69",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-strozzapreti-zucchini.jpg": {
+    "width": 1920,
+    "height": 1437,
+    "hash": "c654f27343be0641699b5801532bd6d6b0d4127f",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-tagliatelle-fish-beet.jpg": {
+    "width": 1920,
+    "height": 1429,
+    "hash": "84ea424975d549327565dad5012ade1f16c2de8e",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-tagliatelle-radicchio.jpg": {
+    "width": 1920,
+    "height": 1438,
+    "hash": "dc2ccc56caea2d67455f07475a9bbfa5e6c23833",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-tagliatelle-tomato-splash.jpg": {
+    "width": 1920,
+    "height": 1440,
+    "hash": "9328cc92b1e125c63f5b698a0fb57d2a0699cf7f",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-tortelli-nero-tuile.jpg": {
+    "width": 1920,
+    "height": 1619,
+    "hash": "fd5f239f3b9d5324c9f978368bc586319458e17d",
+    "webp": true,
+    "avif": true
+  },
+  "images/hero/pasta-tortellini-green-pea.jpg": {
+    "width": 1920,
+    "height": 1433,
+    "hash": "a4a9e46805a62b8fdff58fc5ed0ff3e2e4a3d92a",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/because-wine.jpg": {
+    "width": 578,
+    "height": 466,
+    "hash": "5a6659e27515246dc0203d6cc20b84e1593ddf11",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/because.jpg": {
+    "width": 578,
+    "height": 466,
+    "hash": "5a6659e27515246dc0203d6cc20b84e1593ddf11",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/clubred.jpg": {
+    "width": 640,
+    "height": 640,
+    "hash": "4eb7971b146d727a2c0f583194408ef743a53cae",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/connect-around.jpg": {
+    "width": 213,
+    "height": 63,
+    "hash": "4e1305277d84c997be46630fe0621a0d1fc2a2e5",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/logo.jpg": {
+    "width": 119,
+    "height": 49,
+    "hash": "c01ef30b453b8e99a07901ee3bcb18dbcd1732af",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/mitsui-fudosan.jpg": {
+    "width": 856,
+    "height": 1074,
+    "hash": "e5f029843342a061fe943ec7438736d330c20943",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/takahata-winery.png": {
+    "width": 1350,
+    "height": 405,
+    "hash": "4d601459342cb7e4a1969680381a480e94b0f78b",
+    "webp": true,
+    "avif": true
+  },
+  "images/partners/yota.jpg": {
+    "width": 458,
+    "height": 513,
+    "hash": "ca2a69e36f7b6d078af73468547ef69fd18b76d9",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/1768367292491.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "31a41dbaa7912cf44473233a626e8c918f5a4806",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/1768367314395.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "733cf2008829cdd4e54ae9daac92e69228a09afb",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/1768367344424.jpg": {
+    "width": 1920,
+    "height": 1356,
+    "hash": "e61b1ce8c58201720fef4b718e8153d9dd900f6f",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/1768367360232.jpg": {
+    "width": 1920,
+    "height": 1357,
+    "hash": "1b15f6382639edc0a92a03c6d21e7dc6053fbe97",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/hero.jpg": {
+    "width": 1568,
+    "height": 1104,
+    "hash": "8c2a61de0e2207b2199c57c48b93bfe0c2015d3c",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/messageImage_1730702967185.jpg": {
+    "width": 1920,
+    "height": 1361,
+    "hash": "716eccd83fb147f15eaca2e51c8a5ce788b5cba0",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/messageImage_1730702992996.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "510a427ec471f7c079e408c765a98bf1b778a0f0",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/shuwa-favicon.jpg": {
+    "width": 904,
+    "height": 820,
+    "hash": "1b018d3ba70412653d038849f159430edc635cd4",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-1.jpg": {
+    "width": 1920,
+    "height": 1361,
+    "hash": "716eccd83fb147f15eaca2e51c8a5ce788b5cba0",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-2.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "510a427ec471f7c079e408c765a98bf1b778a0f0",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-3.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "31a41dbaa7912cf44473233a626e8c918f5a4806",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-4.jpg": {
+    "width": 1920,
+    "height": 1354,
+    "hash": "733cf2008829cdd4e54ae9daac92e69228a09afb",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-5.jpg": {
+    "width": 1920,
+    "height": 1356,
+    "hash": "e61b1ce8c58201720fef4b718e8153d9dd900f6f",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/splash-6.jpg": {
+    "width": 1920,
+    "height": 1357,
+    "hash": "1b15f6382639edc0a92a03c6d21e7dc6053fbe97",
+    "webp": true,
+    "avif": true
+  },
+  "images/shuwa/steps.jpg": {
+    "width": 1330,
+    "height": 610,
+    "hash": "ed1ef2e3e9e24228c6c801887cf2c7c37d3c2990",
+    "webp": true,
+    "avif": true
+  }
+}
