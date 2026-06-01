@@ -75,6 +75,13 @@ img {
   display: block;
 }
 
+/* <picture> is a transparent wrapper around <img> (added by
+   scripts/inject-img-dims.js for AVIF/WebP); keep it out of the box tree so
+   wrapped images lay out exactly as a bare <img> would. */
+picture {
+  display: contents;
+}
+
 button {
   cursor: pointer;
   border: none;
