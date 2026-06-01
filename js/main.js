@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsModal();
   initWorkstyleModal();
   initNoteArticles();
+  initAnalytics();
 
   // Apply translations
   applyTranslations();
@@ -261,12 +262,55 @@ function initContactForm() {
       return;
     }
 
+    // Track successful submission as a conversion signal (GA4)
+    if (typeof gtag === 'function') {
+      gtag('event', 'contact_submit', { form_name: 'contact' });
+    }
+
     // Show success message (in real implementation, this would send to server)
     alert(currentLang === 'ja' ? 'お問い合わせを受け付けました。' :
           currentLang === 'fr' ? 'Votre message a été envoyé.' :
           'Your message has been sent.');
     form.reset();
   });
+}
+
+// GA4 custom event tracking. `gtag` is defined by the global GA snippet in
+// <head>; this lives in main.js (loaded on every page) so no extra per-page
+// <script> is needed. Uses event delegation so dynamically-rendered links
+// (news cards, note articles) are covered too.
+function initAnalytics() {
+  if (typeof gtag !== 'function') return;
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const rawHref = link.getAttribute('href') || '';
+    const text = (link.textContent || '').trim().slice(0, 100);
+
+    let url = null;
+    try { url = new URL(link.href, window.location.href); } catch (_) {}
+
+    // Outbound links (external host over http/https)
+    if (url && /^https?:$/.test(url.protocol) && url.hostname && url.hostname !== window.location.hostname) {
+      gtag('event', 'outbound_click', {
+        link_url: url.href,
+        link_domain: url.hostname,
+        link_text: text
+      });
+    }
+
+    // Primary call-to-action buttons
+    if (link.matches('.btn--primary, .btn--outline, .btn--white')) {
+      gtag('event', 'cta_click', { link_url: rawHref, link_text: text });
+    }
+
+    // Career "apply" links (contact.html?subject=<role>)
+    if (/contact\.html\?subject=/.test(rawHref)) {
+      gtag('event', 'apply_click', { link_url: rawHref, link_text: text });
+    }
+  }, { passive: true });
 }
 
 // News modal functionality

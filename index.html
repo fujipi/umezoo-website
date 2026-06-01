@@ -35,9 +35,6 @@
   <meta name="theme-color" content="#1a1a1a">
   <meta name="apple-mobile-web-app-title" content="UMEZOO">
 
-  <!-- Search Console (TODO: replace the placeholder content with the real token) -->
-  <meta name="google-site-verification" content="TODO_REPLACE_WITH_TOKEN">
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="UMEZOO株式会社 | フードクリエイティブファーム">
@@ -74,7 +71,7 @@
       "addressRegion": "東京都",
       "addressCountry": "JP"
     },
-    "sameAs": [],
+    "sameAs": ["https://note.com/cccellars"],
     "knowsAbout": ["フードクリエイティブ", "レシピ開発", "動画制作", "イベント企画", "ケータリング", "フードビジネス", "パスタ", "Pasta", "パスタクリエイター", "Pasta Creator", "シェフズテーブル", "Chef's Table", "CHEF'S TABLE"],
     "award": "RED-U35 2021 シルバーエッグ"
   }
@@ -98,9 +95,11 @@
   }
   </script>
 
+  <!-- BUILD:HEADCHROME:START -->
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,6 +112,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- BUILD:HEADCHROME:END -->
 </head>
 <body>
   <!-- Splash Screen -->
@@ -123,6 +123,7 @@
   </div>
 
   <!-- Header -->
+  <!-- BUILD:HEADER:START -->
   <header class="header header--transparent" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">
@@ -156,6 +157,7 @@
       </button>
     </div>
   </header>
+  <!-- BUILD:HEADER:END -->
 
   <!-- Main Wrapper -->
   <div class="main-wrapper">
@@ -189,7 +191,11 @@
         <!-- About Card -->
         <a href="about.html" class="page-card">
           <div class="page-card__image">
-            <img src="images/hero/pasta-ravioli-herb-cream.jpg" alt="About UMEZOO" loading="lazy">
+            <picture>
+              <source srcset="images/hero/pasta-ravioli-herb-cream.avif" type="image/avif">
+              <source srcset="images/hero/pasta-ravioli-herb-cream.webp" type="image/webp">
+              <img src="images/hero/pasta-ravioli-herb-cream.jpg" alt="About UMEZOO" loading="lazy" width="1920" height="1565">
+            </picture>
           </div>
           <div class="page-card__body">
             <h3 class="page-card__title" data-i18n="cards.aboutTitle">About</h3>
@@ -203,7 +209,11 @@
         <!-- Work Card -->
         <a href="work.html" class="page-card">
           <div class="page-card__image">
-            <img src="images/hero/pasta-tagliatelle-tomato-splash.jpg" alt="Work" loading="lazy">
+            <picture>
+              <source srcset="images/hero/pasta-tagliatelle-tomato-splash.avif" type="image/avif">
+              <source srcset="images/hero/pasta-tagliatelle-tomato-splash.webp" type="image/webp">
+              <img src="images/hero/pasta-tagliatelle-tomato-splash.jpg" alt="Work" loading="lazy" width="1920" height="1440">
+            </picture>
           </div>
           <div class="page-card__body">
             <h3 class="page-card__title" data-i18n="cards.workTitle">Work</h3>
@@ -217,7 +227,11 @@
         <!-- Service Card -->
         <a href="service.html" class="page-card">
           <div class="page-card__image">
-            <img src="images/hero/dish-risotto-fish-zucchini.jpg" alt="Service" loading="lazy">
+            <picture>
+              <source srcset="images/hero/dish-risotto-fish-zucchini.avif" type="image/avif">
+              <source srcset="images/hero/dish-risotto-fish-zucchini.webp" type="image/webp">
+              <img src="images/hero/dish-risotto-fish-zucchini.jpg" alt="Service" loading="lazy" width="1920" height="1908">
+            </picture>
           </div>
           <div class="page-card__body">
             <h3 class="page-card__title" data-i18n="cards.serviceTitle">Service</h3>
@@ -239,22 +253,70 @@
     </div>
     <div class="partners__track">
       <div class="partners__logos">
-        <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo" loading="lazy">
-        <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo" loading="lazy">
-        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large" loading="lazy">
-        <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large" loading="lazy">
-        <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo" loading="lazy">
-        <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--xlarge" loading="lazy">
-        <img src="images/partners/because-wine.jpg" alt="because" class="partners__logo partners__logo--large" loading="lazy">
+        <picture>
+          <source srcset="images/partners/connect-around.avif" type="image/avif">
+          <source srcset="images/partners/connect-around.webp" type="image/webp">
+          <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo" loading="lazy" width="213" height="63">
+        </picture>
+        <picture>
+          <source srcset="images/partners/takahata-winery.avif" type="image/avif">
+          <source srcset="images/partners/takahata-winery.webp" type="image/webp">
+          <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo" loading="lazy" width="1350" height="405">
+        </picture>
+        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large" loading="lazy" width="564" height="376">
+        <picture>
+          <source srcset="images/partners/mitsui-fudosan.avif" type="image/avif">
+          <source srcset="images/partners/mitsui-fudosan.webp" type="image/webp">
+          <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large" loading="lazy" width="856" height="1074">
+        </picture>
+        <picture>
+          <source srcset="images/partners/clubred.avif" type="image/avif">
+          <source srcset="images/partners/clubred.webp" type="image/webp">
+          <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo" loading="lazy" width="640" height="640">
+        </picture>
+        <picture>
+          <source srcset="images/partners/yota.avif" type="image/avif">
+          <source srcset="images/partners/yota.webp" type="image/webp">
+          <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--xlarge" loading="lazy" width="458" height="513">
+        </picture>
+        <picture>
+          <source srcset="images/partners/because-wine.avif" type="image/avif">
+          <source srcset="images/partners/because-wine.webp" type="image/webp">
+          <img src="images/partners/because-wine.jpg" alt="because" class="partners__logo partners__logo--large" loading="lazy" width="578" height="466">
+        </picture>
       </div>
       <div class="partners__logos" aria-hidden="true">
-        <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo" loading="lazy">
-        <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo" loading="lazy">
-        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large" loading="lazy">
-        <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large" loading="lazy">
-        <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo" loading="lazy">
-        <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--xlarge" loading="lazy">
-        <img src="images/partners/because-wine.jpg" alt="because" class="partners__logo partners__logo--large" loading="lazy">
+        <picture>
+          <source srcset="images/partners/connect-around.avif" type="image/avif">
+          <source srcset="images/partners/connect-around.webp" type="image/webp">
+          <img src="images/partners/connect-around.jpg" alt="コネクトアラウンド" class="partners__logo" loading="lazy" width="213" height="63">
+        </picture>
+        <picture>
+          <source srcset="images/partners/takahata-winery.avif" type="image/avif">
+          <source srcset="images/partners/takahata-winery.webp" type="image/webp">
+          <img src="images/partners/takahata-winery.png" alt="高畠ワイナリー" class="partners__logo" loading="lazy" width="1350" height="405">
+        </picture>
+        <img src="images/partners/gurunavi.webp" alt="ぐるなび" class="partners__logo partners__logo--large" loading="lazy" width="564" height="376">
+        <picture>
+          <source srcset="images/partners/mitsui-fudosan.avif" type="image/avif">
+          <source srcset="images/partners/mitsui-fudosan.webp" type="image/webp">
+          <img src="images/partners/mitsui-fudosan.jpg" alt="三井不動産" class="partners__logo partners__logo--large" loading="lazy" width="856" height="1074">
+        </picture>
+        <picture>
+          <source srcset="images/partners/clubred.avif" type="image/avif">
+          <source srcset="images/partners/clubred.webp" type="image/webp">
+          <img src="images/partners/clubred.jpg" alt="CLUB RED" class="partners__logo" loading="lazy" width="640" height="640">
+        </picture>
+        <picture>
+          <source srcset="images/partners/yota.avif" type="image/avif">
+          <source srcset="images/partners/yota.webp" type="image/webp">
+          <img src="images/partners/yota.jpg" alt="Yota" class="partners__logo partners__logo--xlarge" loading="lazy" width="458" height="513">
+        </picture>
+        <picture>
+          <source srcset="images/partners/because-wine.avif" type="image/avif">
+          <source srcset="images/partners/because-wine.webp" type="image/webp">
+          <img src="images/partners/because-wine.jpg" alt="because" class="partners__logo partners__logo--large" loading="lazy" width="578" height="466">
+        </picture>
       </div>
     </div>
   </section>
@@ -269,12 +331,36 @@
   </section>
 
   <!-- Footer -->
+  <!-- BUILD:FOOTER:START -->
   <footer class="footer">
     <div class="container">
-      <nav class="footer__links" aria-label="関連サイト">
-        <a href="shuwa.html">しゅわTokyo</a>
-        <a href="ai-ops/">AI業務Ops</a>
-      </nav>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="umezoo_logo_yoko_color.png" alt="UMEZOO" width="240" height="60">
+          </a>
+          <p class="footer__desc" data-i18n="footer.desc">創造的な食体験を事業活動に浸透させる、フードクリエイティブファーム</p>
+        </div>
+        <nav class="footer__nav-col" aria-label="サイトマップ">
+          <h2 class="footer__nav-title">Sitemap</h2>
+          <div class="footer__nav-list">
+            <a href="about.html" class="footer__nav-link" data-i18n="nav.about">About</a>
+            <a href="work.html" class="footer__nav-link" data-i18n="nav.work">Work</a>
+            <a href="service.html" class="footer__nav-link" data-i18n="nav.service">Service</a>
+            <a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="footer__nav-link">Journey</a>
+            <a href="career.html" class="footer__nav-link" data-i18n="nav.career">Career</a>
+            <a href="news.html" class="footer__nav-link" data-i18n="nav.news">News</a>
+            <a href="contact.html" class="footer__nav-link" data-i18n="nav.contact">Contact</a>
+          </div>
+        </nav>
+        <nav class="footer__nav-col" aria-label="関連サイト">
+          <h2 class="footer__nav-title">Related</h2>
+          <div class="footer__nav-list">
+            <a href="shuwa.html" class="footer__nav-link">しゅわTokyo</a>
+            <a href="ai-ops/" class="footer__nav-link">AI業務Ops</a>
+          </div>
+        </nav>
+      </div>
       <div class="footer__bottom">
         <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
         <div class="footer__legal">
@@ -284,6 +370,7 @@
       </div>
     </div>
   </footer>
+  <!-- BUILD:FOOTER:END -->
 
   </div><!-- /.main-wrapper -->
 

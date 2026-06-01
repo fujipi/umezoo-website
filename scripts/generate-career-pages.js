@@ -6,6 +6,9 @@ const fs = require('fs');
 const path = require('path');
 
 const jobData = require('../js/data/job-data.js');
+const { renderHeadChrome } = require('./partials/head.js');
+const { renderHeader } = require('./partials/header.js');
+const { renderFooter } = require('./partials/footer.js');
 
 const ROOT = path.join(__dirname, '..');
 const CAREERS_DIR = path.join(ROOT, 'careers');
@@ -149,53 +152,11 @@ ${JSON.stringify(breadcrumb, null, 2)}
 ${JSON.stringify(posting, null, 2)}
   </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/css/style.css">
+${renderHeadChrome({ base: '/' })}
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="header__inner">
-      <a href="/index.html" class="header__logo">
-        <img src="/umezoo_logo_yoko_color.jpg" alt="UMEZOO" width="240" height="60">
-      </a>
-
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="/about.html" class="nav__link" data-i18n="nav.about">About</a></li>
-          <li><a href="/work.html" class="nav__link" data-i18n="nav.work">Work</a></li>
-          <li><a href="/service.html" class="nav__link" data-i18n="nav.service">Service</a></li>
-          <li><a href="https://note.com/cccellars" target="_blank" rel="noopener noreferrer" class="nav__link">Journey</a></li>
-          <li><a href="/career.html" class="nav__link nav__link--active" data-i18n="nav.career">Career</a></li>
-          <li><a href="/news.html" class="nav__link" data-i18n="nav.news">News</a></li>
-          <li><a href="/contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-
-        <div class="nav__right">
-          <div class="lang-switcher">
-            <button class="lang-switcher__btn" data-lang="ja">JP</button>
-            <button class="lang-switcher__btn" data-lang="en">EN</button>
-            <button class="lang-switcher__btn" data-lang="fr">FR</button>
-          </div>
-        </div>
-      </nav>
-
-      <button class="menu-toggle" aria-label="Menu">
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-      </button>
-    </div>
-  </header>
+${renderHeader({ base: '/', activeNav: 'career' })}
 
   <!-- Page Hero -->
   <section class="page-hero">
@@ -234,21 +195,7 @@ ${job.body}
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <nav class="footer__links" aria-label="関連サイト">
-        <a href="/shuwa.html">しゅわTokyo</a>
-        <a href="/ai-ops/">AI業務Ops</a>
-      </nav>
-      <div class="footer__bottom">
-        <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2025 UMEZOO Inc. All rights reserved.</p>
-        <div class="footer__legal">
-          <a href="/privacy.html" class="footer__legal-link" data-i18n="footer.privacyPolicy">Privacy Policy</a>
-          <a href="/security.html" class="footer__legal-link" data-i18n="footer.security">Security</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+${renderFooter({ base: '/' })}
 
   <!-- Scripts -->
   <script src="/js/data/translations.js" defer></script>
