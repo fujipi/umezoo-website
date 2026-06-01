@@ -1,0 +1,39 @@
+name: Verify generated output
+
+# Guards the "commit generated output" model: the assembled HTML committed to
+# the repo must match what `npm run build` produces. Runs the build in CI and
+# fails if the working tree drifts, so shared header/footer (and other generated
+# output) can never go stale relative to scripts/partials + scripts/site-config.js.
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history for git-derived sitemap lastmod
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Ensure committed output matches generated output
+        run: |
+          # sitemap.xml <lastmod> is derived from git history and necessarily
+          # shifts the moment a commit lands, so it is excluded from the check.
+          if ! git diff --quiet -- . ':(exclude)sitemap.xml'; then
+            echo "::error::Generated output is stale. Run 'npm run build' and commit the result."
+            git --no-pager diff --stat -- . ':(exclude)sitemap.xml'
+            exit 1
+          fi
+          echo "Generated output is up to date."

@@ -50,10 +50,14 @@ function main() {
   const jsonLdString = JSON.stringify(buildJsonLd());
 
   const re = /(<script id="news-jsonld" type="application\/ld\+json">)[\s\S]*?(<\/script>)/;
-  const updated = html.replace(re, `$1${jsonLdString}$2`);
-
-  if (updated === html) {
+  if (!re.test(html)) {
     throw new Error('news-jsonld marker not found in news.html');
+  }
+
+  const updated = html.replace(re, `$1${jsonLdString}$2`);
+  if (updated === html) {
+    console.log('news.html JSON-LD already up to date.');
+    return;
   }
 
   fs.writeFileSync(NEWS_HTML, updated);
