@@ -1,0 +1,19 @@
+{
+  "name": "UMEZOO株式会社",
+  "short_name": "UMEZOO",
+  "description": "創造的な食体験を事業活動に浸透させるフードクリエイティブファーム。",
+  "lang": "ja",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F2F2F2",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "1654x1654",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -23,6 +23,7 @@ function renderHeadChrome({ base = '', lcpPreload = null } = {}) {
   return `  <!-- Favicon -->
   <link rel="icon" type="image/png" href="${p('images/favicon.png')}">
   <link rel="apple-touch-icon" href="${p('images/favicon.png')}">
+  <link rel="manifest" href="${p('site.webmanifest')}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
