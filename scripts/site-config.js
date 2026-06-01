@@ -5,7 +5,8 @@
 
 const SITE = {
   origin: 'https://umezoo.co.jp',
-  ga4: 'G-7CT8HM5TSV'
+  ga4: 'G-7CT8HM5TSV',
+  fontsHref: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap'
 };
 
 // Primary navigation (order matters). `key` matches a page's `activeNav`.
@@ -35,7 +36,7 @@ const FOOTER_LEGAL = [
 //   header:  'default' | 'transparent' (index hero overlay only).
 //   logoExt: 'jpg' (default) | 'png'.
 const PAGES = {
-  'index.html':    { base: '',  activeNav: null,      header: 'transparent', logoExt: 'png' },
+  'index.html':    { base: '',  activeNav: null,      header: 'transparent', logoExt: 'png', lcpPreload: 'images/hero/pasta-ravioli-herb-cream.jpg' },
   'about.html':    { base: '',  activeNav: 'about'   },
   'work.html':     { base: '',  activeNav: 'work'    },
   'service.html':  { base: '',  activeNav: 'service' },

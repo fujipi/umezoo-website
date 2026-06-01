@@ -12,12 +12,14 @@ const fs = require('fs');
 const path = require('path');
 
 const { PAGES } = require('./site-config.js');
+const { renderHeadChrome } = require('./partials/head.js');
 const { renderHeader } = require('./partials/header.js');
 const { renderFooter } = require('./partials/footer.js');
 
 const ROOT = path.join(__dirname, '..');
 
 const SLOTS = [
+  { name: 'HEADCHROME', render: renderHeadChrome },
   { name: 'HEADER', render: renderHeader },
   { name: 'FOOTER', render: renderFooter }
 ];

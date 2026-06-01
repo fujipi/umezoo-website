@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const jobData = require('../js/data/job-data.js');
+const { renderHeadChrome } = require('./partials/head.js');
 const { renderHeader } = require('./partials/header.js');
 const { renderFooter } = require('./partials/footer.js');
 
@@ -151,17 +152,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
 ${JSON.stringify(posting, null, 2)}
   </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/css/style.css">
+${renderHeadChrome({ base: '/' })}
 </head>
 <body>
   <!-- Header -->
